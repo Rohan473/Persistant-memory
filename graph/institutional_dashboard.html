@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WQ Brain Institutional Research Dashboard</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #0a0a12;
+            color: #e0e0e8;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            overflow: hidden;
+        }
+        .dashboard {
+            display: grid;
+            grid-template-columns: 250px 1fr 350px;
+            grid-template-rows: 50px 1fr 200px;
+            height: 100vh;
+            gap: 1px;
+            background: #1a1a2e;
+        }
+        .header {
+            grid-column: 1 / -1;
+            background: #12121c;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            border-bottom: 1px solid #2a2a4e;
+        }
+        .header h1 {
+            font-size: 18px;
+            font-weight: 500;
+            color: #00d4aa;
+            letter-spacing: 0.5px;
+        }
+        .header .version {
+            margin-left: 10px;
+            font-size: 12px;
+            color: #666;
+            background: #1a1a2e;
+            padding: 2px 8px;
+            border-radius: 3px;
+        }
+        .sidebar {
+            background: #12121c;
+            padding: 15px;
+            overflow-y: auto;
+        }
+        .sidebar h3 {
+            font-size: 11px;
+            text-transform: uppercase;
+            color: #666;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        .nav-item {
+            padding: 8px 12px;
+            margin: 4px 0;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.2s;
+        }
+        .nav-item:hover { background: #1a1a2e; }
+        .nav-item.active { background: #00d4aa22; color: #00d4aa; }
+        .main-view {
+            background: #0a0a12;
+            position: relative;
+            overflow: hidden;
+        }
+        .panel {
+            background: #12121c;
+            padding: 15px;
+            overflow-y: auto;
+        }
+        .panel h3 {
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .panel h3 .badge {
+            background: #00d4aa;
+            color: #000;
+            padding: 1px 6px;
+            border-radius: 3px;
+            font-size: 10px;
+        }
+        .alpha-card {
+            background: #1a1a2e;
+            border-radius: 6px;
+            padding: 12px;
+            margin-bottom: 8px;
+            border: 1px solid #2a2a4e;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .alpha-card:hover { border-color: #00d4aa44; }
+        .alpha-card .name {
+            font-size: 14px;
+            color: #4A90E2;
+            font-weight: 500;
+        }
+        .alpha-card .metrics {
+            font-size: 11px;
+            color: #666;
+            margin-top: 4px;
+        }
+        .alpha-card .factors {
+            margin-top: 6px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+        .factor-tag {
+            background: #2a2a4e;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 10px;
+            color: #9B59B6;
+        }
+        .factor-tag.quality { background: #1a3a2a; color: #2ecc71; }
+        .factor-tag.value { background: #3a2a1a; color: #f39c12; }
+        .factor-tag.momentum { background: #2a1a3a; color: #9b59b6; }
+        .factor-tag.liquidity { background: #2a2a3a; color: #3498db; }
+        .factor-tag.volatility { background: #3a2a2a; color: #e74c3c; }
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #1a1a2e;
+            font-size: 13px;
+        }
+        .stat-row .value { color: #00d4aa; font-weight: 500; }
+        .heatmap {
+            display: grid;
+            gap: 2px;
+            margin-top: 10px;
+        }
+        .heatmap-cell {
+            width: 100%;
+            aspect-ratio: 1;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: transform 0.1s;
+        }
+        .heatmap-cell:hover { transform: scale(1.1); }
+        .correlation-matrix {
+            display: grid;
+            gap: 1px;
+            background: #1a1a2e;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .corr-cell {
+            width: 100%;
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 9px;
+        }
+        .genealogy-tree {
+            padding: 10px;
+        }
+        .tree-node {
+            display: flex;
+            align-items: center;
+            padding: 4px 0;
+            font-size: 12px;
+        }
+        .tree-node .depth-0 { padding-left: 0; }
+        .tree-node .depth-1 { padding-left: 20px; }
+        .tree-node .depth-2 { padding-left: 40px; }
+        .tree-connector {
+            width: 20px;
+            height: 20px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #444;
+        }
+        .input-box {
+            background: #1a1a2e;
+            border: 1px solid #2a2a4e;
+            border-radius: 6px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+        .input-box input {
+            width: 100%;
+            background: transparent;
+            border: none;
+            color: #e0e0e8;
+            font-size: 14px;
+            outline: none;
+        }
+        .input-box input::placeholder { color: #666; }
+        .query-results {
+            margin-top: 15px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .result-item {
+            padding: 10px;
+            background: #1a1a2e;
+            border-radius: 4px;
+            margin-bottom: 8px;
+            font-size: 12px;
+        }
+        .result-item .type {
+            color: #666;
+            font-size: 10px;
+            text-transform: uppercase;
+        }
+        .result-item .content {
+            margin-top: 4px;
+            color: #aaa;
+        }
+        .status-bar {
+            grid-column: 1 / -1;
+            background: #12121c;
+            padding: 8px 15px;
+            font-size: 11px;
+            color: #666;
+            display: flex;
+            gap: 20px;
+            border-top: 1px solid #2a2a4e;
+        }
+        .status-item { display: flex; align-items: center; gap: 6px; }
+        .status-dot { width: 6px; height: 6px; border-radius: 50%; background: #00d4aa; }
+        .status-dot.warning { background: #f39c12; }
+        .status-dot.error { background: #e74c3c; }
+    </style>
+</head>
+<body>
+<div class="dashboard">
+    <div class="header">
+        <h1>WQ Brain Research Intelligence</h1>
+        <span class="version">v0.2.0 INSTITUTIONAL</span>
+    </div>
+
+    <div class="sidebar">
+        <h3>Views</h3>
+        <div class="nav-item active" data-view="graph">Alpha Graph Explorer</div>
+        <div class="nav-item" data-view="factors">Factor Clusters</div>
+        <div class="nav-item" data-view="regimes">Regime Analysis</div>
+        <div class="nav-item" data-view="correlations">Correlation Matrix</div>
+        <div class="nav-item" data-view="genealogy">Alpha Lineage</div>
+        <div class="nav-item" data-view="copilot">Research Copilot</div>
+        <div class="nav-item" data-view="query">Natural Language Query</div>
+
+        <h3 style="margin-top: 30px;">Quick Stats</h3>
+        <div class="stat-row"><span>Total Alphas</span><span class="value" id="stat-total">91</span></div>
+        <div class="stat-row"><span>Good Rated</span><span class="value" id="stat-good">12</span></div>
+        <div class="stat-row"><span>Ceiling</span><span class="value" id="stat-ceiling">8</span></div>
+        <div class="stat-row"><span>Factor Families</span><span class="value">16</span></div>
+
+        <h3 style="margin-top: 30px;">Factor Distribution</h3>
+        <div id="factor-dist"></div>
+    </div>
+
+    <div class="main-view" id="main-view">
+        <svg id="graph-svg" width="100%" height="100%"></svg>
+    </div>
+
+    <div class="panel">
+        <h3>Selected Alpha <span class="badge" id="selected-count">0</span></h3>
+        <div id="alpha-details">
+            <p style="color:#666;font-size:12px;">Click an alpha to view details</p>
+        </div>
+
+        <h3 style="margin-top:30px">Top Performing</h3>
+        <div id="top-alphas">
+            <div class="alpha-card" data-alpha="alpha_0803">
+                <div class="name">alpha_0803</div>
+                <div class="metrics">Sharpe: 2.19 | Turnover: 116%</div>
+                <div class="factors">
+                    <span class="factor-tag">mean_reversion</span>
+                </div>
+            </div>
+            <div class="alpha-card" data-alpha="alpha_0901">
+                <div class="name">alpha_0901</div>
+                <div class="metrics">Sharpe: 1.31 | Fitness: 1.06</div>
+                <div class="factors">
+                    <span class="factor-tag value">value</span>
+                    <span class="factor-tag quality">quality</span>
+                </div>
+            </div>
+            <div class="alpha-card" data-alpha="alpha_0600">
+                <div class="name">alpha_0600</div>
+                <div class="metrics">Sharpe: 1.62 | Turnover: 131%</div>
+                <div class="factors">
+                    <span class="factor-tag momentum">momentum</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="status-bar">
+        <div class="status-item"><span class="status-dot"></span>Vector Store: Connected</div>
+        <div class="status-item"><span class="status-dot"></span>Graph: 1295 edges</div>
+        <div class="status-item"><span class="status-dot warning"></span>Factor Classifier: Ready</div>
+        <div class="status-item"><span class="status-dot"></span>Research Copilot: Active</div>
+    </div>
+</div>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>
+const COLORS = {
+    Alpha: "#4A90E2",
+    Concept: "#7ED321",
+    Datafield: "#F5A623",
+    Operator: "#9B59B6",
+    Setting: "#1ABC9C",
+    FailureMode: "#E74C3C",
+    Session: "#95A5A6"
+};
+
+const FACTOR_COLORS = {
+    quality: "#2ecc71",
+    value: "#f39c12",
+    momentum: "#9b59b6",
+    reversal: "#e67e22",
+    liquidity: "#3498db",
+    volatility: "#e74c3c",
+    growth: "#1abc9c",
+    defensive: "#95a5a6"
+};
+
+let currentView = 'graph';
+let graphData = null;
+
+function init() {
+    const graphScript = document.getElementById('graph-data');
+    if (graphScript) {
+        try {
+            graphData = JSON.parse(graphScript.textContent);
+            initGraphView();
+            initFactorDistribution();
+        } catch (e) {
+            console.log('Graph data not available');
+        }
+    }
+
+    document.querySelectorAll('.nav-item').forEach(item => {
+        item.addEventListener('click', () => {
+            document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
+            item.classList.add('active');
+            currentView = item.dataset.view;
+            switchView(currentView);
+        });
+    });
+}
+
+function initGraphView() {
+    if (!graphData) return;
+
+    const svg = d3.select("#graph-svg");
+    const width = svg.node().clientWidth;
+    const height = svg.node().clientHeight;
+
+    const sim = d3.forceSimulation(graphData.nodes)
+        .force("link", d3.forceLink(graphData.links).id(d => d.id).distance(60).strength(0.3))
+        .force("charge", d3.forceManyBody().strength(-200).distanceMax(350))
+        .force("center", d3.forceCenter(width/2, height/2))
+        .force("collide", d3.forceCollide().radius(d => d.size + 3));
+
+    const link = svg.append("g").selectAll("line")
+        .data(graphData.links).enter()
+        .append("line").attr("stroke", "#444").attr("stroke-opacity", 0.3);
+
+    const node = svg.append("g").selectAll("circle")
+        .data(graphData.nodes).enter()
+        .append("circle")
+        .attr("r", d => d.size || 5)
+        .attr("fill", d => COLORS[d.node_type] || "#bbb")
+        .attr("cursor", "pointer")
+        .call(d3.drag()
+            .on("start", (e, d) => { if (!e.active) sim.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; })
+            .on("drag", (e, d) => { d.fx = e.x; d.fy = e.y; })
+            .on("end", (e, d) => { if (!e.active) sim.alphaTarget(0); d.fx = null; d.fy = null; }))
+        .on("click", (e, d) => selectAlpha(d));
+
+    const label = svg.append("g").selectAll("text")
+        .data(graphData.nodes).enter()
+        .append("text")
+        .attr("font-size", "9px")
+        .attr("fill", "rgba(255,255,255,0.6)")
+        .text(d => d.name);
+
+    sim.on("tick", () => {
+        link.attr("x1", d => d.source.x).attr("y1", d => d.source.y)
+            .attr("x2", d => d.target.x).attr("y2", d => d.target.y);
+        node.attr("cx", d => d.x).attr("cy", d => d.y);
+        label.attr("x", d => d.x + 8).attr("y", d => d.y + 3);
+    });
+}
+
+function initFactorDistribution() {
+    const dist = [
+        { factor: 'momentum', count: 28, color: FACTOR_COLORS.momentum },
+        { factor: 'value', count: 22, color: FACTOR_COLORS.value },
+        { factor: 'quality', count: 18, color: FACTOR_COLORS.quality },
+        { factor: 'liquidity', count: 15, color: FACTOR_COLORS.liquidity },
+        { factor: 'reversal', count: 12, color: FACTOR_COLORS.reversal },
+        { factor: 'volatility', count: 8, color: FACTOR_COLORS.volatility }
+    ];
+
+    const container = document.getElementById('factor-dist');
+    dist.forEach(f => {
+        const row = document.createElement('div');
+        row.className = 'stat-row';
+        row.innerHTML = `<span>${f.factor}</span><span class="value" style="color:${f.color}">${f.count}</span>`;
+        container.appendChild(row);
+    });
+}
+
+function switchView(view) {
+    const mainView = document.getElementById('main-view');
+    mainView.innerHTML = '';
+
+    switch(view) {
+        case 'graph':
+            mainView.innerHTML = '<svg id="graph-svg" width="100%" height="100%"></svg>';
+            initGraphView();
+            break;
+        case 'factors':
+            mainView.innerHTML = '<div style="padding:20px"><h2 style="color:#888;margin-bottom:20px">Factor Cluster Map</h2><div id="factor-cluster"></div></div>';
+            break;
+        case 'regimes':
+            mainView.innerHTML = '<div style="padding:20px"><h2 style="color:#888;margin-bottom:20px">Regime Heatmap</h2><div class="heatmap" style="display:grid;grid-template-columns:repeat(10,1fr);gap:2px;"></div></div>';
+            break;
+        case 'correlations':
+            mainView.innerHTML = '<div style="padding:20px"><h2 style="color:#888;margin-bottom:20px">Correlation Matrix</h2><div id="corr-matrix"></div></div>';
+            break;
+        case 'query':
+            mainView.innerHTML = `
+                <div style="padding:30px">
+                    <h2 style="color:#888;margin-bottom:20px">Natural Language Query</h2>
+                    <div class="input-box">
+                        <input type="text" placeholder="e.g., 'Find recovery-quality alphas' or 'Which operators improve crisis performance?'" id="nl-query">
+                    </div>
+                    <button onclick="runQuery()" style="background:#00d4aa;color:#000;padding:8px 20px;border:none;border-radius:4px;cursor:pointer">Search</button>
+                    <div class="query-results" id="query-results"></div>
+                </div>`;
+            break;
+        case 'copilot':
+            mainView.innerHTML = `
+                <div style="padding:30px">
+                    <h2 style="color:#888;margin-bottom:20px">Research Copilot</h2>
+                    <p style="color:#666;margin-bottom:20px">AI-powered research assistance</p>
+                    <div style="display:grid;gap:15px">
+                        <button onclick="copilotAction('explain-failure')" style="background:#1a1a2e;color:#e0e0e8;padding:15px;border:1px solid #2a2a4e;border-radius:6px;text-align:left;cursor:pointer">
+                            <strong style="color:#4A90E2">Explain Failure</strong><br>
+                            <span style="color:#666;font-size:12px">Why did this alpha fail?</span>
+                        </button>
+                        <button onclick="copilotAction('detect-exposures')" style="background:#1a1a2e;color:#e0e0e8;padding:15px;border:1px solid #2a2a4e;border-radius:6px;text-align:left;cursor:pointer">
+                            <strong style="color:#9B59B6">Detect Hidden Exposures</strong><br>
+                            <span style="color:#666;font-size:12px">What factor exposures are hidden?</span>
+                        </button>
+                        <button onclick="copilotAction('suggest-sleeves')" style="background:#1a1a2e;color:#e0e0e8;padding:15px;border:1px solid #2a2a4e;border-radius:6px;text-align:left;cursor:pointer">
+                            <strong style="color:#2ecc71">Suggest Orthogonal Sleeves</strong><br>
+                            <span style="color:#666;font-size:12px">Find uncorrelated alpha combinations</span>
+                        </button>
+                    </div>
+                </div>`;
+            break;
+    }
+}
+
+function selectAlpha(d) {
+    document.getElementById('selected-count').textContent = '1';
+    const details = document.getElementById('alpha-details');
+    details.innerHTML = `
+        <div class="alpha-card">
+            <div class="name">${d.name}</div>
+            ${d.sharpe !== undefined ? `<div class="metrics">Sharpe: ${d.sharpe}</div>` : ''}
+            ${d.fitness !== undefined ? `<div class="metrics">Fitness: ${d.fitness}</div>` : ''}
+            ${d.expression ? `<div class="metrics" style="margin-top:8px;font-family:monospace;font-size:11px;color:#9B59B6">${d.expression.substring(0, 60)}</div>` : ''}
+        </div>
+    `;
+}
+
+function runQuery() {
+    const input = document.getElementById('nl-query').value;
+    const results = document.getElementById('query-results');
+
+    fetch('/query/nl', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({query: input})
+    })
+    .then(r => r.json())
+    .then(data => {
+        results.innerHTML = `
+            <div class="result-item">
+                <div class="type">${data.intent}</div>
+                <div class="content">${data.explanation || JSON.stringify(data.results).substring(0, 200)}</div>
+            </div>
+        `;
+    })
+    .catch(() => {
+        results.innerHTML = '<div class="result-item"><div class="type">Demo Mode</div><div class="content">Connect API to enable NL queries</div></div>';
+    });
+}
+
+function copilotAction(action) {
+    alert('Copilot action: ' + action + ' - Connect to API for full functionality');
+}
+
+init();
+</script>
+</body>
+</html>

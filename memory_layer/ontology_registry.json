@@ -1,0 +1,231 @@
+{
+  "Concept::momentum": {
+    "canonical_id": "Concept::momentum",
+    "name": "momentum",
+    "display_name": "Momentum",
+    "description": "Past returns predict future returns - trend following",
+    "aliases": [
+      "momentum",
+      "trend",
+      "trend following",
+      "past performance",
+      "relative strength"
+    ],
+    "category": "factor",
+    "parent": null,
+    "related_concepts": [],
+    "created_at": "2026-05-14T21:24:16.548971",
+    "updated_at": null,
+    "usage_count": 0
+  },
+  "Concept::mean_reversion": {
+    "canonical_id": "Concept::mean_reversion",
+    "name": "mean_reversion",
+    "display_name": "Mean Reversion",
+    "description": "Prices revert to mean - contrarian strategies",
+    "aliases": [
+      "reversal",
+      "contrarian",
+      "short-term reversal",
+      "price reversal"
+    ],
+    "category": "factor",
+    "parent": null,
+    "related_concepts": [],
+    "created_at": "2026-05-14T21:24:16.548971",
+    "updated_at": null,
+    "usage_count": 0
+  },
+  "Concept::value": {
+    "canonical_id": "Concept::value",
+    "name": "value",
+    "display_name": "Value",
+    "description": "Cheapest securities outperform - intrinsic value",
+    "aliases": [
+      "value",
+      "valuation",
+      "cheap",
+      "undervalued",
+      "book value"
+    ],
+    "category": "factor",
+    "parent": null,
+    "related_concepts": [],
+    "created_at": "2026-05-14T21:24:16.548971",
+    "updated_at": null,
+    "usage_count": 0
+  },
+  "Concept::quality": {
+    "canonical_id": "Concept::quality",
+    "name": "quality",
+    "display_name": "Quality",
+    "description": "High quality companies outperform",
+    "aliases": [
+      "profitability",
+      "ROE",
+      "financial health",
+      "fundamentals"
+    ],
+    "category": "factor",
+    "parent": null,
+    "related_concepts": [],
+    "created_at": "2026-05-14T21:24:16.548971",
+    "updated_at": null,
+    "usage_count": 0
+  },
+  "Concept::volatility": {
+    "canonical_id": "Concept::volatility",
+    "name": "volatility",
+    "display_name": "Volatility",
+    "description": "Volatility and risk factors",
+    "aliases": [
+      "risk",
+      "variance",
+      "standard deviation",
+      "dispersion"
+    ],
+    "category": "factor",
+    "parent": null,
+    "related_concepts": [],
+    "created_at": "2026-05-14T21:24:16.548971",
+    "updated_at": null,
+    "usage_count": 0
+  },
+  "Concept::liquidity": {
+    "canonical_id": "Concept::liquidity",
+    "name": "liquidity",
+    "display_name": "Liquidity",
+    "description": "Liquidity provision and trading volume effects",
+    "aliases": [
+      "volume",
+      "turnover",
+      "bid-ask",
+      "spread"
+    ],
+    "category": "factor",
+    "parent": null,
+    "related_concepts": [],
+    "created_at": "2026-05-14T21:24:16.548971",
+    "updated_at": null,
+    "usage_count": 0
+  },
+  "Concept::sentiment": {
+    "canonical_id": "Concept::sentiment",
+    "name": "sentiment",
+    "display_name": "Sentiment",
+    "description": "Investor sentiment and behavioral factors",
+    "aliases": [
+      "market sentiment",
+      "investor mood",
+      "opinion"
+    ],
+    "category": "factor",
+    "parent": null,
+    "related_concepts": [],
+    "created_at": "2026-05-14T21:24:16.548971",
+    "updated_at": null,
+    "usage_count": 0
+  },
+  "Concept::technical": {
+    "canonical_id": "Concept::technical",
+    "name": "technical",
+    "display_name": "Technical",
+    "description": "Price action and chart patterns",
+    "aliases": [
+      "price action",
+      "chart patterns",
+      "technical analysis"
+    ],
+    "category": "factor",
+    "parent": null,
+    "related_concepts": [],
+    "created_at": "2026-05-14T21:24:16.548971",
+    "updated_at": null,
+    "usage_count": 0
+  },
+  "Concept::fundamental": {
+    "canonical_id": "Concept::fundamental",
+    "name": "fundamental",
+    "display_name": "Fundamental",
+    "description": "Fundamental analysis factors",
+    "aliases": [
+      "financials",
+      "earnings",
+      "financial statements"
+    ],
+    "category": "factor",
+    "parent": null,
+    "related_concepts": [],
+    "created_at": "2026-05-14T21:24:16.548971",
+    "updated_at": null,
+    "usage_count": 0
+  },
+  "Concept::cross_sectional": {
+    "canonical_id": "Concept::cross_sectional",
+    "name": "cross_sectional",
+    "display_name": "Cross-Sectional",
+    "description": "Rank-based normalization across universe",
+    "aliases": [
+      "rank",
+      "percentile",
+      "relative ranking"
+    ],
+    "category": "method",
+    "parent": null,
+    "related_concepts": [],
+    "created_at": "2026-05-14T21:24:16.548971",
+    "updated_at": null,
+    "usage_count": 0
+  },
+  "Concept::time_series": {
+    "canonical_id": "Concept::time_series",
+    "name": "time_series",
+    "display_name": "Time Series",
+    "description": "Historical time-based calculations",
+    "aliases": [
+      "temporal",
+      "historical",
+      "rolling"
+    ],
+    "category": "method",
+    "parent": null,
+    "related_concepts": [],
+    "created_at": "2026-05-14T21:24:16.548971",
+    "updated_at": null,
+    "usage_count": 0
+  },
+  "Concept::neutralization": {
+    "canonical_id": "Concept::neutralization",
+    "name": "neutralization",
+    "display_name": "Neutralization",
+    "description": "Removing factor exposures",
+    "aliases": [
+      "neutral",
+      "market neutral",
+      "factor neutral"
+    ],
+    "category": "method",
+    "parent": null,
+    "related_concepts": [],
+    "created_at": "2026-05-14T21:24:16.548971",
+    "updated_at": null,
+    "usage_count": 0
+  },
+  "Concept::normalization": {
+    "canonical_id": "Concept::normalization",
+    "name": "normalization",
+    "display_name": "Normalization",
+    "description": "Standardizing values",
+    "aliases": [
+      "standardize",
+      "z-score",
+      "scale"
+    ],
+    "category": "method",
+    "parent": null,
+    "related_concepts": [],
+    "created_at": "2026-05-14T21:24:16.548971",
+    "updated_at": null,
+    "usage_count": 0
+  }
+}

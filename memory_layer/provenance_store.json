@@ -1,0 +1,24 @@
+{
+  "concept::mean_reversion::https://arxiv.org/test": {
+    "entity_type": "concept",
+    "entity_value": "mean_reversion",
+    "source_type": "external_paper",
+    "source_url": "https://arxiv.org/test",
+    "source_title": "Quant Research Paper",
+    "extraction_confidence": 0.85,
+    "extraction_method": "ontology_match",
+    "source_author": null,
+    "source_date": null,
+    "matched_patterns": [
+      "mean reversion",
+      "reversal"
+    ],
+    "source_text_snippet": null,
+    "extracted_at": "2026-05-14T21:24:16.546920",
+    "last_verified": null,
+    "mapped_to": null,
+    "parent_concept": null,
+    "trust_score": 0.765,
+    "citation_count": null
+  }
+}

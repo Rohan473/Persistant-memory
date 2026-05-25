@@ -1,0 +1,3821 @@
+[
+  {
+    "id": "Concept::cross_sectional",
+    "node_type": "Concept",
+    "name": "cross_sectional",
+    "hypothesis": "",
+    "related_alphas": [],
+    "datafields_used": [],
+    "operators_used": [],
+    "structured_summary": "Concept:cross_sectional"
+  },
+  {
+    "id": "Concept::fundamental",
+    "node_type": "Concept",
+    "name": "fundamental",
+    "hypothesis": "",
+    "related_alphas": [],
+    "datafields_used": [],
+    "operators_used": [],
+    "structured_summary": "Concept:fundamental"
+  },
+  {
+    "id": "Concept::liquidity",
+    "node_type": "Concept",
+    "name": "liquidity",
+    "hypothesis": "",
+    "related_alphas": [],
+    "datafields_used": [],
+    "operators_used": [],
+    "structured_summary": "Concept:liquidity"
+  },
+  {
+    "id": "Concept::mean_reversion",
+    "node_type": "Concept",
+    "name": "mean_reversion",
+    "hypothesis": "",
+    "related_alphas": [],
+    "datafields_used": [],
+    "operators_used": [],
+    "structured_summary": "Concept:mean_reversion"
+  },
+  {
+    "id": "Concept::momentum",
+    "node_type": "Concept",
+    "name": "momentum",
+    "hypothesis": "",
+    "related_alphas": [],
+    "datafields_used": [],
+    "operators_used": [],
+    "structured_summary": "Concept:momentum"
+  },
+  {
+    "id": "Concept::neutralization",
+    "node_type": "Concept",
+    "name": "neutralization",
+    "hypothesis": "",
+    "related_alphas": [],
+    "datafields_used": [],
+    "operators_used": [],
+    "structured_summary": "Concept:neutralization"
+  },
+  {
+    "id": "Concept::normalization",
+    "node_type": "Concept",
+    "name": "normalization",
+    "hypothesis": "",
+    "related_alphas": [],
+    "datafields_used": [],
+    "operators_used": [],
+    "structured_summary": "Concept:normalization"
+  },
+  {
+    "id": "Concept::quality",
+    "node_type": "Concept",
+    "name": "quality",
+    "hypothesis": "",
+    "related_alphas": [],
+    "datafields_used": [],
+    "operators_used": [],
+    "structured_summary": "Concept:quality"
+  },
+  {
+    "id": "Concept::sentiment",
+    "node_type": "Concept",
+    "name": "sentiment",
+    "hypothesis": "",
+    "related_alphas": [],
+    "datafields_used": [],
+    "operators_used": [],
+    "structured_summary": "Concept:sentiment"
+  },
+  {
+    "id": "Concept::technical",
+    "node_type": "Concept",
+    "name": "technical",
+    "hypothesis": "",
+    "related_alphas": [],
+    "datafields_used": [],
+    "operators_used": [],
+    "structured_summary": "Concept:technical"
+  },
+  {
+    "id": "Concept::time_series",
+    "node_type": "Concept",
+    "name": "time_series",
+    "hypothesis": "",
+    "related_alphas": [],
+    "datafields_used": [],
+    "operators_used": [],
+    "structured_summary": "Concept:time_series"
+  },
+  {
+    "id": "Concept::value",
+    "node_type": "Concept",
+    "name": "value",
+    "hypothesis": "",
+    "related_alphas": [],
+    "datafields_used": [],
+    "operators_used": [],
+    "structured_summary": "Concept:value"
+  },
+  {
+    "id": "Concept::volatility",
+    "node_type": "Concept",
+    "name": "volatility",
+    "hypothesis": "",
+    "related_alphas": [],
+    "datafields_used": [],
+    "operators_used": [],
+    "structured_summary": "Concept:volatility"
+  },
+  {
+    "id": "Datafield::adv20",
+    "node_type": "Datafield",
+    "name": "adv20",
+    "alphas_used_in": [],
+    "structured_summary": "Datafield:adv20"
+  },
+  {
+    "id": "Datafield::analyst_revision_rank_derivative",
+    "node_type": "Datafield",
+    "name": "analyst_revision_rank_derivative",
+    "alphas_used_in": [],
+    "structured_summary": "Datafield:analyst_revision_rank_derivative"
+  },
+  {
+    "id": "Datafield::anl4_ebit_value",
+    "node_type": "Datafield",
+    "name": "anl4_ebit_value",
+    "alphas_used_in": [],
+    "structured_summary": "Datafield:anl4_ebit_value"
+  },
+  {
+    "id": "Datafield::assets",
+    "node_type": "Datafield",
+    "name": "assets",
+    "alphas_used_in": [],
+    "structured_summary": "Datafield:assets"
+  },
+  {
+    "id": "Datafield::beta_last_30_days_spy",
+    "node_type": "Datafield",
+    "name": "beta_last_30_days_spy",
+    "alphas_used_in": [],
+    "structured_summary": "Datafield:beta_last_30_days_spy"
+  },
+  {
+    "id": "Datafield::cap",
+    "node_type": "Datafield",
+    "name": "cap",
+    "alphas_used_in": [],
+    "structured_summary": "Datafield:cap"
+  },
+  {
+    "id": "Datafield::capex",
+    "node_type": "Datafield",
+    "name": "capex",
+    "alphas_used_in": [],
+    "structured_summary": "Datafield:capex"
+  },
+  {
+    "id": "Datafield::cashflow_op",
+    "node_type": "Datafield",
+    "name": "cashflow_op",
+    "alphas_used_in": [],
+    "structured_summary": "Datafield:cashflow_op"
+  },
+  {
+    "id": "Datafield::close",
+    "node_type": "Datafield",
+    "name": "close",
+    "alphas_used_in": [],
+    "structured_summary": "Datafield:close"
+  },
+  {
+    "id": "Datafield::cogs",
+    "node_type": "Datafield",
+    "name": "cogs",
+    "alphas_used_in": [],
+    "structured_summary": "Datafield:cogs"
+  },
+  {
+    "id": "Datafield::ebit",
+    "node_type": "Datafield",
+    "name": "ebit",
+    "alphas_used_in": [],
+    "structured_summary": "Datafield:ebit"
+  },
+  {
+    "id": "Datafield::fn_assets_fair_val_a",
+    "node_type": "Datafield",
+    "name": "fn_assets_fair_val_a",
+    "alphas_used_in": [],
+    "structured_summary": "Datafield:fn_assets_fair_val_a"
+  },
+  {
+    "id": "Datafield::fnd2_ebitdm",
+    "node_type": "Datafield",
+    "name": "fnd2_ebitdm",
+    "alphas_used_in": [],
+    "structured_summary": "Datafield:fnd2_ebitdm"
+  },
+  {
+    "id": "Datafield::fnd2_ebitfr",
+    "node_type": "Datafield",
+    "name": "fnd2_ebitfr",
+    "alphas_used_in": [],
+    "structured_summary": "Datafield:fnd2_ebitfr"
+  },
+  {
+    "id": "Datafield::fscore_momentum",
+    "node_type": "Datafield",
+    "name": "fscore_momentum",
+    "alphas_used_in": [],
+    "structured_summary": "Datafield:fscore_momentum"
+  },
+  {
+    "id": "Datafield::high",
+    "node_type": "Datafield",
+    "name": "high",
+    "alphas_used_in": [],
+    "structured_summary": "Datafield:high"
+  },
+  {
+    "id": "Datafield::low",
+    "node_type": "Datafield",
+    "name": "low",
+    "alphas_used_in": [],
+    "structured_summary": "Datafield:low"
+  },
+  {
+    "id": "Datafield::mdl177_deepvaluefactor_bp_alt",
+    "node_type": "Datafield",
+    "name": "mdl177_deepvaluefactor_bp_alt",
+    "alphas_used_in": [],
+    "structured_summary": "Datafield:mdl177_deepvaluefactor_bp_alt"
+  },
+  {
+    "id": "Datafield::mdl177_deepvaluefactor_curep_alt",
+    "node_type": "Datafield",
+    "name": "mdl177_deepvaluefactor_curep_alt",
+    "alphas_used_in": [],
+    "structured_summary": "Datafield:mdl177_deepvaluefactor_curep_alt"
+  },
+  {
+    "id": "Datafield::mdl77_2400_pbroeresidual",
+    "node_type": "Datafield",
+    "name": "mdl77_2400_pbroeresidual",
+    "alphas_used_in": [],
+    "structured_summary": "Datafield:mdl77_2400_pbroeresidual"
+  },
+  {
+    "id": "Datafield::net_income_adjusted",
+    "node_type": "Datafield",
+    "name": "net_income_adjusted",
+    "alphas_used_in": [],
+    "structured_summary": "Datafield:net_income_adjusted"
+  },
+  {
+    "id": "Datafield::open",
+    "node_type": "Datafield",
+    "name": "open",
+    "alphas_used_in": [],
+    "structured_summary": "Datafield:open"
+  },
+  {
+    "id": "Datafield::operating_income",
+    "node_type": "Datafield",
+    "name": "operating_income",
+    "alphas_used_in": [],
+    "structured_summary": "Datafield:operating_income"
+  },
+  {
+    "id": "Datafield::returns",
+    "node_type": "Datafield",
+    "name": "returns",
+    "alphas_used_in": [],
+    "structured_summary": "Datafield:returns"
+  },
+  {
+    "id": "Datafield::revenue",
+    "node_type": "Datafield",
+    "name": "revenue",
+    "alphas_used_in": [],
+    "structured_summary": "Datafield:revenue"
+  },
+  {
+    "id": "Datafield::scl12_buzz",
+    "node_type": "Datafield",
+    "name": "scl12_buzz",
+    "alphas_used_in": [],
+    "structured_summary": "Datafield:scl12_buzz"
+  },
+  {
+    "id": "Datafield::volume",
+    "node_type": "Datafield",
+    "name": "volume",
+    "alphas_used_in": [],
+    "structured_summary": "Datafield:volume"
+  },
+  {
+    "id": "Datafield::vwap",
+    "node_type": "Datafield",
+    "name": "vwap",
+    "alphas_used_in": [],
+    "structured_summary": "Datafield:vwap"
+  },
+  {
+    "id": "Operator::abs",
+    "node_type": "Operator",
+    "name": "abs",
+    "alphas_used_in": [],
+    "structured_summary": "Operator:abs"
+  },
+  {
+    "id": "Operator::group_mean",
+    "node_type": "Operator",
+    "name": "group_mean",
+    "alphas_used_in": [],
+    "structured_summary": "Operator:group_mean"
+  },
+  {
+    "id": "Operator::group_neutralize",
+    "node_type": "Operator",
+    "name": "group_neutralize",
+    "alphas_used_in": [],
+    "structured_summary": "Operator:group_neutralize"
+  },
+  {
+    "id": "Operator::group_rank",
+    "node_type": "Operator",
+    "name": "group_rank",
+    "alphas_used_in": [],
+    "structured_summary": "Operator:group_rank"
+  },
+  {
+    "id": "Operator::hump",
+    "node_type": "Operator",
+    "name": "hump",
+    "alphas_used_in": [],
+    "structured_summary": "Operator:hump"
+  },
+  {
+    "id": "Operator::log",
+    "node_type": "Operator",
+    "name": "log",
+    "alphas_used_in": [],
+    "structured_summary": "Operator:log"
+  },
+  {
+    "id": "Operator::rank",
+    "node_type": "Operator",
+    "name": "rank",
+    "alphas_used_in": [],
+    "structured_summary": "Operator:rank"
+  },
+  {
+    "id": "Operator::sign",
+    "node_type": "Operator",
+    "name": "sign",
+    "alphas_used_in": [],
+    "structured_summary": "Operator:sign"
+  },
+  {
+    "id": "Operator::ts_av_diff",
+    "node_type": "Operator",
+    "name": "ts_av_diff",
+    "alphas_used_in": [],
+    "structured_summary": "Operator:ts_av_diff"
+  },
+  {
+    "id": "Operator::ts_corr",
+    "node_type": "Operator",
+    "name": "ts_corr",
+    "alphas_used_in": [],
+    "structured_summary": "Operator:ts_corr"
+  },
+  {
+    "id": "Operator::ts_decay_linear",
+    "node_type": "Operator",
+    "name": "ts_decay_linear",
+    "alphas_used_in": [],
+    "structured_summary": "Operator:ts_decay_linear"
+  },
+  {
+    "id": "Operator::ts_delay",
+    "node_type": "Operator",
+    "name": "ts_delay",
+    "alphas_used_in": [],
+    "structured_summary": "Operator:ts_delay"
+  },
+  {
+    "id": "Operator::ts_delta",
+    "node_type": "Operator",
+    "name": "ts_delta",
+    "alphas_used_in": [],
+    "structured_summary": "Operator:ts_delta"
+  },
+  {
+    "id": "Operator::ts_mean",
+    "node_type": "Operator",
+    "name": "ts_mean",
+    "alphas_used_in": [],
+    "structured_summary": "Operator:ts_mean"
+  },
+  {
+    "id": "Operator::ts_rank",
+    "node_type": "Operator",
+    "name": "ts_rank",
+    "alphas_used_in": [],
+    "structured_summary": "Operator:ts_rank"
+  },
+  {
+    "id": "Operator::ts_std_dev",
+    "node_type": "Operator",
+    "name": "ts_std_dev",
+    "alphas_used_in": [],
+    "structured_summary": "Operator:ts_std_dev"
+  },
+  {
+    "id": "Operator::ts_zscore",
+    "node_type": "Operator",
+    "name": "ts_zscore",
+    "alphas_used_in": [],
+    "structured_summary": "Operator:ts_zscore"
+  },
+  {
+    "id": "Operator::zscore",
+    "node_type": "Operator",
+    "name": "zscore",
+    "alphas_used_in": [],
+    "structured_summary": "Operator:zscore"
+  },
+  {
+    "id": "Setting::TOP1000_1_industry",
+    "node_type": "Setting",
+    "name": "TOP1000_1_industry",
+    "alphas_tested": [],
+    "structured_summary": "Setting:TOP1000_1_industry"
+  },
+  {
+    "id": "Setting::TOP1000_1_subindustry",
+    "node_type": "Setting",
+    "name": "TOP1000_1_subindustry",
+    "alphas_tested": [],
+    "structured_summary": "Setting:TOP1000_1_subindustry"
+  },
+  {
+    "id": "Setting::TOP3000_1_industry",
+    "node_type": "Setting",
+    "name": "TOP3000_1_industry",
+    "alphas_tested": [],
+    "structured_summary": "Setting:TOP3000_1_industry"
+  },
+  {
+    "id": "Setting::TOP3000_1_market",
+    "node_type": "Setting",
+    "name": "TOP3000_1_market",
+    "alphas_tested": [],
+    "structured_summary": "Setting:TOP3000_1_market"
+  },
+  {
+    "id": "Setting::TOP3000_1_None",
+    "node_type": "Setting",
+    "name": "TOP3000_1_None",
+    "alphas_tested": [],
+    "structured_summary": "Setting:TOP3000_1_None"
+  },
+  {
+    "id": "Setting::TOP3000_1_sector",
+    "node_type": "Setting",
+    "name": "TOP3000_1_sector",
+    "alphas_tested": [],
+    "structured_summary": "Setting:TOP3000_1_sector"
+  },
+  {
+    "id": "Setting::TOP3000_1_subindustry",
+    "node_type": "Setting",
+    "name": "TOP3000_1_subindustry",
+    "alphas_tested": [],
+    "structured_summary": "Setting:TOP3000_1_subindustry"
+  },
+  {
+    "id": "Setting::TOP500_1_industry",
+    "node_type": "Setting",
+    "name": "TOP500_1_industry",
+    "alphas_tested": [],
+    "structured_summary": "Setting:TOP500_1_industry"
+  },
+  {
+    "id": "FailureMode::correlated",
+    "node_type": "FailureMode",
+    "name": "correlated",
+    "failed_alphas": [],
+    "structured_summary": "FailureMode:correlated"
+  },
+  {
+    "id": "FailureMode::high_turnover",
+    "node_type": "FailureMode",
+    "name": "high_turnover",
+    "failed_alphas": [],
+    "structured_summary": "FailureMode:high_turnover"
+  },
+  {
+    "id": "FailureMode::low_fitness",
+    "node_type": "FailureMode",
+    "name": "low_fitness",
+    "failed_alphas": [],
+    "structured_summary": "FailureMode:low_fitness"
+  },
+  {
+    "id": "FailureMode::low_sharpe",
+    "node_type": "FailureMode",
+    "name": "low_sharpe",
+    "failed_alphas": [],
+    "structured_summary": "FailureMode:low_sharpe"
+  },
+  {
+    "id": "FailureMode::os_failure",
+    "node_type": "FailureMode",
+    "name": "os_failure",
+    "failed_alphas": [],
+    "structured_summary": "FailureMode:os_failure"
+  },
+  {
+    "id": "FailureMode::sector_bias",
+    "node_type": "FailureMode",
+    "name": "sector_bias",
+    "failed_alphas": [],
+    "structured_summary": "FailureMode:sector_bias"
+  },
+  {
+    "id": "Session::da0781cf-0bb3-4a0d-b41b-704d67a6ee5a",
+    "node_type": "Session",
+    "name": "EBIT to CapEx ratio short strategy",
+    "timestamp": "",
+    "alphas_produced": [
+      "alpha_0900",
+      "alpha_0901",
+      "alpha_0902",
+      "alpha_0903",
+      "alpha_0904",
+      "alpha_0905",
+      "alpha_0906",
+      "alpha_0907",
+      "alpha_0908"
+    ],
+    "structured_summary": "Session:EBIT to CapEx ratio short strategy|PRODUCED:9_alphas"
+  },
+  {
+    "id": "Session::5d2db226-af6d-42c6-9139-1381fd11e2fe",
+    "node_type": "Session",
+    "name": "Improving fitness score in quantitative strategy",
+    "timestamp": "",
+    "alphas_produced": [
+      "alpha_0800",
+      "alpha_0801",
+      "alpha_0802",
+      "alpha_0803",
+      "alpha_0804",
+      "alpha_0805",
+      "alpha_0806",
+      "alpha_0807"
+    ],
+    "structured_summary": "Session:Improving fitness score in quantitative strategy|PRODUCED:8_alphas"
+  },
+  {
+    "id": "Session::51ce67d6-3107-4d9f-9f54-9043f8300c01",
+    "node_type": "Session",
+    "name": "Creating uncorrelated alpha from price-volume data",
+    "timestamp": "",
+    "alphas_produced": [
+      "alpha_0106",
+      "alpha_0107",
+      "alpha_0108"
+    ],
+    "structured_summary": "Session:Creating uncorrelated alpha from price-volume data|PRODUCED:3_alphas"
+  },
+  {
+    "id": "Session::1d4bd673-0801-4225-af37-8e4cb4734903",
+    "node_type": "Session",
+    "name": "Applying paper strategies to alpha creation",
+    "timestamp": "",
+    "alphas_produced": [
+      "alpha_0700",
+      "alpha_0701",
+      "alpha_0702",
+      "alpha_0704"
+    ],
+    "structured_summary": "Session:Applying paper strategies to alpha creation|PRODUCED:4_alphas"
+  },
+  {
+    "id": "Session::a6c94acf-e75a-44a5-81a0-e716f080dd29",
+    "node_type": "Session",
+    "name": "Liabilities and leverage analysis",
+    "timestamp": "",
+    "alphas_produced": [
+      "alpha_0600",
+      "alpha_0601",
+      "alpha_0602",
+      "alpha_0603",
+      "alpha_0604",
+      "alpha_0605",
+      "alpha_0606",
+      "alpha_0607",
+      "alpha_0608",
+      "alpha_0609"
+    ],
+    "structured_summary": "Session:Liabilities and leverage analysis|PRODUCED:10_alphas"
+  },
+  {
+    "id": "Session::abe10f6c-8dd4-42b7-a544-12cfb795317b",
+    "node_type": "Session",
+    "name": "Growth investment alpha signal by EBIT ranking",
+    "timestamp": "",
+    "alphas_produced": [
+      "alpha_0200",
+      "alpha_0203",
+      "alpha_0207",
+      "alpha_0208",
+      "alpha_0209",
+      "alpha_0210",
+      "alpha_0211",
+      "alpha_0212"
+    ],
+    "structured_summary": "Session:Growth investment alpha signal by EBIT ranking|PRODUCED:8_alphas"
+  },
+  {
+    "id": "Session::86834b59-2f41-4ee6-a666-c1d0812d404a",
+    "node_type": "Session",
+    "name": "Pearson correlation coefficient with SPY",
+    "timestamp": "",
+    "alphas_produced": [
+      "alpha_0001",
+      "alpha_0003",
+      "alpha_0004",
+      "alpha_0005",
+      "alpha_0006",
+      "alpha_0007",
+      "alpha_0008",
+      "alpha_0009",
+      "alpha_0010",
+      "alpha_0011",
+      "alpha_0012",
+      "alpha_0013",
+      "alpha_0014",
+      "alpha_0015",
+      "alpha_0016",
+      "alpha_0017"
+    ],
+    "structured_summary": "Session:Pearson correlation coefficient with SPY|PRODUCED:16_alphas"
+  },
+  {
+    "id": "Session::f05a49d6-193c-497f-a288-53aef7549256",
+    "node_type": "Session",
+    "name": "Creating alphas for WorldQuant Brain",
+    "timestamp": "",
+    "alphas_produced": [
+      "alpha_0303",
+      "alpha_0304",
+      "alpha_0305",
+      "alpha_0306",
+      "alpha_0307",
+      "alpha_0308"
+    ],
+    "structured_summary": "Session:Creating alphas for WorldQuant Brain|PRODUCED:6_alphas"
+  },
+  {
+    "id": "Session::858dff99-7881-405e-a3df-232c8de9918b",
+    "node_type": "Session",
+    "name": "Grouping sectors in WQB",
+    "timestamp": "",
+    "alphas_produced": [
+      "alpha_0407"
+    ],
+    "structured_summary": "Session:Grouping sectors in WQB|PRODUCED:1_alphas"
+  },
+  {
+    "id": "Alpha::alpha_0001",
+    "node_type": "Alpha",
+    "name": "alpha_0001",
+    "expression": "analyst_revision_rank_derivative",
+    "sharpe": -0.7,
+    "fitness": -0.38,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [],
+    "concepts": [
+      "sentiment",
+      "momentum"
+    ],
+    "datafields": [
+      "analyst_revision_rank_derivative"
+    ],
+    "settings": [
+      "TOP3000_1_subindustry"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness",
+      "high_turnover"
+    ],
+    "correlated_with": [
+      "alpha_0003"
+    ],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0001|CONCEPTS:sentiment,momentum|DF:analyst_revision_rank_derivative|FAIL:low_sharpe,low_fitness,high_turnover|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0003",
+    "node_type": "Alpha",
+    "name": "alpha_0003",
+    "expression": "-analyst_revision_rank_derivative",
+    "sharpe": 0.7,
+    "fitness": 0.38,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [],
+    "concepts": [
+      "sentiment",
+      "mean_reversion"
+    ],
+    "datafields": [
+      "analyst_revision_rank_derivative"
+    ],
+    "settings": [
+      "TOP3000_1_subindustry"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness",
+      "high_turnover"
+    ],
+    "correlated_with": [
+      "alpha_0001"
+    ],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0003|CONCEPTS:sentiment,mean_reversion|DF:analyst_revision_rank_derivative|FAIL:low_sharpe,low_fitness,high_turnover|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0004",
+    "node_type": "Alpha",
+    "name": "alpha_0004",
+    "expression": "zscore(-analyst_revision_rank_derivative) * zscore(beta_last_30_days_spy)",
+    "sharpe": 0.59,
+    "fitness": 0.25,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "zscore"
+    ],
+    "concepts": [
+      "sentiment",
+      "momentum"
+    ],
+    "datafields": [
+      "analyst_revision_rank_derivative",
+      "beta_last_30_days_spy"
+    ],
+    "settings": [
+      "TOP3000_1_subindustry"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness",
+      "sector_bias"
+    ],
+    "correlated_with": [],
+    "derived_from": [
+      "alpha_0003"
+    ],
+    "structured_summary": "Alpha:alpha_0004|OPS:zscore|CONCEPTS:sentiment,momentum|DF:analyst_revision_rank_derivative,beta_last_30_days_spy|FAIL:low_sharpe,low_fitness,sector_bias|DERIVED:alpha_0003|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0005",
+    "node_type": "Alpha",
+    "name": "alpha_0005",
+    "expression": "ts_delta(-analyst_revision_rank_derivative, 5)",
+    "sharpe": 0.21,
+    "fitness": 0.05,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "ts_delta"
+    ],
+    "concepts": [
+      "sentiment",
+      "momentum"
+    ],
+    "datafields": [
+      "analyst_revision_rank_derivative"
+    ],
+    "settings": [
+      "TOP3000_1_subindustry"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness"
+    ],
+    "correlated_with": [],
+    "derived_from": [
+      "alpha_0003"
+    ],
+    "structured_summary": "Alpha:alpha_0005|OPS:ts_delta|CONCEPTS:sentiment,momentum|DF:analyst_revision_rank_derivative|FAIL:low_sharpe,low_fitness|DERIVED:alpha_0003|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0006",
+    "node_type": "Alpha",
+    "name": "alpha_0006",
+    "expression": "fscore_momentum",
+    "sharpe": 0.31,
+    "fitness": 0.05,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [],
+    "concepts": [
+      "quality",
+      "fundamental"
+    ],
+    "datafields": [
+      "fscore_momentum"
+    ],
+    "settings": [
+      "TOP3000_1_subindustry"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness",
+      "sector_bias"
+    ],
+    "correlated_with": [],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0006|CONCEPTS:quality,fundamental|DF:fscore_momentum|FAIL:low_sharpe,low_fitness,sector_bias|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0007",
+    "node_type": "Alpha",
+    "name": "alpha_0007",
+    "expression": "zscore(fscore_momentum) - zscore(mdl77_2400_pbroeresidual)",
+    "sharpe": 0.76,
+    "fitness": 0.17,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "zscore"
+    ],
+    "concepts": [
+      "quality",
+      "value",
+      "fundamental"
+    ],
+    "datafields": [
+      "fscore_momentum",
+      "mdl77_2400_pbroeresidual"
+    ],
+    "settings": [
+      "TOP3000_1_subindustry"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness",
+      "sector_bias"
+    ],
+    "correlated_with": [
+      "alpha_0008",
+      "alpha_0009",
+      "alpha_0010"
+    ],
+    "derived_from": [
+      "alpha_0006"
+    ],
+    "structured_summary": "Alpha:alpha_0007|OPS:zscore|CONCEPTS:quality,value,fundamental|DF:fscore_momentum,mdl77_2400_pbroeresidual|FAIL:low_sharpe,low_fitness,sector_bias|DERIVED:alpha_0006|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0008",
+    "node_type": "Alpha",
+    "name": "alpha_0008",
+    "expression": "zscore(fscore_momentum) * 0.4 + zscore(-mdl77_2400_pbroeresidual) * 0.3 + zscore(ts_std_dev(close, 20)) * 0.3",
+    "sharpe": 0.63,
+    "fitness": 0.12,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "zscore",
+      "ts_std_dev"
+    ],
+    "concepts": [
+      "quality",
+      "value",
+      "volatility",
+      "fundamental"
+    ],
+    "datafields": [
+      "fscore_momentum",
+      "mdl77_2400_pbroeresidual",
+      "close"
+    ],
+    "settings": [
+      "TOP3000_1_subindustry"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness",
+      "sector_bias"
+    ],
+    "correlated_with": [
+      "alpha_0007"
+    ],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0008|OPS:zscore,ts_std_dev|CONCEPTS:quality,value,volatility,fundamental|DF:fscore_momentum,mdl77_2400_pbroeresidual,close|FAIL:low_sharpe,low_fitness,sector_bias|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0009",
+    "node_type": "Alpha",
+    "name": "alpha_0009",
+    "expression": "zscore(fscore_momentum) - zscore(mdl77_2400_pbroeresidual) + zscore(ts_delta(-mdl77_2400_pbroeresidual, 10))",
+    "sharpe": 0.53,
+    "fitness": 0.1,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "zscore",
+      "ts_delta"
+    ],
+    "concepts": [
+      "quality",
+      "value",
+      "momentum",
+      "fundamental"
+    ],
+    "datafields": [
+      "fscore_momentum",
+      "mdl77_2400_pbroeresidual"
+    ],
+    "settings": [
+      "TOP3000_1_subindustry"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness",
+      "sector_bias"
+    ],
+    "correlated_with": [
+      "alpha_0007"
+    ],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0009|OPS:zscore,ts_delta|CONCEPTS:quality,value,momentum,fundamental|DF:fscore_momentum,mdl77_2400_pbroeresidual|FAIL:low_sharpe,low_fitness,sector_bias|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0010",
+    "node_type": "Alpha",
+    "name": "alpha_0010",
+    "expression": "group_rank(zscore(fscore_momentum) - zscore(mdl77_2400_pbroeresidual), subindustry)",
+    "sharpe": 0.76,
+    "fitness": 0.15,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "group_rank",
+      "zscore"
+    ],
+    "concepts": [
+      "quality",
+      "value",
+      "fundamental",
+      "cross_sectional"
+    ],
+    "datafields": [
+      "fscore_momentum",
+      "mdl77_2400_pbroeresidual"
+    ],
+    "settings": [
+      "TOP3000_1_None"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness",
+      "sector_bias"
+    ],
+    "correlated_with": [
+      "alpha_0007",
+      "alpha_0012"
+    ],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0010|OPS:group_rank,zscore|CONCEPTS:quality,value,fundamental,cross_sectional|DF:fscore_momentum,mdl77_2400_pbroeresidual|FAIL:low_sharpe,low_fitness,sector_bias|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0011",
+    "node_type": "Alpha",
+    "name": "alpha_0011",
+    "expression": "if_else(is_nan(fscore_momentum) == 0, group_rank(zscore(fscore_momentum) - zscore(mdl77_2400_pbroeresidual), subindustry), if_else(is_nan(mdl77_2400_pbroeresidual) == 0, group_rank(zscore(-mdl77_2400_",
+    "sharpe": 0.31,
+    "fitness": 0.13,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "group_rank",
+      "zscore",
+      "ts_delta"
+    ],
+    "concepts": [
+      "quality",
+      "value",
+      "momentum",
+      "fundamental"
+    ],
+    "datafields": [
+      "fscore_momentum",
+      "mdl77_2400_pbroeresidual",
+      "close"
+    ],
+    "settings": [
+      "TOP3000_1_None"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness"
+    ],
+    "correlated_with": [],
+    "derived_from": [
+      "alpha_0010"
+    ],
+    "structured_summary": "Alpha:alpha_0011|OPS:group_rank,zscore,ts_delta|CONCEPTS:quality,value,momentum,fundamental|DF:fscore_momentum,mdl77_2400_pbroeresidual,close|FAIL:low_sharpe,low_fitness|DERIVED:alpha_0010|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0012",
+    "node_type": "Alpha",
+    "name": "alpha_0012",
+    "expression": "group_rank(zscore(ts_decay_linear(fscore_momentum, 15)) - zscore(ts_decay_linear(mdl77_2400_pbroeresidual, 15)), subindustry)",
+    "sharpe": 0.76,
+    "fitness": 0.48,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "group_rank",
+      "zscore",
+      "ts_decay_linear"
+    ],
+    "concepts": [
+      "quality",
+      "value",
+      "fundamental",
+      "time_series"
+    ],
+    "datafields": [
+      "fscore_momentum",
+      "mdl77_2400_pbroeresidual"
+    ],
+    "settings": [
+      "TOP3000_1_None"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness"
+    ],
+    "correlated_with": [
+      "alpha_0010"
+    ],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0012|OPS:group_rank,zscore,ts_decay_linear|CONCEPTS:quality,value,fundamental,time_series|DF:fscore_momentum,mdl77_2400_pbroeresidual|FAIL:low_sharpe,low_fitness|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0013",
+    "node_type": "Alpha",
+    "name": "alpha_0013",
+    "expression": "group_rank(-ts_decay_linear(mdl77_2400_pbroeresidual, 15), subindustry)",
+    "sharpe": 0.7,
+    "fitness": 0.43,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "group_rank",
+      "ts_decay_linear"
+    ],
+    "concepts": [
+      "value",
+      "fundamental",
+      "time_series"
+    ],
+    "datafields": [
+      "mdl77_2400_pbroeresidual"
+    ],
+    "settings": [
+      "TOP3000_1_None"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness"
+    ],
+    "correlated_with": [],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0013|OPS:group_rank,ts_decay_linear|CONCEPTS:value,fundamental,time_series|DF:mdl77_2400_pbroeresidual|FAIL:low_sharpe,low_fitness|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0014",
+    "node_type": "Alpha",
+    "name": "alpha_0014",
+    "expression": "-mdl77_2400_pbroeresidual",
+    "sharpe": 0.78,
+    "fitness": 0.56,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [],
+    "concepts": [
+      "value",
+      "fundamental"
+    ],
+    "datafields": [
+      "mdl77_2400_pbroeresidual"
+    ],
+    "settings": [
+      "TOP3000_1_subindustry"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness"
+    ],
+    "correlated_with": [],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0014|CONCEPTS:value,fundamental|DF:mdl77_2400_pbroeresidual|FAIL:low_sharpe,low_fitness|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0015",
+    "node_type": "Alpha",
+    "name": "alpha_0015",
+    "expression": "group_rank(zscore(-mdl77_2400_pbroeresidual) + zscore(ebit / assets), subindustry)",
+    "sharpe": 0.9,
+    "fitness": 0.6,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "group_rank",
+      "zscore"
+    ],
+    "concepts": [
+      "value",
+      "quality",
+      "fundamental"
+    ],
+    "datafields": [
+      "mdl77_2400_pbroeresidual",
+      "ebit",
+      "assets"
+    ],
+    "settings": [
+      "TOP3000_1_None"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness"
+    ],
+    "correlated_with": [],
+    "derived_from": [
+      "alpha_0014"
+    ],
+    "structured_summary": "Alpha:alpha_0015|OPS:group_rank,zscore|CONCEPTS:value,quality,fundamental|DF:mdl77_2400_pbroeresidual,ebit,assets|FAIL:low_sharpe,low_fitness|DERIVED:alpha_0014|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0016",
+    "node_type": "Alpha",
+    "name": "alpha_0016",
+    "expression": "group_rank(zscore(-mdl77_2400_pbroeresidual) + zscore(ebit / assets) + zscore((cashflow_op - capex) / assets), subindustry)",
+    "sharpe": 1.04,
+    "fitness": 0.71,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "group_rank",
+      "zscore"
+    ],
+    "concepts": [
+      "value",
+      "quality",
+      "fundamental"
+    ],
+    "datafields": [
+      "mdl77_2400_pbroeresidual",
+      "ebit",
+      "assets",
+      "cashflow_op",
+      "capex"
+    ],
+    "settings": [
+      "TOP3000_1_None"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness"
+    ],
+    "correlated_with": [],
+    "derived_from": [
+      "alpha_0015"
+    ],
+    "structured_summary": "Alpha:alpha_0016|OPS:group_rank,zscore|CONCEPTS:value,quality,fundamental|DF:mdl77_2400_pbroeresidual,ebit,assets,cashflow_op,capex|FAIL:low_sharpe,low_fitness|DERIVED:alpha_0015|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0017",
+    "node_type": "Alpha",
+    "name": "alpha_0017",
+    "expression": "group_rank(zscore(ts_decay_linear(-mdl77_2400_pbroeresidual, 10)) + zscore(ts_decay_linear(ebit / assets, 10)) + zscore(ts_decay_linear((cashflow_op - capex) / assets, 10)), subindustry)",
+    "sharpe": 0.93,
+    "fitness": 1.68,
+    "rating": "Average",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "group_rank",
+      "zscore",
+      "ts_decay_linear"
+    ],
+    "concepts": [
+      "value",
+      "quality",
+      "fundamental",
+      "time_series"
+    ],
+    "datafields": [
+      "mdl77_2400_pbroeresidual",
+      "ebit",
+      "assets",
+      "cashflow_op",
+      "capex"
+    ],
+    "settings": [
+      "TOP3000_1_None"
+    ],
+    "failure_modes": [
+      "low_sharpe"
+    ],
+    "correlated_with": [],
+    "derived_from": [
+      "alpha_0016"
+    ],
+    "structured_summary": "Alpha:alpha_0017|OPS:group_rank,zscore,ts_decay_linear|CONCEPTS:value,quality,fundamental,time_series|DF:mdl77_2400_pbroeresidual,ebit,assets,cashflow_op,capex|FAIL:low_sharpe|DERIVED:alpha_0016|RATING:Average"
+  },
+  {
+    "id": "Alpha::alpha_0020",
+    "node_type": "Alpha",
+    "name": "alpha_0020",
+    "expression": "zscore(group_rank(zscore(ts_decay_linear(-mdl77_2400_pbroeresidual, 10)) + zscore(ts_decay_linear(ebit / revenue, 10)) + zscore(ts_decay_linear((cashflow_op - capex) / assets, 10)), subindustry))",
+    "sharpe": 1.564,
+    "fitness": 1.158,
+    "rating": "Average",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "zscore",
+      "group_rank",
+      "ts_decay_linear"
+    ],
+    "concepts": [
+      "fundamental",
+      "value",
+      "quality",
+      "cross_sectional",
+      "normalization"
+    ],
+    "datafields": [
+      "mdl77_2400_pbroeresidual",
+      "ebit",
+      "revenue",
+      "cashflow_op",
+      "capex",
+      "assets"
+    ],
+    "settings": [
+      "TOP3000_1_subindustry"
+    ],
+    "failure_modes": [],
+    "correlated_with": [],
+    "derived_from": [
+      "alpha_0017"
+    ],
+    "structured_summary": "Alpha:alpha_0020|OPS:zscore,group_rank,ts_decay_linear|CONCEPTS:fundamental,value,quality,cross_sectional,normalization|DF:mdl77_2400_pbroeresidual,ebit,revenue,cashflow_op,capex|DERIVED:alpha_0017|RATING:Average"
+  },
+  {
+    "id": "Session::submitted_alphas_import_2026-05-05",
+    "node_type": "Session",
+    "name": "submitted_alphas_import_2026-05-05",
+    "timestamp": "",
+    "alphas_produced": [
+      "alpha_0020"
+    ],
+    "structured_summary": "Session:submitted_alphas_import_2026-05-05|PRODUCED:1_alphas"
+  },
+  {
+    "id": "Alpha::alpha_0021",
+    "node_type": "Alpha",
+    "name": "alpha_0021",
+    "expression": "hump(ts_decay_linear(-group_neutralize(scl12_buzz, subindustry), 5))",
+    "sharpe": 1.744,
+    "fitness": 1.516,
+    "rating": "Good",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "hump",
+      "ts_decay_linear",
+      "group_neutralize"
+    ],
+    "concepts": [
+      "sentiment",
+      "mean_reversion",
+      "neutralization"
+    ],
+    "datafields": [
+      "scl12_buzz"
+    ],
+    "settings": [
+      "TOP3000_1_sector"
+    ],
+    "failure_modes": [],
+    "correlated_with": [],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0021|OPS:hump,ts_decay_linear,group_neutralize|CONCEPTS:sentiment,mean_reversion,neutralization|DF:scl12_buzz|RATING:Good"
+  },
+  {
+    "id": "Session::submitted_alphas_import_2026-05-02",
+    "node_type": "Session",
+    "name": "submitted_alphas_import_2026-05-02",
+    "timestamp": "",
+    "alphas_produced": [
+      "alpha_0021"
+    ],
+    "structured_summary": "Session:submitted_alphas_import_2026-05-02|PRODUCED:1_alphas"
+  },
+  {
+    "id": "Alpha::alpha_0022",
+    "node_type": "Alpha",
+    "name": "alpha_0022",
+    "expression": "ts_decay_linear(group_rank(ts_rank(operating_income / cap, 120), industry), 10)",
+    "sharpe": 1.794,
+    "fitness": 1.618,
+    "rating": "Good",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "ts_decay_linear",
+      "group_rank",
+      "ts_rank"
+    ],
+    "concepts": [
+      "fundamental",
+      "quality",
+      "value",
+      "time_series",
+      "cross_sectional"
+    ],
+    "datafields": [
+      "operating_income",
+      "cap"
+    ],
+    "settings": [
+      "TOP500_1_industry"
+    ],
+    "failure_modes": [],
+    "correlated_with": [],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0022|OPS:ts_decay_linear,group_rank,ts_rank|CONCEPTS:fundamental,quality,value,time_series,cross_sectional|DF:operating_income,cap|RATING:Good"
+  },
+  {
+    "id": "Session::submitted_alphas_import_2026-04-30",
+    "node_type": "Session",
+    "name": "submitted_alphas_import_2026-04-30",
+    "timestamp": "",
+    "alphas_produced": [
+      "alpha_0022"
+    ],
+    "structured_summary": "Session:submitted_alphas_import_2026-04-30|PRODUCED:1_alphas"
+  },
+  {
+    "id": "Alpha::alpha_0023",
+    "node_type": "Alpha",
+    "name": "alpha_0023",
+    "expression": "0.90 * ts_decay_linear(-ts_rank(returns>0? 1:0, 250), 250) + 0.10 * -ts_rank(returns>0? 1:0, 250)",
+    "sharpe": 2.052,
+    "fitness": 1.126,
+    "rating": "Average",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "ts_decay_linear",
+      "ts_rank"
+    ],
+    "concepts": [
+      "mean_reversion",
+      "momentum",
+      "time_series"
+    ],
+    "datafields": [
+      "returns"
+    ],
+    "settings": [
+      "TOP3000_1_subindustry"
+    ],
+    "failure_modes": [],
+    "correlated_with": [],
+    "derived_from": [
+      "alpha_0604"
+    ],
+    "structured_summary": "Alpha:alpha_0023|OPS:ts_decay_linear,ts_rank|CONCEPTS:mean_reversion,momentum,time_series|DF:returns|DERIVED:alpha_0604|RATING:Average"
+  },
+  {
+    "id": "Alpha::alpha_0604",
+    "node_type": "Alpha",
+    "name": "alpha_0604",
+    "expression": "ts_decay_linear(-ts_rank(returns>0? 1:0, 250), 250)",
+    "sharpe": 1.26,
+    "fitness": 0.97,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "ts_rank",
+      "ts_decay_linear"
+    ],
+    "concepts": [
+      "momentum",
+      "time_series"
+    ],
+    "datafields": [
+      "returns"
+    ],
+    "settings": [
+      "TOP3000_1_market"
+    ],
+    "failure_modes": [
+      "low_fitness"
+    ],
+    "correlated_with": [],
+    "derived_from": [
+      "alpha_0600"
+    ],
+    "structured_summary": "Alpha:alpha_0604|OPS:ts_rank,ts_decay_linear|CONCEPTS:momentum,time_series|DF:returns|FAIL:low_fitness|DERIVED:alpha_0600|RATING:Needs Improvement"
+  },
+  {
+    "id": "Session::submitted_alphas_import_2026-04-29",
+    "node_type": "Session",
+    "name": "submitted_alphas_import_2026-04-29",
+    "timestamp": "",
+    "alphas_produced": [
+      "alpha_0023",
+      "alpha_0024"
+    ],
+    "structured_summary": "Session:submitted_alphas_import_2026-04-29|PRODUCED:2_alphas"
+  },
+  {
+    "id": "Alpha::alpha_0024",
+    "node_type": "Alpha",
+    "name": "alpha_0024",
+    "expression": "ts_decay_linear(-ts_rank(returns>0? 1:0, 250), 200)",
+    "sharpe": 1.316,
+    "fitness": 1.11,
+    "rating": "Average",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "ts_decay_linear",
+      "ts_rank"
+    ],
+    "concepts": [
+      "mean_reversion",
+      "time_series"
+    ],
+    "datafields": [
+      "returns"
+    ],
+    "settings": [
+      "TOP3000_1_subindustry"
+    ],
+    "failure_modes": [],
+    "correlated_with": [],
+    "derived_from": [
+      "alpha_0604"
+    ],
+    "structured_summary": "Alpha:alpha_0024|OPS:ts_decay_linear,ts_rank|CONCEPTS:mean_reversion,time_series|DF:returns|DERIVED:alpha_0604|RATING:Average"
+  },
+  {
+    "id": "Alpha::alpha_0025",
+    "node_type": "Alpha",
+    "name": "alpha_0025",
+    "expression": "ts_rank(operating_income/cap,252)",
+    "sharpe": 1.57,
+    "fitness": 1.304,
+    "rating": "Good",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "ts_rank"
+    ],
+    "concepts": [
+      "fundamental",
+      "quality",
+      "time_series"
+    ],
+    "datafields": [
+      "operating_income",
+      "cap"
+    ],
+    "settings": [
+      "TOP3000_1_subindustry"
+    ],
+    "failure_modes": [],
+    "correlated_with": [],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0025|OPS:ts_rank|CONCEPTS:fundamental,quality,time_series|DF:operating_income,cap|RATING:Good"
+  },
+  {
+    "id": "Session::submitted_alphas_import_2026-04-28",
+    "node_type": "Session",
+    "name": "submitted_alphas_import_2026-04-28",
+    "timestamp": "",
+    "alphas_produced": [
+      "alpha_0025"
+    ],
+    "structured_summary": "Session:submitted_alphas_import_2026-04-28|PRODUCED:1_alphas"
+  },
+  {
+    "id": "Alpha::alpha_0026",
+    "node_type": "Alpha",
+    "name": "alpha_0026",
+    "expression": "ts_decay_linear(rank(-returns * rank(volume/adv20)) + rank(1 - close/open) + 0.5 * rank(revenue/ebit), 5)",
+    "sharpe": 1.676,
+    "fitness": 1.316,
+    "rating": "Good",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "ts_decay_linear",
+      "rank"
+    ],
+    "concepts": [
+      "mean_reversion",
+      "value",
+      "liquidity",
+      "technical",
+      "cross_sectional"
+    ],
+    "datafields": [
+      "returns",
+      "volume",
+      "adv20",
+      "close",
+      "open",
+      "revenue",
+      "ebit"
+    ],
+    "settings": [
+      "TOP1000_1_subindustry"
+    ],
+    "failure_modes": [],
+    "correlated_with": [],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0026|OPS:ts_decay_linear,rank|CONCEPTS:mean_reversion,value,liquidity,technical,cross_sectional|DF:returns,volume,adv20,close,open|RATING:Good"
+  },
+  {
+    "id": "Session::submitted_alphas_import_2026-05-11",
+    "node_type": "Session",
+    "name": "submitted_alphas_import_2026-05-11",
+    "timestamp": "",
+    "alphas_produced": [
+      "alpha_0026",
+      "alpha_0027",
+      "alpha_0028"
+    ],
+    "structured_summary": "Session:submitted_alphas_import_2026-05-11|PRODUCED:3_alphas"
+  },
+  {
+    "id": "Alpha::alpha_0027",
+    "node_type": "Alpha",
+    "name": "alpha_0027",
+    "expression": "ts_decay_linear(rank(-returns * rank(volume/adv20)) + 0.5 * rank(revenue/ebit), 5)",
+    "sharpe": 1.434,
+    "fitness": 1.186,
+    "rating": "Average",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "ts_decay_linear",
+      "rank"
+    ],
+    "concepts": [
+      "mean_reversion",
+      "value",
+      "liquidity",
+      "cross_sectional"
+    ],
+    "datafields": [
+      "returns",
+      "volume",
+      "adv20",
+      "revenue",
+      "ebit"
+    ],
+    "settings": [
+      "TOP1000_1_subindustry"
+    ],
+    "failure_modes": [],
+    "correlated_with": [],
+    "derived_from": [
+      "alpha_0026"
+    ],
+    "structured_summary": "Alpha:alpha_0027|OPS:ts_decay_linear,rank|CONCEPTS:mean_reversion,value,liquidity,cross_sectional|DF:returns,volume,adv20,revenue,ebit|DERIVED:alpha_0026|RATING:Average"
+  },
+  {
+    "id": "Alpha::alpha_0028",
+    "node_type": "Alpha",
+    "name": "alpha_0028",
+    "expression": "ts_decay_linear(rank(1 - close/open), 5)",
+    "sharpe": 1.666,
+    "fitness": 1.178,
+    "rating": "Average",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "ts_decay_linear",
+      "rank"
+    ],
+    "concepts": [
+      "mean_reversion",
+      "technical",
+      "cross_sectional"
+    ],
+    "datafields": [
+      "close",
+      "open"
+    ],
+    "settings": [
+      "TOP1000_1_subindustry"
+    ],
+    "failure_modes": [],
+    "correlated_with": [],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0028|OPS:ts_decay_linear,rank|CONCEPTS:mean_reversion,technical,cross_sectional|DF:close,open|RATING:Average"
+  },
+  {
+    "id": "Alpha::alpha_0029",
+    "node_type": "Alpha",
+    "name": "alpha_0029",
+    "expression": "ts_decay_linear(zscore(rank(-returns - group_mean(returns, 1, sector))) + zscore(-ts_rank((net_income_adjusted - cashflow_op) / assets, 252)), 5)",
+    "sharpe": 1.64,
+    "fitness": 1.202,
+    "rating": "Average",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "ts_decay_linear",
+      "zscore",
+      "rank",
+      "group_mean",
+      "ts_rank"
+    ],
+    "concepts": [
+      "mean_reversion",
+      "quality",
+      "fundamental",
+      "cross_sectional",
+      "normalization"
+    ],
+    "datafields": [
+      "returns",
+      "net_income_adjusted",
+      "cashflow_op",
+      "assets"
+    ],
+    "settings": [
+      "TOP3000_1_subindustry"
+    ],
+    "failure_modes": [],
+    "correlated_with": [],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0029|OPS:ts_decay_linear,zscore,rank,group_mean,ts_rank|CONCEPTS:mean_reversion,quality,fundamental,cross_sectional,normalization|DF:returns,net_income_adjusted,cashflow_op,assets|RATING:Average"
+  },
+  {
+    "id": "Session::submitted_alphas_import_2026-05-12",
+    "node_type": "Session",
+    "name": "submitted_alphas_import_2026-05-12",
+    "timestamp": "",
+    "alphas_produced": [
+      "alpha_0029"
+    ],
+    "structured_summary": "Session:submitted_alphas_import_2026-05-12|PRODUCED:1_alphas"
+  },
+  {
+    "id": "Alpha::alpha_0050",
+    "node_type": "Alpha",
+    "name": "alpha_0050",
+    "expression": "rank(mdl177_2_globaldevnorthamerica_v502_skew90drtn)",
+    "sharpe": 0.51,
+    "fitness": 0.23,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "rank"
+    ],
+    "concepts": [
+      "sentiment",
+      "technical",
+      "cross_sectional",
+      "volatility"
+    ],
+    "datafields": [],
+    "settings": [
+      "TOP3000_1_market"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness"
+    ],
+    "correlated_with": [
+      "alpha_0501",
+      "alpha_0502",
+      "alpha_0503",
+      "alpha_0504"
+    ],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0050|OPS:rank|CONCEPTS:sentiment,technical,cross_sectional,volatility|FAIL:low_sharpe,low_fitness|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0501",
+    "node_type": "Alpha",
+    "name": "alpha_0501",
+    "expression": "group_rank(ts_rank(close, 252) - ts_rank(close, 21), sector)",
+    "sharpe": 0.82,
+    "fitness": 1.41,
+    "rating": "Average",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "group_rank",
+      "ts_rank"
+    ],
+    "concepts": [
+      "momentum",
+      "cross_sectional",
+      "technical"
+    ],
+    "datafields": [
+      "close"
+    ],
+    "settings": [
+      "TOP3000_1_sector"
+    ],
+    "failure_modes": [
+      "low_sharpe"
+    ],
+    "correlated_with": [
+      "alpha_0050",
+      "alpha_0503"
+    ],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0501|OPS:group_rank,ts_rank|CONCEPTS:momentum,cross_sectional,technical|DF:close|FAIL:low_sharpe|RATING:Average"
+  },
+  {
+    "id": "Session::manual_entry_2026-05-13",
+    "node_type": "Session",
+    "name": "manual_entry_2026-05-13",
+    "timestamp": "",
+    "alphas_produced": [
+      "alpha_0050",
+      "alpha_0501",
+      "alpha_0502",
+      "alpha_0503",
+      "alpha_0504",
+      "alpha_0505"
+    ],
+    "structured_summary": "Session:manual_entry_2026-05-13|PRODUCED:6_alphas"
+  },
+  {
+    "id": "Alpha::alpha_0106",
+    "node_type": "Alpha",
+    "name": "alpha_0106",
+    "expression": "group_rank(-ts_mean((close-low)/(high-low+close*0.0001),10),subindustry)",
+    "sharpe": 1.33,
+    "fitness": 0.63,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "group_rank",
+      "ts_mean"
+    ],
+    "concepts": [
+      "mean_reversion",
+      "technical",
+      "cross_sectional"
+    ],
+    "datafields": [
+      "close",
+      "high",
+      "low"
+    ],
+    "settings": [
+      "TOP1000_1_subindustry"
+    ],
+    "failure_modes": [
+      "low_fitness"
+    ],
+    "correlated_with": [],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0106|OPS:group_rank,ts_mean|CONCEPTS:mean_reversion,technical,cross_sectional|DF:close,high,low|FAIL:low_fitness|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0107",
+    "node_type": "Alpha",
+    "name": "alpha_0107",
+    "expression": "group_rank(-ts_mean((close-low)/(high-low+close*0.0001),22),subindustry)",
+    "sharpe": 0.56,
+    "fitness": 0.21,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "group_rank",
+      "ts_mean"
+    ],
+    "concepts": [
+      "mean_reversion",
+      "technical",
+      "cross_sectional"
+    ],
+    "datafields": [
+      "close",
+      "high",
+      "low"
+    ],
+    "settings": [
+      "TOP1000_1_subindustry"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness"
+    ],
+    "correlated_with": [],
+    "derived_from": [
+      "alpha_0106"
+    ],
+    "structured_summary": "Alpha:alpha_0107|OPS:group_rank,ts_mean|CONCEPTS:mean_reversion,technical,cross_sectional|DF:close,high,low|FAIL:low_sharpe,low_fitness|DERIVED:alpha_0106|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0108",
+    "node_type": "Alpha",
+    "name": "alpha_0108",
+    "expression": "group_rank(-ts_mean((close-low)/(high-low+close*0.0001),10)+0.7*ts_zscore(-ts_delta(vwap,5)/ts_std_dev(returns,20),10),subindustry)",
+    "sharpe": 1.48,
+    "fitness": 0.65,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "group_rank",
+      "ts_mean",
+      "ts_zscore",
+      "ts_delta",
+      "ts_std_dev"
+    ],
+    "concepts": [
+      "mean_reversion",
+      "momentum",
+      "technical",
+      "cross_sectional"
+    ],
+    "datafields": [
+      "close",
+      "high",
+      "low",
+      "vwap",
+      "returns"
+    ],
+    "settings": [
+      "TOP1000_1_subindustry"
+    ],
+    "failure_modes": [
+      "high_turnover",
+      "low_fitness"
+    ],
+    "correlated_with": [],
+    "derived_from": [
+      "alpha_0106"
+    ],
+    "structured_summary": "Alpha:alpha_0108|OPS:group_rank,ts_mean,ts_zscore,ts_delta,ts_std_dev|CONCEPTS:mean_reversion,momentum,technical,cross_sectional|DF:close,high,low,vwap,returns|FAIL:high_turnover,low_fitness|DERIVED:alpha_0106|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0200",
+    "node_type": "Alpha",
+    "name": "alpha_0200",
+    "expression": "-group_rank(fnd2_ebitdm, industry) - group_rank(fnd2_ebitfr, industry); group_rank(fn_assets_fair_val_a, industry) > 0.5 ? alpha * 2 : alpha",
+    "sharpe": 0.52,
+    "fitness": 0.38,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "group_rank"
+    ],
+    "concepts": [
+      "value",
+      "fundamental",
+      "quality"
+    ],
+    "datafields": [
+      "fnd2_ebitdm",
+      "fnd2_ebitfr",
+      "fn_assets_fair_val_a"
+    ],
+    "settings": [
+      "TOP500_1_industry"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness"
+    ],
+    "correlated_with": [
+      "alpha_0203"
+    ],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0200|OPS:group_rank|CONCEPTS:value,fundamental,quality|DF:fnd2_ebitdm,fnd2_ebitfr,fn_assets_fair_val_a|FAIL:low_sharpe,low_fitness|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0203",
+    "node_type": "Alpha",
+    "name": "alpha_0203",
+    "expression": "ts_decay_linear((-group_rank(fnd2_ebitdm, industry) - group_rank(fnd2_ebitfr, industry)) * group_rank(fn_assets_fair_val_a, industry) * sign(ts_delta(close, 60)), 10)",
+    "sharpe": 0.6,
+    "fitness": 0.33,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "group_rank",
+      "ts_decay_linear",
+      "sign",
+      "ts_delta"
+    ],
+    "concepts": [
+      "value",
+      "momentum",
+      "fundamental"
+    ],
+    "datafields": [
+      "fnd2_ebitdm",
+      "fnd2_ebitfr",
+      "fn_assets_fair_val_a",
+      "close"
+    ],
+    "settings": [
+      "TOP500_1_industry"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness"
+    ],
+    "correlated_with": [
+      "alpha_0200",
+      "alpha_0207",
+      "alpha_0208"
+    ],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0203|OPS:group_rank,ts_decay_linear,sign,ts_delta|CONCEPTS:value,momentum,fundamental|DF:fnd2_ebitdm,fnd2_ebitfr,fn_assets_fair_val_a,close|FAIL:low_sharpe,low_fitness|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0207",
+    "node_type": "Alpha",
+    "name": "alpha_0207",
+    "expression": "ts_decay_linear((-group_zscore(fnd2_ebitdm, industry) - group_zscore(fnd2_ebitfr, industry)) * group_zscore(fn_assets_fair_val_a, industry) * sign(ts_delta(close, 60)), 10)",
+    "sharpe": -0.33,
+    "fitness": -0.16,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "ts_decay_linear",
+      "sign",
+      "ts_delta"
+    ],
+    "concepts": [
+      "value",
+      "fundamental",
+      "momentum",
+      "normalization"
+    ],
+    "datafields": [
+      "fnd2_ebitdm",
+      "fnd2_ebitfr",
+      "fn_assets_fair_val_a",
+      "close"
+    ],
+    "settings": [
+      "TOP500_1_industry"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness",
+      "sector_bias"
+    ],
+    "correlated_with": [
+      "alpha_0203"
+    ],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0207|OPS:ts_decay_linear,sign,ts_delta|CONCEPTS:value,fundamental,momentum,normalization|DF:fnd2_ebitdm,fnd2_ebitfr,fn_assets_fair_val_a,close|FAIL:low_sharpe,low_fitness,sector_bias|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0208",
+    "node_type": "Alpha",
+    "name": "alpha_0208",
+    "expression": "ts_decay_linear((-group_rank(fnd2_ebitdm, industry) - group_rank(fnd2_ebitfr, industry)) * group_rank(fn_assets_fair_val_a, industry) * sign(ts_av_diff(close, 120)), 10)",
+    "sharpe": 0.68,
+    "fitness": 0.42,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "group_rank",
+      "ts_decay_linear",
+      "sign",
+      "ts_av_diff"
+    ],
+    "concepts": [
+      "value",
+      "momentum",
+      "fundamental"
+    ],
+    "datafields": [
+      "fnd2_ebitdm",
+      "fnd2_ebitfr",
+      "fn_assets_fair_val_a",
+      "close"
+    ],
+    "settings": [
+      "TOP500_1_industry"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness"
+    ],
+    "correlated_with": [
+      "alpha_0203",
+      "alpha_0209",
+      "alpha_0210"
+    ],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0208|OPS:group_rank,ts_decay_linear,sign,ts_av_diff|CONCEPTS:value,momentum,fundamental|DF:fnd2_ebitdm,fnd2_ebitfr,fn_assets_fair_val_a,close|FAIL:low_sharpe,low_fitness|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0209",
+    "node_type": "Alpha",
+    "name": "alpha_0209",
+    "expression": "ts_decay_linear((-group_rank(fnd2_ebitdm, industry) - group_rank(fnd2_ebitfr, industry)) * group_rank(fn_assets_fair_val_a, industry) * rank(ts_av_diff(close, 250) / ts_std_dev(returns, 250)), 10)",
+    "sharpe": 0.34,
+    "fitness": 0.18,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "group_rank",
+      "rank",
+      "ts_decay_linear",
+      "ts_av_diff",
+      "ts_std_dev"
+    ],
+    "concepts": [
+      "value",
+      "momentum",
+      "fundamental",
+      "volatility"
+    ],
+    "datafields": [
+      "fnd2_ebitdm",
+      "fnd2_ebitfr",
+      "fn_assets_fair_val_a",
+      "close",
+      "returns"
+    ],
+    "settings": [
+      "TOP500_1_industry"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness"
+    ],
+    "correlated_with": [
+      "alpha_0208"
+    ],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0209|OPS:group_rank,rank,ts_decay_linear,ts_av_diff,ts_std_dev|CONCEPTS:value,momentum,fundamental,volatility|DF:fnd2_ebitdm,fnd2_ebitfr,fn_assets_fair_val_a,close,returns|FAIL:low_sharpe,low_fitness|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0210",
+    "node_type": "Alpha",
+    "name": "alpha_0210",
+    "expression": "ts_decay_linear((-group_rank(fnd2_ebitdm, industry) - group_rank(fnd2_ebitfr, industry)) * group_rank(fn_assets_fair_val_a, industry) * sign(ts_av_diff(close, 120)) * group_rank(ts_mean(returns, 250),",
+    "sharpe": 1.04,
+    "fitness": 0.88,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "group_rank",
+      "ts_decay_linear",
+      "sign",
+      "ts_av_diff",
+      "ts_mean"
+    ],
+    "concepts": [
+      "value",
+      "momentum",
+      "fundamental",
+      "quality"
+    ],
+    "datafields": [
+      "fnd2_ebitdm",
+      "fnd2_ebitfr",
+      "fn_assets_fair_val_a",
+      "close",
+      "returns"
+    ],
+    "settings": [
+      "TOP500_1_industry"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness"
+    ],
+    "correlated_with": [
+      "alpha_0208",
+      "alpha_0211"
+    ],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0210|OPS:group_rank,ts_decay_linear,sign,ts_av_diff,ts_mean|CONCEPTS:value,momentum,fundamental,quality|DF:fnd2_ebitdm,fnd2_ebitfr,fn_assets_fair_val_a,close,returns|FAIL:low_sharpe,low_fitness|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0211",
+    "node_type": "Alpha",
+    "name": "alpha_0211",
+    "expression": "ts_decay_linear((-group_rank(fnd2_ebitdm, industry) - group_rank(fnd2_ebitfr, industry)) * group_rank(fn_assets_fair_val_a, industry) * sign(ts_av_diff(close, 250)), 10)",
+    "sharpe": 1.04,
+    "fitness": 0.88,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "group_rank",
+      "ts_decay_linear",
+      "sign",
+      "ts_av_diff"
+    ],
+    "concepts": [
+      "value",
+      "momentum",
+      "fundamental"
+    ],
+    "datafields": [
+      "fnd2_ebitdm",
+      "fnd2_ebitfr",
+      "fn_assets_fair_val_a",
+      "close"
+    ],
+    "settings": [
+      "TOP500_1_industry"
+    ],
+    "failure_modes": [
+      "low_fitness"
+    ],
+    "correlated_with": [
+      "alpha_0210",
+      "alpha_0212"
+    ],
+    "derived_from": [
+      "alpha_0208"
+    ],
+    "structured_summary": "Alpha:alpha_0211|OPS:group_rank,ts_decay_linear,sign,ts_av_diff|CONCEPTS:value,momentum,fundamental|DF:fnd2_ebitdm,fnd2_ebitfr,fn_assets_fair_val_a,close|FAIL:low_fitness|DERIVED:alpha_0208|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0212",
+    "node_type": "Alpha",
+    "name": "alpha_0212",
+    "expression": "ts_decay_linear((-group_rank(fnd2_ebitdm, industry) - group_rank(fnd2_ebitfr, industry)) * group_rank(fn_assets_fair_val_a, industry) * sign(ts_av_diff(close, 60) + ts_av_diff(close, 250)), 10)",
+    "sharpe": 0.98,
+    "fitness": 0.65,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "group_rank",
+      "ts_decay_linear",
+      "sign",
+      "ts_av_diff"
+    ],
+    "concepts": [
+      "value",
+      "momentum",
+      "fundamental"
+    ],
+    "datafields": [
+      "fnd2_ebitdm",
+      "fnd2_ebitfr",
+      "fn_assets_fair_val_a",
+      "close"
+    ],
+    "settings": [
+      "TOP500_1_industry"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness"
+    ],
+    "correlated_with": [
+      "alpha_0211"
+    ],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0212|OPS:group_rank,ts_decay_linear,sign,ts_av_diff|CONCEPTS:value,momentum,fundamental|DF:fnd2_ebitdm,fnd2_ebitfr,fn_assets_fair_val_a,close|FAIL:low_sharpe,low_fitness|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0303",
+    "node_type": "Alpha",
+    "name": "alpha_0303",
+    "expression": "zscore(group_rank(zscore(ts_decay_linear((revenue - cogs) / assets, 10)) + zscore(ts_decay_linear(mdl177_deepvaluefactor_bp_alt, 10)) + zscore(ts_decay_linear(mdl177_deepvaluefactor_curep_alt, 10)), i",
+    "sharpe": 0.56,
+    "fitness": 0.22,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "zscore",
+      "group_rank",
+      "ts_decay_linear",
+      "ts_rank",
+      "ts_av_diff"
+    ],
+    "concepts": [
+      "value",
+      "quality",
+      "momentum",
+      "mean_reversion",
+      "fundamental"
+    ],
+    "datafields": [
+      "revenue",
+      "cogs",
+      "assets",
+      "close",
+      "mdl177_deepvaluefactor_bp_alt",
+      "mdl177_deepvaluefactor_curep_alt"
+    ],
+    "settings": [
+      "TOP1000_1_industry"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness"
+    ],
+    "correlated_with": [],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0303|OPS:zscore,group_rank,ts_decay_linear,ts_rank,ts_av_diff|CONCEPTS:value,quality,momentum,mean_reversion,fundamental|DF:revenue,cogs,assets,close,mdl177_deepvaluefactor_bp_alt|FAIL:low_sharpe,low_fitness|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0304",
+    "node_type": "Alpha",
+    "name": "alpha_0304",
+    "expression": "zscore(group_rank(zscore(ts_decay_linear((revenue - cogs) / assets, 10)) + zscore(ts_decay_linear(mdl177_deepvaluefactor_bp_alt, 10)) + zscore(ts_decay_linear(mdl177_deepvaluefactor_curep_alt, 10)), i",
+    "sharpe": 0.29,
+    "fitness": 0.1,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "zscore",
+      "group_rank",
+      "ts_decay_linear",
+      "ts_rank",
+      "ts_av_diff"
+    ],
+    "concepts": [
+      "value",
+      "quality",
+      "momentum",
+      "mean_reversion",
+      "fundamental"
+    ],
+    "datafields": [
+      "revenue",
+      "cogs",
+      "assets",
+      "close",
+      "mdl177_deepvaluefactor_bp_alt",
+      "mdl177_deepvaluefactor_curep_alt"
+    ],
+    "settings": [
+      "TOP1000_1_industry"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness"
+    ],
+    "correlated_with": [],
+    "derived_from": [
+      "alpha_0303"
+    ],
+    "structured_summary": "Alpha:alpha_0304|OPS:zscore,group_rank,ts_decay_linear,ts_rank,ts_av_diff|CONCEPTS:value,quality,momentum,mean_reversion,fundamental|DF:revenue,cogs,assets,close,mdl177_deepvaluefactor_bp_alt|FAIL:low_sharpe,low_fitness|DERIVED:alpha_0303|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0305",
+    "node_type": "Alpha",
+    "name": "alpha_0305",
+    "expression": "zscore(group_rank(zscore(ts_decay_linear((revenue - cogs) / assets, 10)) + zscore(ts_decay_linear(mdl177_deepvaluefactor_bp_alt, 10)) + zscore(ts_decay_linear(mdl177_deepvaluefactor_curep_alt, 10)), i",
+    "sharpe": 0.72,
+    "fitness": 0.28,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "zscore",
+      "group_rank",
+      "ts_decay_linear",
+      "ts_rank",
+      "ts_av_diff",
+      "ts_delta"
+    ],
+    "concepts": [
+      "value",
+      "quality",
+      "momentum",
+      "mean_reversion",
+      "fundamental",
+      "sentiment"
+    ],
+    "datafields": [
+      "revenue",
+      "cogs",
+      "assets",
+      "close",
+      "mdl177_deepvaluefactor_bp_alt",
+      "mdl177_deepvaluefactor_curep_alt",
+      "anl4_ebit_value"
+    ],
+    "settings": [
+      "TOP1000_1_industry"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness"
+    ],
+    "correlated_with": [],
+    "derived_from": [
+      "alpha_0303"
+    ],
+    "structured_summary": "Alpha:alpha_0305|OPS:zscore,group_rank,ts_decay_linear,ts_rank,ts_av_diff|CONCEPTS:value,quality,momentum,mean_reversion,fundamental|DF:revenue,cogs,assets,close,mdl177_deepvaluefactor_bp_alt|FAIL:low_sharpe,low_fitness|DERIVED:alpha_0303|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0306",
+    "node_type": "Alpha",
+    "name": "alpha_0306",
+    "expression": "zscore(group_rank(ts_decay_linear((revenue - cogs) / assets, 10), industry))",
+    "sharpe": -0.23,
+    "fitness": -0.08,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "zscore",
+      "group_rank",
+      "ts_decay_linear"
+    ],
+    "concepts": [
+      "quality",
+      "fundamental",
+      "value"
+    ],
+    "datafields": [
+      "revenue",
+      "cogs",
+      "assets"
+    ],
+    "settings": [
+      "TOP1000_1_industry"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness"
+    ],
+    "correlated_with": [
+      "alpha_0307",
+      "alpha_0308"
+    ],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0306|OPS:zscore,group_rank,ts_decay_linear|CONCEPTS:quality,fundamental,value|DF:revenue,cogs,assets|FAIL:low_sharpe,low_fitness|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0307",
+    "node_type": "Alpha",
+    "name": "alpha_0307",
+    "expression": "zscore(group_rank(ts_decay_linear(mdl177_deepvaluefactor_bp_alt, 10), industry))",
+    "sharpe": -0.83,
+    "fitness": -0.54,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "zscore",
+      "group_rank",
+      "ts_decay_linear"
+    ],
+    "concepts": [
+      "value",
+      "fundamental"
+    ],
+    "datafields": [
+      "mdl177_deepvaluefactor_bp_alt"
+    ],
+    "settings": [
+      "TOP1000_1_industry"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness",
+      "sector_bias"
+    ],
+    "correlated_with": [
+      "alpha_0306",
+      "alpha_0308"
+    ],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0307|OPS:zscore,group_rank,ts_decay_linear|CONCEPTS:value,fundamental|DF:mdl177_deepvaluefactor_bp_alt|FAIL:low_sharpe,low_fitness,sector_bias|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0308",
+    "node_type": "Alpha",
+    "name": "alpha_0308",
+    "expression": "zscore(group_rank(ts_decay_linear(mdl177_deepvaluefactor_curep_alt, 10), industry))",
+    "sharpe": 0.86,
+    "fitness": 0.64,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "zscore",
+      "group_rank",
+      "ts_decay_linear"
+    ],
+    "concepts": [
+      "value",
+      "fundamental"
+    ],
+    "datafields": [
+      "mdl177_deepvaluefactor_curep_alt"
+    ],
+    "settings": [
+      "TOP1000_1_industry"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness"
+    ],
+    "correlated_with": [
+      "alpha_0307",
+      "alpha_0306"
+    ],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0308|OPS:zscore,group_rank,ts_decay_linear|CONCEPTS:value,fundamental|DF:mdl177_deepvaluefactor_curep_alt|FAIL:low_sharpe,low_fitness|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0407",
+    "node_type": "Alpha",
+    "name": "alpha_0407",
+    "expression": "rank(-returns - group_mean(returns, 1, sector))",
+    "sharpe": 1.33,
+    "fitness": 0.7,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "rank",
+      "group_mean"
+    ],
+    "concepts": [
+      "mean_reversion",
+      "neutralization",
+      "cross_sectional"
+    ],
+    "datafields": [
+      "returns"
+    ],
+    "settings": [
+      "TOP3000_1_subindustry"
+    ],
+    "failure_modes": [
+      "high_turnover",
+      "low_fitness"
+    ],
+    "correlated_with": [],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0407|OPS:rank,group_mean|CONCEPTS:mean_reversion,neutralization,cross_sectional|DF:returns|FAIL:high_turnover,low_fitness|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0502",
+    "node_type": "Alpha",
+    "name": "alpha_0502",
+    "expression": "zscore(rank(mdl177_2_globaldevnorthamerica_v502_skew90drtn) + zscore(group_rank(ts_rank(close, 252) - ts_rank(close, 21), sector)))",
+    "sharpe": 0.22,
+    "fitness": 0.07,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "zscore",
+      "rank",
+      "group_rank",
+      "ts_rank"
+    ],
+    "concepts": [
+      "momentum",
+      "sentiment",
+      "cross_sectional",
+      "normalization"
+    ],
+    "datafields": [
+      "close"
+    ],
+    "settings": [
+      "TOP3000_1_subindustry"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness"
+    ],
+    "correlated_with": [
+      "alpha_0050",
+      "alpha_0503"
+    ],
+    "derived_from": [
+      "alpha_0501"
+    ],
+    "structured_summary": "Alpha:alpha_0502|OPS:zscore,rank,group_rank,ts_rank|CONCEPTS:momentum,sentiment,cross_sectional,normalization|DF:close|FAIL:low_sharpe,low_fitness|DERIVED:alpha_0501|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0503",
+    "node_type": "Alpha",
+    "name": "alpha_0503",
+    "expression": "zscore(0.6 * rank(mdl177_2_globaldevnorthamerica_v502_skew90drtn) + 0.4 * zscore(group_rank(ts_rank(close, 252) - ts_rank(close, 21), sector)))",
+    "sharpe": 0.22,
+    "fitness": 0.08,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "zscore",
+      "rank",
+      "group_rank",
+      "ts_rank"
+    ],
+    "concepts": [
+      "momentum",
+      "sentiment",
+      "cross_sectional",
+      "normalization"
+    ],
+    "datafields": [
+      "close"
+    ],
+    "settings": [
+      "TOP3000_1_market"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness"
+    ],
+    "correlated_with": [
+      "alpha_0050",
+      "alpha_0501"
+    ],
+    "derived_from": [
+      "alpha_0502"
+    ],
+    "structured_summary": "Alpha:alpha_0503|OPS:zscore,rank,group_rank,ts_rank|CONCEPTS:momentum,sentiment,cross_sectional,normalization|DF:close|FAIL:low_sharpe,low_fitness|DERIVED:alpha_0502|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0504",
+    "node_type": "Alpha",
+    "name": "alpha_0504",
+    "expression": "zscore(group_rank(ts_rank(close, 252) - ts_rank(close, 21), sector))",
+    "sharpe": 0.77,
+    "fitness": 0.39,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "zscore",
+      "group_rank",
+      "ts_rank"
+    ],
+    "concepts": [
+      "momentum",
+      "cross_sectional",
+      "normalization"
+    ],
+    "datafields": [
+      "close"
+    ],
+    "settings": [
+      "TOP3000_1_market"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness"
+    ],
+    "correlated_with": [
+      "alpha_0050"
+    ],
+    "derived_from": [
+      "alpha_0501"
+    ],
+    "structured_summary": "Alpha:alpha_0504|OPS:zscore,group_rank,ts_rank|CONCEPTS:momentum,cross_sectional,normalization|DF:close|FAIL:low_sharpe,low_fitness|DERIVED:alpha_0501|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0505",
+    "node_type": "Alpha",
+    "name": "alpha_0505",
+    "expression": "ts_decay_linear(zscore(group_rank(ts_rank(close, 252) - ts_rank(close, 21), sector)), 10)",
+    "sharpe": 0.47,
+    "fitness": 0.33,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "ts_decay_linear",
+      "zscore",
+      "group_rank",
+      "ts_rank"
+    ],
+    "concepts": [
+      "momentum",
+      "cross_sectional",
+      "time_series",
+      "normalization"
+    ],
+    "datafields": [
+      "close"
+    ],
+    "settings": [
+      "TOP3000_1_market"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness"
+    ],
+    "correlated_with": [],
+    "derived_from": [
+      "alpha_0504"
+    ],
+    "structured_summary": "Alpha:alpha_0505|OPS:ts_decay_linear,zscore,group_rank,ts_rank|CONCEPTS:momentum,cross_sectional,time_series,normalization|DF:close|FAIL:low_sharpe,low_fitness|DERIVED:alpha_0504|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0600",
+    "node_type": "Alpha",
+    "name": "alpha_0600",
+    "expression": "-ts_rank(returns>0? 1:0, 250)",
+    "sharpe": 1.62,
+    "fitness": 0.5,
+    "rating": "Needs Improvement",
+    "is_ceiling": true,
+    "ceiling_blocked_by": "Fitness 0.50 < 1.0 cutoff (gap +0.50) | Turnover 131.8% > 70% cutoff (excess +61.8pp)",
+    "operators": [
+      "ts_rank"
+    ],
+    "concepts": [
+      "momentum",
+      "time_series",
+      "cross_sectional"
+    ],
+    "datafields": [
+      "returns"
+    ],
+    "settings": [
+      "TOP3000_1_market"
+    ],
+    "failure_modes": [
+      "high_turnover",
+      "low_fitness"
+    ],
+    "correlated_with": [
+      "alpha_0603"
+    ],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0600|OPS:ts_rank|CONCEPTS:momentum,time_series,cross_sectional|DF:returns|FAIL:high_turnover,low_fitness|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0601",
+    "node_type": "Alpha",
+    "name": "alpha_0601",
+    "expression": "hump(-ts_rank(returns>0? 1:0, 250))",
+    "sharpe": -0.33,
+    "fitness": -0.11,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "ts_rank",
+      "hump"
+    ],
+    "concepts": [
+      "momentum",
+      "time_series"
+    ],
+    "datafields": [
+      "returns"
+    ],
+    "settings": [
+      "TOP3000_1_market"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness"
+    ],
+    "correlated_with": [
+      "alpha_0602"
+    ],
+    "derived_from": [
+      "alpha_0600"
+    ],
+    "structured_summary": "Alpha:alpha_0601|OPS:ts_rank,hump|CONCEPTS:momentum,time_series|DF:returns|FAIL:low_sharpe,low_fitness|DERIVED:alpha_0600|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0602",
+    "node_type": "Alpha",
+    "name": "alpha_0602",
+    "expression": "hump(-log(1 + ts_rank(returns>0? 1:0, 250) / 100))",
+    "sharpe": -0.5,
+    "fitness": -0.23,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "ts_rank",
+      "log",
+      "hump"
+    ],
+    "concepts": [
+      "momentum",
+      "time_series",
+      "normalization"
+    ],
+    "datafields": [
+      "returns"
+    ],
+    "settings": [
+      "TOP3000_1_market"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness"
+    ],
+    "correlated_with": [
+      "alpha_0601"
+    ],
+    "derived_from": [
+      "alpha_0600"
+    ],
+    "structured_summary": "Alpha:alpha_0602|OPS:ts_rank,log,hump|CONCEPTS:momentum,time_series,normalization|DF:returns|FAIL:low_sharpe,low_fitness|DERIVED:alpha_0600|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0603",
+    "node_type": "Alpha",
+    "name": "alpha_0603",
+    "expression": "-log(1 + ts_rank(returns>0? 1:0, 250) / 100)",
+    "sharpe": 1.62,
+    "fitness": 0.5,
+    "rating": "Needs Improvement",
+    "is_ceiling": true,
+    "ceiling_blocked_by": "Fitness 0.50 < 1.0 cutoff (gap +0.50) | Turnover 131.8% > 70% cutoff (excess +61.8pp)",
+    "operators": [
+      "ts_rank",
+      "log"
+    ],
+    "concepts": [
+      "momentum",
+      "time_series",
+      "normalization"
+    ],
+    "datafields": [
+      "returns"
+    ],
+    "settings": [
+      "TOP3000_1_market"
+    ],
+    "failure_modes": [
+      "high_turnover",
+      "low_fitness"
+    ],
+    "correlated_with": [
+      "alpha_0600"
+    ],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0603|OPS:ts_rank,log|CONCEPTS:momentum,time_series,normalization|DF:returns|FAIL:high_turnover,low_fitness|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0605",
+    "node_type": "Alpha",
+    "name": "alpha_0605",
+    "expression": "rank(ts_mean(close,10))/rank(ts_mean(close,5))*rank(volume/ts_mean(volume,10))*sign(ts_delta(close,5))",
+    "sharpe": -1.18,
+    "fitness": -0.6,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "rank",
+      "ts_mean",
+      "ts_delta",
+      "sign"
+    ],
+    "concepts": [
+      "momentum",
+      "technical",
+      "cross_sectional"
+    ],
+    "datafields": [
+      "close",
+      "volume"
+    ],
+    "settings": [
+      "TOP3000_1_market"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness"
+    ],
+    "correlated_with": [],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0605|OPS:rank,ts_mean,ts_delta,sign|CONCEPTS:momentum,technical,cross_sectional|DF:close,volume|FAIL:low_sharpe,low_fitness|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0606",
+    "node_type": "Alpha",
+    "name": "alpha_0606",
+    "expression": "-rank(ts_mean(close,10))/rank(ts_mean(close,5))*rank(volume/ts_mean(volume,10))*sign(ts_delta(close,5))",
+    "sharpe": 1.42,
+    "fitness": 0.66,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "rank",
+      "ts_mean",
+      "ts_delta",
+      "sign"
+    ],
+    "concepts": [
+      "momentum",
+      "technical",
+      "cross_sectional"
+    ],
+    "datafields": [
+      "close",
+      "volume"
+    ],
+    "settings": [
+      "TOP3000_1_market"
+    ],
+    "failure_modes": [
+      "low_fitness"
+    ],
+    "correlated_with": [],
+    "derived_from": [
+      "alpha_0605"
+    ],
+    "structured_summary": "Alpha:alpha_0606|OPS:rank,ts_mean,ts_delta,sign|CONCEPTS:momentum,technical,cross_sectional|DF:close,volume|FAIL:low_fitness|DERIVED:alpha_0605|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0607",
+    "node_type": "Alpha",
+    "name": "alpha_0607",
+    "expression": "ts_decay_linear(-rank(ts_mean(close,10))/rank(ts_mean(close,5))*rank(volume/ts_mean(volume,10))*sign(ts_delta(close,5)), 250)",
+    "sharpe": 0.49,
+    "fitness": 0.33,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "rank",
+      "ts_mean",
+      "ts_delta",
+      "sign",
+      "ts_decay_linear"
+    ],
+    "concepts": [
+      "momentum",
+      "technical",
+      "cross_sectional"
+    ],
+    "datafields": [
+      "close",
+      "volume"
+    ],
+    "settings": [
+      "TOP3000_1_market"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness"
+    ],
+    "correlated_with": [],
+    "derived_from": [
+      "alpha_0606"
+    ],
+    "structured_summary": "Alpha:alpha_0607|OPS:rank,ts_mean,ts_delta,sign,ts_decay_linear|CONCEPTS:momentum,technical,cross_sectional|DF:close,volume|FAIL:low_sharpe,low_fitness|DERIVED:alpha_0606|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0608",
+    "node_type": "Alpha",
+    "name": "alpha_0608",
+    "expression": "0.6 * -rank(ts_mean(close,10))/rank(ts_mean(close,5))*rank(volume/ts_mean(volume,10))*sign(ts_delta(close,5)) + 0.3 * ts_delay(-rank(ts_mean(close,10))/rank(ts_mean(close,5))*rank(volume/ts_mean(volum",
+    "sharpe": 1.31,
+    "fitness": 0.64,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "rank",
+      "ts_mean",
+      "ts_delta",
+      "sign",
+      "ts_delay"
+    ],
+    "concepts": [
+      "momentum",
+      "technical",
+      "cross_sectional"
+    ],
+    "datafields": [
+      "close",
+      "volume"
+    ],
+    "settings": [
+      "TOP3000_1_market"
+    ],
+    "failure_modes": [
+      "low_fitness"
+    ],
+    "correlated_with": [],
+    "derived_from": [
+      "alpha_0606"
+    ],
+    "structured_summary": "Alpha:alpha_0608|OPS:rank,ts_mean,ts_delta,sign,ts_delay|CONCEPTS:momentum,technical,cross_sectional|DF:close,volume|FAIL:low_fitness|DERIVED:alpha_0606|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0609",
+    "node_type": "Alpha",
+    "name": "alpha_0609",
+    "expression": "0.5 * -rank(ts_mean(close,10))/rank(ts_mean(close,5))*rank(volume/ts_mean(volume,10))*sign(ts_delta(close,5)) + 0.4 * ts_delay(-rank(ts_mean(close,10))/rank(ts_mean(close,5))*rank(volume/ts_mean(volum",
+    "sharpe": 1.27,
+    "fitness": 0.62,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "rank",
+      "ts_mean",
+      "ts_delta",
+      "sign",
+      "ts_delay"
+    ],
+    "concepts": [
+      "momentum",
+      "technical",
+      "cross_sectional"
+    ],
+    "datafields": [
+      "close",
+      "volume"
+    ],
+    "settings": [
+      "TOP3000_1_market"
+    ],
+    "failure_modes": [
+      "low_fitness"
+    ],
+    "correlated_with": [],
+    "derived_from": [
+      "alpha_0608"
+    ],
+    "structured_summary": "Alpha:alpha_0609|OPS:rank,ts_mean,ts_delta,sign,ts_delay|CONCEPTS:momentum,technical,cross_sectional|DF:close,volume|FAIL:low_fitness|DERIVED:alpha_0608|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0700",
+    "node_type": "Alpha",
+    "name": "alpha_0700",
+    "expression": "group_neutralize(-zscore(ts_av_diff(close, 10)) * ts_std_dev(returns, 20), subindustry)",
+    "sharpe": -0.47,
+    "fitness": -0.19,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "group_neutralize",
+      "zscore",
+      "ts_av_diff",
+      "ts_std_dev"
+    ],
+    "concepts": [
+      "mean_reversion",
+      "volatility",
+      "neutralization"
+    ],
+    "datafields": [
+      "close",
+      "returns"
+    ],
+    "settings": [
+      "TOP3000_1_subindustry"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness",
+      "sector_bias"
+    ],
+    "correlated_with": [],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0700|OPS:group_neutralize,zscore,ts_av_diff,ts_std_dev|CONCEPTS:mean_reversion,volatility,neutralization|DF:close,returns|FAIL:low_sharpe,low_fitness,sector_bias|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0701",
+    "node_type": "Alpha",
+    "name": "alpha_0701",
+    "expression": "group_neutralize(ts_decay_linear(zscore(ts_av_diff(analyst_revision_rank_derivative, 20)), 5), subindustry)",
+    "sharpe": -0.54,
+    "fitness": -0.25,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "group_neutralize",
+      "ts_decay_linear",
+      "zscore",
+      "ts_av_diff"
+    ],
+    "concepts": [
+      "sentiment",
+      "mean_reversion",
+      "neutralization"
+    ],
+    "datafields": [
+      "analyst_revision_rank_derivative"
+    ],
+    "settings": [
+      "TOP3000_1_subindustry"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness"
+    ],
+    "correlated_with": [],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0701|OPS:group_neutralize,ts_decay_linear,zscore,ts_av_diff|CONCEPTS:sentiment,mean_reversion,neutralization|DF:analyst_revision_rank_derivative|FAIL:low_sharpe,low_fitness|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0702",
+    "node_type": "Alpha",
+    "name": "alpha_0702",
+    "expression": "group_neutralize(ts_decay_linear(zscore(analyst_revision_rank_derivative), 10), subindustry)",
+    "sharpe": 1.45,
+    "fitness": 1.4,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "group_neutralize",
+      "ts_decay_linear",
+      "zscore"
+    ],
+    "concepts": [
+      "sentiment",
+      "momentum",
+      "neutralization"
+    ],
+    "datafields": [
+      "analyst_revision_rank_derivative"
+    ],
+    "settings": [
+      "TOP3000_1_subindustry"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "os_failure"
+    ],
+    "correlated_with": [],
+    "derived_from": [
+      "alpha_0701"
+    ],
+    "structured_summary": "Alpha:alpha_0702|OPS:group_neutralize,ts_decay_linear,zscore|CONCEPTS:sentiment,momentum,neutralization|DF:analyst_revision_rank_derivative|FAIL:low_sharpe,os_failure|DERIVED:alpha_0701|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0704",
+    "node_type": "Alpha",
+    "name": "alpha_0704",
+    "expression": "group_neutralize(-zscore(ts_av_diff(close, 10)) * ts_rank(ts_std_dev(returns, 20), 60), subindustry)",
+    "sharpe": 0.83,
+    "fitness": 0.39,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "group_neutralize",
+      "zscore",
+      "ts_av_diff",
+      "ts_rank",
+      "ts_std_dev"
+    ],
+    "concepts": [
+      "mean_reversion",
+      "volatility",
+      "neutralization",
+      "cross_sectional"
+    ],
+    "datafields": [
+      "close",
+      "returns"
+    ],
+    "settings": [
+      "TOP3000_1_subindustry"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness",
+      "sector_bias"
+    ],
+    "correlated_with": [],
+    "derived_from": [
+      "alpha_0700"
+    ],
+    "structured_summary": "Alpha:alpha_0704|OPS:group_neutralize,zscore,ts_av_diff,ts_rank,ts_std_dev|CONCEPTS:mean_reversion,volatility,neutralization,cross_sectional|DF:close,returns|FAIL:low_sharpe,low_fitness,sector_bias|DERIVED:alpha_0700|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0800",
+    "node_type": "Alpha",
+    "name": "alpha_0800",
+    "expression": "#DECAY 10 clv = ((close-low)-(high-close))/(high-low); -zscore(clv) * rank(volume)",
+    "sharpe": 1.58,
+    "fitness": 0.8,
+    "rating": "Needs Improvement",
+    "is_ceiling": true,
+    "ceiling_blocked_by": "Fitness 0.80 < 1.0 cutoff (gap +0.20) | Turnover 81.7% > 70% cutoff (excess +11.7pp)",
+    "operators": [
+      "zscore",
+      "rank"
+    ],
+    "concepts": [
+      "mean_reversion",
+      "technical",
+      "cross_sectional"
+    ],
+    "datafields": [
+      "close",
+      "low",
+      "high",
+      "volume"
+    ],
+    "settings": [
+      "TOP3000_1_market"
+    ],
+    "failure_modes": [
+      "high_turnover",
+      "low_fitness"
+    ],
+    "correlated_with": [
+      "alpha_0801",
+      "alpha_0802",
+      "alpha_0803",
+      "alpha_0804"
+    ],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0800|OPS:zscore,rank|CONCEPTS:mean_reversion,technical,cross_sectional|DF:close,low,high,volume|FAIL:high_turnover,low_fitness|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0801",
+    "node_type": "Alpha",
+    "name": "alpha_0801",
+    "expression": "#DECAY 20 clv = ((close-low)-(high-close))/(high-low); -zscore(clv) * rank(volume)",
+    "sharpe": 1.79,
+    "fitness": 0.51,
+    "rating": "Needs Improvement",
+    "is_ceiling": true,
+    "ceiling_blocked_by": "Fitness 0.51 < 1.0 cutoff (gap +0.49) | Turnover 138.5% > 70% cutoff (excess +68.5pp)",
+    "operators": [
+      "zscore",
+      "rank"
+    ],
+    "concepts": [
+      "mean_reversion",
+      "technical",
+      "cross_sectional"
+    ],
+    "datafields": [
+      "close",
+      "low",
+      "high",
+      "volume"
+    ],
+    "settings": [
+      "TOP3000_1_market"
+    ],
+    "failure_modes": [
+      "high_turnover",
+      "low_fitness"
+    ],
+    "correlated_with": [
+      "alpha_0800",
+      "alpha_0804"
+    ],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0801|OPS:zscore,rank|CONCEPTS:mean_reversion,technical,cross_sectional|DF:close,low,high,volume|FAIL:high_turnover,low_fitness|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0802",
+    "node_type": "Alpha",
+    "name": "alpha_0802",
+    "expression": "#DECAY 15 clv = ((close-low)-(high-close))/(high-low); hump(-zscore(clv) * rank(volume), hump=0.02)",
+    "sharpe": -0.2,
+    "fitness": -0.05,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "zscore",
+      "rank"
+    ],
+    "concepts": [
+      "mean_reversion",
+      "technical",
+      "cross_sectional"
+    ],
+    "datafields": [
+      "close",
+      "low",
+      "high",
+      "volume"
+    ],
+    "settings": [
+      "TOP3000_1_market"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness",
+      "high_turnover"
+    ],
+    "correlated_with": [
+      "alpha_0800"
+    ],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0802|OPS:zscore,rank|CONCEPTS:mean_reversion,technical,cross_sectional|DF:close,low,high,volume|FAIL:low_sharpe,low_fitness,high_turnover|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0803",
+    "node_type": "Alpha",
+    "name": "alpha_0803",
+    "expression": "#DECAY 5 clv = ((close-low)-(high-close))/(high-low); ts_mean(clv, 5) * ts_mean(rank(volume), 5)",
+    "sharpe": 2.19,
+    "fitness": 0.77,
+    "rating": "Needs Improvement",
+    "is_ceiling": true,
+    "ceiling_blocked_by": "Fitness 0.77 < 1.0 cutoff (gap +0.23) | Turnover 116.2% > 70% cutoff (excess +46.2pp)",
+    "operators": [
+      "ts_mean",
+      "rank"
+    ],
+    "concepts": [
+      "mean_reversion",
+      "technical",
+      "time_series"
+    ],
+    "datafields": [
+      "close",
+      "low",
+      "high",
+      "volume"
+    ],
+    "settings": [
+      "TOP3000_1_market"
+    ],
+    "failure_modes": [
+      "high_turnover",
+      "low_fitness"
+    ],
+    "correlated_with": [
+      "alpha_0800"
+    ],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0803|OPS:ts_mean,rank|CONCEPTS:mean_reversion,technical,time_series|DF:close,low,high,volume|FAIL:high_turnover,low_fitness|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0804",
+    "node_type": "Alpha",
+    "name": "alpha_0804",
+    "expression": "#DECAY 20 clv = ((close-low)-(high-close))/(high-low); smooth_clv = ts_decay_linear(clv, 5); -zscore(smooth_clv) * ts_delay(rank(volume), 2)",
+    "sharpe": 1.8,
+    "fitness": 0.78,
+    "rating": "Needs Improvement",
+    "is_ceiling": true,
+    "ceiling_blocked_by": "Fitness 0.78 < 1.0 cutoff (gap +0.22) | Turnover 75.1% > 70% cutoff (excess +5.1pp)",
+    "operators": [
+      "zscore",
+      "ts_decay_linear",
+      "rank",
+      "ts_delay"
+    ],
+    "concepts": [
+      "mean_reversion",
+      "technical",
+      "time_series",
+      "cross_sectional"
+    ],
+    "datafields": [
+      "close",
+      "low",
+      "high",
+      "volume"
+    ],
+    "settings": [
+      "TOP3000_1_market"
+    ],
+    "failure_modes": [
+      "high_turnover",
+      "low_fitness"
+    ],
+    "correlated_with": [
+      "alpha_0800",
+      "alpha_0801",
+      "alpha_0805",
+      "alpha_0806"
+    ],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0804|OPS:zscore,ts_decay_linear,rank,ts_delay|CONCEPTS:mean_reversion,technical,time_series,cross_sectional|DF:close,low,high,volume|FAIL:high_turnover,low_fitness|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0805",
+    "node_type": "Alpha",
+    "name": "alpha_0805",
+    "expression": "#DECAY 22 clv = ((close-low)-(high-close))/(high-low); smooth_clv = ts_decay_linear(clv, 5); -zscore(smooth_clv) * ts_delay(rank(volume), 2)",
+    "sharpe": 1.73,
+    "fitness": 0.77,
+    "rating": "Needs Improvement",
+    "is_ceiling": true,
+    "ceiling_blocked_by": "Fitness 0.77 < 1.0 cutoff (gap +0.23)",
+    "operators": [
+      "zscore",
+      "ts_decay_linear",
+      "rank",
+      "ts_delay"
+    ],
+    "concepts": [
+      "mean_reversion",
+      "technical",
+      "time_series",
+      "cross_sectional"
+    ],
+    "datafields": [
+      "close",
+      "low",
+      "high",
+      "volume"
+    ],
+    "settings": [
+      "TOP3000_1_market"
+    ],
+    "failure_modes": [
+      "low_fitness"
+    ],
+    "correlated_with": [
+      "alpha_0804",
+      "alpha_0806"
+    ],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0805|OPS:zscore,ts_decay_linear,rank,ts_delay|CONCEPTS:mean_reversion,technical,time_series,cross_sectional|DF:close,low,high,volume|FAIL:low_fitness|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0806",
+    "node_type": "Alpha",
+    "name": "alpha_0806",
+    "expression": "#DECAY 20 clv = ((close-low)-(high-close))/(high-low); smooth_clv = ts_decay_linear(clv, 5); clv_return_corr = abs(ts_corr(smooth_clv, ts_delta(close, 1), 10)); -zscore(smooth_clv) * ts_delay(rank(vol",
+    "sharpe": 1.4,
+    "fitness": 0.7,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "zscore",
+      "ts_decay_linear",
+      "rank",
+      "ts_delay",
+      "ts_corr",
+      "ts_delta",
+      "abs"
+    ],
+    "concepts": [
+      "mean_reversion",
+      "technical",
+      "time_series",
+      "cross_sectional"
+    ],
+    "datafields": [
+      "close",
+      "low",
+      "high",
+      "volume"
+    ],
+    "settings": [
+      "TOP3000_1_market"
+    ],
+    "failure_modes": [
+      "low_fitness"
+    ],
+    "correlated_with": [
+      "alpha_0804",
+      "alpha_0805",
+      "alpha_0807"
+    ],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0806|OPS:zscore,ts_decay_linear,rank,ts_delay,ts_corr|CONCEPTS:mean_reversion,technical,time_series,cross_sectional|DF:close,low,high,volume|FAIL:low_fitness|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0807",
+    "node_type": "Alpha",
+    "name": "alpha_0807",
+    "expression": "#DECAY 15 clv = ((close-low)-(high-close))/(high-low); smooth_clv = ts_decay_linear(clv, 5); clv_return_corr = abs(ts_corr(smooth_clv, ts_delta(close, 1), 10)); signal = -zscore(smooth_clv) * ts_delay",
+    "sharpe": 1.4,
+    "fitness": 0.7,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "zscore",
+      "ts_decay_linear",
+      "rank",
+      "ts_delay",
+      "ts_corr",
+      "ts_delta",
+      "abs"
+    ],
+    "concepts": [
+      "mean_reversion",
+      "technical",
+      "time_series",
+      "cross_sectional"
+    ],
+    "datafields": [
+      "close",
+      "low",
+      "high",
+      "volume"
+    ],
+    "settings": [
+      "TOP3000_1_market"
+    ],
+    "failure_modes": [
+      "low_fitness"
+    ],
+    "correlated_with": [
+      "alpha_0806"
+    ],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0807|OPS:zscore,ts_decay_linear,rank,ts_delay,ts_corr|CONCEPTS:mean_reversion,technical,time_series,cross_sectional|DF:close,low,high,volume|FAIL:low_fitness|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0900",
+    "node_type": "Alpha",
+    "name": "alpha_0900",
+    "expression": "-rank(ebit / capex)",
+    "sharpe": -0.09,
+    "fitness": -0.03,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "rank"
+    ],
+    "concepts": [
+      "value",
+      "fundamental",
+      "quality"
+    ],
+    "datafields": [
+      "ebit",
+      "capex"
+    ],
+    "settings": [
+      "TOP3000_1_market"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness"
+    ],
+    "correlated_with": [],
+    "derived_from": [],
+    "structured_summary": "Alpha:alpha_0900|OPS:rank|CONCEPTS:value,fundamental,quality|DF:ebit,capex|FAIL:low_sharpe,low_fitness|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0901",
+    "node_type": "Alpha",
+    "name": "alpha_0901",
+    "expression": "-rank(ebit / capex)",
+    "sharpe": 1.31,
+    "fitness": 1.06,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "rank"
+    ],
+    "concepts": [
+      "value",
+      "fundamental",
+      "quality",
+      "neutralization"
+    ],
+    "datafields": [
+      "ebit",
+      "capex"
+    ],
+    "settings": [
+      "TOP3000_1_industry"
+    ],
+    "failure_modes": [
+      "correlated"
+    ],
+    "correlated_with": [],
+    "derived_from": [
+      "alpha_0900"
+    ],
+    "structured_summary": "Alpha:alpha_0901|OPS:rank|CONCEPTS:value,fundamental,quality,neutralization|DF:ebit,capex|FAIL:correlated|DERIVED:alpha_0900|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0902",
+    "node_type": "Alpha",
+    "name": "alpha_0902",
+    "expression": "-rank(ts_decay_linear(ebit / capex, 5))",
+    "sharpe": -0.09,
+    "fitness": -0.03,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "rank",
+      "ts_decay_linear"
+    ],
+    "concepts": [
+      "value",
+      "fundamental",
+      "time_series",
+      "neutralization"
+    ],
+    "datafields": [
+      "ebit",
+      "capex"
+    ],
+    "settings": [
+      "TOP3000_1_industry"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness"
+    ],
+    "correlated_with": [],
+    "derived_from": [
+      "alpha_0901"
+    ],
+    "structured_summary": "Alpha:alpha_0902|OPS:rank,ts_decay_linear|CONCEPTS:value,fundamental,time_series,neutralization|DF:ebit,capex|FAIL:low_sharpe,low_fitness|DERIVED:alpha_0901|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0903",
+    "node_type": "Alpha",
+    "name": "alpha_0903",
+    "expression": "-zscore(ts_decay_linear(ebit / capex, 5))",
+    "sharpe": -0.35,
+    "fitness": -0.26,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "zscore",
+      "ts_decay_linear"
+    ],
+    "concepts": [
+      "value",
+      "fundamental",
+      "time_series",
+      "normalization",
+      "neutralization"
+    ],
+    "datafields": [
+      "ebit",
+      "capex"
+    ],
+    "settings": [
+      "TOP3000_1_industry"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness"
+    ],
+    "correlated_with": [],
+    "derived_from": [
+      "alpha_0901"
+    ],
+    "structured_summary": "Alpha:alpha_0903|OPS:zscore,ts_decay_linear|CONCEPTS:value,fundamental,time_series,normalization,neutralization|DF:ebit,capex|FAIL:low_sharpe,low_fitness|DERIVED:alpha_0901|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0904",
+    "node_type": "Alpha",
+    "name": "alpha_0904",
+    "expression": "-rank(ts_decay_linear(ebit / capex, 10))",
+    "sharpe": -0.09,
+    "fitness": -0.03,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "rank",
+      "ts_decay_linear"
+    ],
+    "concepts": [
+      "value",
+      "fundamental",
+      "time_series",
+      "neutralization"
+    ],
+    "datafields": [
+      "ebit",
+      "capex"
+    ],
+    "settings": [
+      "TOP3000_1_industry"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness"
+    ],
+    "correlated_with": [],
+    "derived_from": [
+      "alpha_0901"
+    ],
+    "structured_summary": "Alpha:alpha_0904|OPS:rank,ts_decay_linear|CONCEPTS:value,fundamental,time_series,neutralization|DF:ebit,capex|FAIL:low_sharpe,low_fitness|DERIVED:alpha_0901|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0905",
+    "node_type": "Alpha",
+    "name": "alpha_0905",
+    "expression": "-rank(ebit / capex + 0.05 * ts_delta(ebit / capex, 20))",
+    "sharpe": -0.06,
+    "fitness": -0.02,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "rank",
+      "ts_delta"
+    ],
+    "concepts": [
+      "value",
+      "fundamental",
+      "momentum",
+      "time_series",
+      "neutralization"
+    ],
+    "datafields": [
+      "ebit",
+      "capex"
+    ],
+    "settings": [
+      "TOP3000_1_industry"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness"
+    ],
+    "correlated_with": [],
+    "derived_from": [
+      "alpha_0901"
+    ],
+    "structured_summary": "Alpha:alpha_0905|OPS:rank,ts_delta|CONCEPTS:value,fundamental,momentum,time_series,neutralization|DF:ebit,capex|FAIL:low_sharpe,low_fitness|DERIVED:alpha_0901|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0906",
+    "node_type": "Alpha",
+    "name": "alpha_0906",
+    "expression": "-rank(close / ebit)",
+    "sharpe": -0.04,
+    "fitness": -0.01,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "rank"
+    ],
+    "concepts": [
+      "value",
+      "fundamental",
+      "cross_sectional",
+      "neutralization"
+    ],
+    "datafields": [
+      "close",
+      "ebit"
+    ],
+    "settings": [
+      "TOP3000_1_industry"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness"
+    ],
+    "correlated_with": [],
+    "derived_from": [
+      "alpha_0901"
+    ],
+    "structured_summary": "Alpha:alpha_0906|OPS:rank|CONCEPTS:value,fundamental,cross_sectional,neutralization|DF:close,ebit|FAIL:low_sharpe,low_fitness|DERIVED:alpha_0901|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0907",
+    "node_type": "Alpha",
+    "name": "alpha_0907",
+    "expression": "-rank(ebit / close)",
+    "sharpe": -0.42,
+    "fitness": -0.27,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "rank"
+    ],
+    "concepts": [
+      "value",
+      "fundamental",
+      "cross_sectional",
+      "neutralization"
+    ],
+    "datafields": [
+      "ebit",
+      "close"
+    ],
+    "settings": [
+      "TOP3000_1_industry"
+    ],
+    "failure_modes": [
+      "low_sharpe",
+      "low_fitness"
+    ],
+    "correlated_with": [],
+    "derived_from": [
+      "alpha_0901"
+    ],
+    "structured_summary": "Alpha:alpha_0907|OPS:rank|CONCEPTS:value,fundamental,cross_sectional,neutralization|DF:ebit,close|FAIL:low_sharpe,low_fitness|DERIVED:alpha_0901|RATING:Needs Improvement"
+  },
+  {
+    "id": "Alpha::alpha_0908",
+    "node_type": "Alpha",
+    "name": "alpha_0908",
+    "expression": "-rank(ebit / capex)",
+    "sharpe": null,
+    "fitness": null,
+    "rating": "Needs Improvement",
+    "is_ceiling": false,
+    "ceiling_blocked_by": null,
+    "operators": [
+      "rank"
+    ],
+    "concepts": [
+      "value",
+      "fundamental",
+      "quality",
+      "neutralization"
+    ],
+    "datafields": [
+      "ebit",
+      "capex"
+    ],
+    "settings": [
+      "TOP3000_1_industry"
+    ],
+    "failure_modes": [],
+    "correlated_with": [],
+    "derived_from": [
+      "alpha_0901"
+    ],
+    "structured_summary": "Alpha:alpha_0908|OPS:rank|CONCEPTS:value,fundamental,quality,neutralization|DF:ebit,capex|DERIVED:alpha_0901|RATING:Needs Improvement"
+  }
+]

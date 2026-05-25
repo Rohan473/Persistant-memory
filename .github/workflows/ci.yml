@@ -1,0 +1,116 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.11']
+
+    services:
+      qdrant:
+        image: qdrant/qdrant:v1.18.0
+        options: >-
+          --health-cmd "curl -f http://localhost:6333/health || exit 1"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 6333:6333
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f memory_layer/requirements.txt ]; then pip install -r memory_layer/requirements.txt; fi
+          pip install pytest pytest-cov
+
+      - name: Run tests
+        env:
+          QDRANT_HOST: localhost
+          QDRANT_PORT: 6333
+        run: |
+          pytest -v --cov=. --cov-report=xml
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          files: ./coverage.xml
+          fail_ci_if_error: false
+
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build and push (if on main)
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile.mcp
+          push: false
+          tags: wq-brain-mcp:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Test Docker image
+        run: |
+          docker buildx build --load -f Dockerfile.mcp -t wq-brain-mcp:test .
+          docker run --rm wq-brain-mcp:test python -c "import memory_layer; print('Image built successfully')"
+
+  build-ingest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build ingest image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile.ingest
+          push: false
+          tags: wq-brain-ingest:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+  compose-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate docker-compose.yml
+        run: |
+          docker compose config > /dev/null
+
+      - name: Build docker-compose services
+        run: |
+          docker compose build --no-cache mcp-server

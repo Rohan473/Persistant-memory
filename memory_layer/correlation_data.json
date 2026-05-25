@@ -1,0 +1,14 @@
+{
+  "pair_correlations": {},
+  "alpha_factors": {
+    "test_alpha": [
+      "value",
+      "quality"
+    ]
+  },
+  "alpha_concepts": {
+    "test_alpha": [
+      "value"
+    ]
+  }
+}

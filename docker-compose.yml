@@ -1,0 +1,72 @@
+version: '3.8'
+
+services:
+  # Vector database for memory layer
+  qdrant:
+    image: qdrant/qdrant:v1.18.0
+    container_name: wq-qdrant
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    environment:
+      - RUN_MODE=production
+    volumes:
+      - qdrant_storage:/qdrant/storage
+    restart: unless-stopped
+
+  # MCP server for memory layer retrieval
+  mcp-server:
+    build:
+      context: .
+      dockerfile: Dockerfile.mcp
+    container_name: wq-mcp
+    ports:
+      - "8000:8000"
+    depends_on:
+      - qdrant
+    environment:
+      - QDRANT_HOST=wq-qdrant
+      - QDRANT_PORT=6333
+      - FIRECRAWL_API_KEY=${FIRECRAWL_API_KEY}
+    restart: unless-stopped
+    command: python -m memory_layer.mcp
+
+  # Batch ingest service - processes graph and firecrawl data into Qdrant
+  ingest:
+    build:
+      context: .
+      dockerfile: Dockerfile.mcp
+    container_name: wq-ingest
+    depends_on:
+      - qdrant
+    environment:
+      - QDRANT_HOST=qdrant
+      - QDRANT_PORT=6333
+      - FIRECRAWL_API_KEY=${FIRECRAWL_API_KEY}
+    volumes:
+      - ./nodes:/app/nodes
+      - ./graph:/app/graph
+    command: python -m memory_layer.ingest ingest_all
+    restart: "no"
+    profiles:
+      - ingest
+
+  # Firecrawl for web scraping (optional - requires API key)
+  firecrawl:
+    image: dhi.io/firecrawl-mcp
+    container_name: firecrawl-mcp
+    ports:
+      - "3001:3001"
+    environment:
+      - FIRECRAWL_API_KEY=${FIRECRAWL_API_KEY}
+    restart: unless-stopped
+    profiles:
+      - firecrawl
+
+volumes:
+  qdrant_storage:
+    driver: local
+
+networks:
+  default:
+    name: wq-brain-net

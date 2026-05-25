@@ -1,0 +1,135 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>WQ Brain Graph - Demo</title>
+<style>
+  body{margin:0;background:#0f0f1e;color:#eee;font-family:-apple-system,Segoe UI,sans-serif;overflow:hidden}
+  svg{display:block;cursor:grab}
+  .node{stroke:rgba(255,255,255,0.4);stroke-width:0.5px;cursor:pointer}
+  .node.dim{opacity:0.08}
+  .node:hover,.node.hl{stroke:#fff;stroke-width:2.5px}
+  .node.rating-Good{stroke:#00ff88;stroke-width:3px;filter:drop-shadow(0 0 6px #00ff88)}
+  .node.rating-Average{stroke:#ffd700;stroke-width:2.5px;filter:drop-shadow(0 0 4px #ffd700)}
+  .link{stroke:#888;stroke-opacity:0.32}
+  .link.dim{stroke-opacity:0.04}
+  .link.hl{stroke:#fff;stroke-opacity:0.85;stroke-width:1.2px}
+  .label{font-size:9px;fill:rgba(255,255,255,0.78);pointer-events:none;text-shadow:0 0 3px #000}
+  #legend,#tooltip,#search,#stats{background:rgba(20,20,40,0.92);border:1px solid #333;border-radius:6px;padding:8px 10px;font-size:11px;color:#eee}
+  #legend{position:fixed;top:12px;left:12px;line-height:1.55}
+  #legend .sw{display:inline-block;width:10px;height:10px;margin-right:4px;border-radius:50%;vertical-align:middle}
+  #search{position:fixed;top:12px;right:12px;width:230px;font-size:12px;outline:none}
+  #stats{position:fixed;bottom:10px;left:12px;font-size:10px;color:#aaa}
+  #tooltip{position:fixed;display:none;max-width:360px;pointer-events:none;z-index:99;line-height:1.5}
+  code{background:#222;padding:1px 4px;border-radius:3px;font-size:10px;color:#9af}
+  .copy-btn{background:#333;border:1px solid #555;border-radius:3px;color:#9af;cursor:pointer;padding:2px 6px;font-size:9px;margin-left:6px;pointer-events:auto}
+  .copy-btn:hover{background:#444;border-color:#777}
+  .copy-hint{color:#888;font-size:9px;margin-top:4px}
+  .demo-notice{background:#ff9800;color:#000;padding:8px 12px;border-radius:4px;margin-bottom:8px;font-size:11px}
+</style></head><body>
+<svg></svg>
+<div id="legend"><strong>WQ Brain Graph</strong>
+  <div class="demo-notice">SAMPLE DATA - Demo Only</div>
+  <div><span class="sw" style="background:#4A90E2"></span>Alpha &nbsp;<em style="color:#888">size=Sharpe</em></div>
+  <div><span class="sw" style="background:#7ED321"></span>Concept</div>
+  <div><span class="sw" style="background:#F5A623"></span>Datafield</div>
+  <div><span class="sw" style="background:#9B59B6"></span>Operator</div>
+  <div><span class="sw" style="background:#1ABC9C"></span>Setting</div>
+  <div><span class="sw" style="background:#E74C3C"></span>FailureMode</div>
+  <hr style="border-color:#333;margin:6px 0">
+  <div style="font-size:10px;color:#888;margin-bottom:4px"><b style="color:#ccc">Ring around alpha:</b></div>
+  <div><span class="sw" style="background:#4A90E2;border:2px solid #00ff88;box-shadow:0 0 4px #00ff88"></span><b style="color:#00ff88">Good</b> rated alpha</div>
+  <div><span class="sw" style="background:#4A90E2;border:2px solid #ffd700;box-shadow:0 0 4px #ffd700"></span><b style="color:#ffd700">Average</b> rated alpha</div>
+  <hr style="border-color:#333;margin:6px 0">
+  <span style="color:#888;font-size:10px">scroll=zoom · drag=move · click=highlight neighbors</span>
+</div>
+<input id="search" placeholder="search node name...">
+<div id="stats"></div><div id="tooltip"></div>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script id="graph-data" type="application/json">{"directed":true,"multigraph":false,"graph":{},"nodes":[{"node_type":"Concept","name":"momentum","id":"Concept::momentum","size":8},{"node_type":"Concept","name":"mean_reversion","id":"Concept::mean_reversion","size":8},{"node_type":"Concept","name":"neutralization","id":"Concept::neutralization","size":8},{"node_type":"Datafield","name":"close","id":"Datafield::close","size":6},{"node_type":"Datafield","name":"volume","id":"Datafield::volume","size":6},{"node_type":"Operator","name":"rank","id":"Operator::rank","size":5},{"node_type":"Operator","name":"ts_rank","id":"Operator::ts_rank","size":5},{"node_type":"Setting","name":"TOP500","id":"Setting::TOP500","size":4},{"node_type":"Alpha","name":"demo_alpha_01","expression":"rank(ts_rank(close, 20))","sharpe":1.45,"fitness":0.92,"status":"live","rating":"Good","node_type":"Alpha","id":"Alpha::demo_alpha_01","size":12},{"node_type":"Alpha","name":"demo_alpha_02","expression":"-rank(volume)","sharpe":0.85,"fitness":0.65,"status":"testing","rating":"Average","node_type":"Alpha","id":"Alpha::demo_alpha_02","size":8},{"node_type":"FailureMode","name":"high_turnover","id":"FailureMode::high_turnover","size":4}],"links":[{"source":"Alpha::demo_alpha_01","target":"Concept::momentum"},{"source":"Alpha::demo_alpha_01","target":"Datafield::close"},{"source":"Alpha::demo_alpha_01","target":"Operator::ts_rank"},{"source":"Alpha::demo_alpha_01","target":"Operator::rank"},{"source":"Alpha::demo_alpha_01","target":"Setting::TOP500"},{"source":"Alpha::demo_alpha_02","target":"Concept::mean_reversion"},{"source":"Alpha::demo_alpha_02","target":"Datafield::volume"},{"source":"Alpha::demo_alpha_02","target":"Operator::rank"},{"source":"Alpha::demo_alpha_02","target":"FailureMode::high_turnover"}]}
+<script>
+const COLORS = {"Alpha": "#4A90E2", "Concept": "#7ED321", "Datafield": "#F5A623", "Operator": "#9B59B6", "Setting": "#1ABC9C", "FailureMode": "#E74C3C", "Session": "#95A5A6"};
+const W = window.innerWidth, H = window.innerHeight;
+const svg = d3.select("svg").attr("width", W).attr("height", H);
+const g = svg.append("g");
+svg.call(d3.zoom().scaleExtent([0.1, 10]).on("zoom", e => g.attr("transform", e.transform)));
+
+(function() {
+  const data = JSON.parse(document.getElementById("graph-data").textContent);
+  document.getElementById("stats").textContent =
+    data.nodes.length + " nodes · " + data.links.length + " edges";
+
+  const sim = d3.forceSimulation(data.nodes)
+    .force("link", d3.forceLink(data.links).id(d => d.id).distance(70).strength(0.35))
+    .force("charge", d3.forceManyBody().strength(-260).distanceMax(420))
+    .force("center", d3.forceCenter(W/2, H/2))
+    .force("collide", d3.forceCollide().radius(d => d.size + 3));
+
+  const link = g.append("g").selectAll("line").data(data.links).enter()
+    .append("line").attr("class", "link");
+  const node = g.append("g").selectAll("circle").data(data.nodes).enter()
+    .append("circle")
+    .attr("class", d => "node" + (d.rating === "Good" ? " rating-Good"
+                                  : d.rating === "Average" ? " rating-Average" : ""))
+    .attr("r", d => d.size)
+    .attr("fill", d => COLORS[d.node_type] || "#bbb")
+    .call(d3.drag()
+      .on("start", (e, d) => { if (!e.active) sim.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; })
+      .on("drag",  (e, d) => { d.fx = e.x; d.fy = e.y; })
+      .on("end",   (e, d) => { if (!e.active) sim.alphaTarget(0); d.fx = null; d.fy = null; }));
+  const label = g.append("g").selectAll("text").data(data.nodes).enter()
+    .append("text").attr("class", "label").text(d => d.name);
+
+  const tip = document.getElementById("tooltip");
+  function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
+      const prev = tip.innerHTML;
+      tip.innerHTML = '<span style="color:#0f0;background:#222;padding:4px 8px;border-radius:4px">Copied!</span>';
+      setTimeout(() => tip.innerHTML = prev, 800);
+    });
+  }
+  node.on("mouseover", (e, d) => {
+    let h = `<strong style="color:${COLORS[d.node_type]}">${d.name}</strong> <span style="color:#888">(${d.node_type})</span>`;
+    if (d.sharpe   != null) h += `<br>Sharpe: <b>${d.sharpe}</b>`;
+    if (d.fitness  != null) h += ` · Fitness: ${d.fitness}`;
+    if (d.status)           h += `<br>Status: ${d.status}`;
+    if (d.rating)           h += ` · Rating: <b>${d.rating}</b>`;
+    if (d.expression)       h += `<br><code>${d.expression}</code> <button class="copy-btn" onclick="event.stopPropagation(); copyToClipboard('${d.expression.replace(/'/g, "\\'")}')">Copy</button>`;
+    if (d.node_type === "Alpha") h += `<div class="copy-hint">Double-click node to copy expression</div>`;
+    tip.innerHTML = h; tip.style.display = "block";
+  }).on("mousemove", e => {
+    tip.style.left = (e.clientX + 12) + "px"; tip.style.top = (e.clientY + 12) + "px";
+  }).on("mouseout", () => tip.style.display = "none")
+    .on("dblclick", (e, d) => {
+      if (d.expression) {
+        copyToClipboard(d.expression);
+        node.classed("hl", n => n.id === d.id);
+        setTimeout(() => node.classed("hl", false), 300);
+      }
+    })
+    .on("click", (e, d) => {
+      const nbrs = new Set([d.id]);
+      data.links.forEach(l => {
+        if (l.source.id === d.id) nbrs.add(l.target.id);
+        if (l.target.id === d.id) nbrs.add(l.source.id);
+      });
+      node.classed("hl", n => n.id === d.id).classed("dim", n => !nbrs.has(n.id));
+      link.classed("hl", l => l.source.id === d.id || l.target.id === d.id)
+          .classed("dim", l => !(l.source.id === d.id || l.target.id === d.id));
+    });
+  svg.on("dblclick.zoom", null);
+  svg.on("dblclick", () => { node.classed("hl", false).classed("dim", false);
+                              link.classed("hl", false).classed("dim", false); });
+
+  sim.on("tick", () => {
+    link.attr("x1", d => d.source.x).attr("y1", d => d.source.y)
+        .attr("x2", d => d.target.x).attr("y2", d => d.target.y);
+    node.attr("cx", d => d.x).attr("cy", d => d.y);
+    label.attr("x", d => d.x + d.size + 2).attr("y", d => d.y + 3);
+  });
+
+  setTimeout(() => { sim.stop(); }, 6000);
+
+  document.getElementById("search").addEventListener("input", e => {
+    const q = e.target.value.toLowerCase();
+    node.classed("dim", d => q && !d.name.toLowerCase().includes(q));
+    label.style("opacity", d => !q || d.name.toLowerCase().includes(q) ? 1 : 0.1);
+  });
+})();
+</script></body></html>

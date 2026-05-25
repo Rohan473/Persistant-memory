@@ -1,0 +1,17 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Copy memory layer requirements
+COPY memory_layer/requirements.txt ./memory_requirements.txt
+RUN pip install --no-cache-dir -r ./memory_requirements.txt
+
+# Copy project files
+COPY memory_layer/ ./memory_layer/
+COPY graph/ ./graph/
+
+# Expose MCP server port
+EXPOSE 8000
+
+# Default: run MCP server
+CMD ["python", "-m", "memory_layer.mcp"]
