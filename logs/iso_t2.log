@@ -1,0 +1,39 @@
+Daily budget: 19/30 remaining
+Batch: 1 expressions from private\templates\_isolation_t2_weak_top3000.txt
+Daily cap leaves room for 19 more today.
+
+
+=== [1/1] ===
+Pre-flight context (5 related attempt(s)):
+  alpha_1030     score=1.00  Sharpe=+1.45  status=submitted [EXACT MATCH]
+    shared datafields: close, mdl77_2earningsmomemtummodel_pge_cf, mdl77_2liquidityriskfactor_si_ratio, mdl77_garpanalystmodel_qgp_vfpriceratio, mdl77_ohistoricalgrowthfactor_pctchgeps
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    expression: winsorize(0.30 * zscore(group_rank(zscore(mdl77_2liquidityriskfactor_si_ratio), industry))
+  alpha_1029     score=0.88  Sharpe=+1.21  status=rejected
+    shared datafields: close, mdl77_2earningsmomemtummodel_pge_cf, mdl77_2liquidityriskfactor_si_ratio, mdl77_garpanalystmodel_qgp_vfpriceratio, mdl77_ohistoricalgrowthfactor_pctchgeps
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    prior failures:    low_fitness, low_sharpe
+    expression: winsorize(0.40 * zscore(group_rank(zscore(mdl77_2liquidityriskfactor_si_ratio), industry))
+  alpha_1031     score=0.88  Sharpe=+1.08  status=rejected
+    shared datafields: close, mdl77_2earningsmomemtummodel_pge_cf, mdl77_2liquidityriskfactor_si_ratio, mdl77_garpanalystmodel_qgp_vfpriceratio, mdl77_ohistoricalgrowthfactor_pctchgeps
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    prior failures:    low_fitness, low_sharpe, sub_universe_failure
+    expression: winsorize(0.30 * zscore(group_rank(zscore(mdl77_2liquidityriskfactor_si_ratio), industry))
+  alpha_1018     score=0.44  Sharpe=+2.16  status=submitted
+    shared datafields: close
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    expression: winsorize(0.30 * zscore(-1 * group_rank(zscore(mdl77_fangma_gpam11), industry)) + 0.25 * z
+  alpha_1019     score=0.44  Sharpe=+2.07  status=submitted
+    shared datafields: close
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    expression: winsorize(0.40 * zscore(-1 * group_rank(zscore(mdl77_fangma_gpam11), industry)) + 0.20 * z
+
+[19/30 remaining] submitting expression (441 chars)
+  sim_id = mhymb5IB4tSaardja07tWm
+  status: UNKNOWN
+  status: COMPLETE
+  alpha resource: /alphas/omVleOd6
+
+Result: status=COMPLETE
+  Sharpe=1.75  Fitness=1.52  Turnover=14.78%  Returns=11.15%
+  wrote: E:\New folder\WQB\knowledge_graph\private\nodes\alphas\alpha_1032.md

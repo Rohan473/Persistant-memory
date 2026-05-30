@@ -1,0 +1,32 @@
+# iqc_phase22_v2_d0_pcr started 15:36:57
+# cmd: C:\Users\91866\AppData\Local\Programs\Python\Python312\python.exe E:\New folder\WQB\knowledge_graph\scripts\sweep.py run iqc_phase22_v2_d0_pcr --budget 0
+
+  ! session token expires in 451s � re-auth soon to avoid mid-sweep 401
+  ! session token expires in 448s � re-auth soon to avoid mid-sweep 401
+  ! session token expires in 443s � re-auth soon to avoid mid-sweep 401
+  ! session token expires in 437s � re-auth soon to avoid mid-sweep 401
+  ! session token expires in 432s � re-auth soon to avoid mid-sweep 401
+  ! session token expires in 426s � re-auth soon to avoid mid-sweep 401
+  ! session token expires in 421s � re-auth soon to avoid mid-sweep 401
+  ! session token expires in 415s � re-auth soon to avoid mid-sweep 401
+  ! session token expires in 410s � re-auth soon to avoid mid-sweep 401
+  ! session token expires in 404s � re-auth soon to avoid mid-sweep 401
+  ! session token expires in 399s � re-auth soon to avoid mid-sweep 401
+  ! session token expires in 393s � re-auth soon to avoid mid-sweep 401
+  ! session token expires in 388s � re-auth soon to avoid mid-sweep 401
+
+Template: iqc_phase22_v2_d0_pcr
+Selected 1 expression(s) to submit
+
+Daily budget: 1000000000/0 remaining
+
+=== [1/1] group_rank(-1 * (2 * ts_delta(pcr_oi_30, 22) + (pcr_oi_30 - pcr_oi_180)), subindustry) ===
+  Pre-flight: top similar = alpha_1167 (score=0.95, Sharpe=1.54)
+  [1000000000/0 remaining] submitting expression (86 chars)
+    sim_id = 2ENcAtd1V4It9di10VUrDbEi
+    status: UNKNOWN
+    status: ERROR
+  -> status=ERROR Sharpe=None Fitness=None Turnover=None%
+    wrote: alpha_1167.md
+
+Done. Submitted 1/1. Budget remaining: 1000000000/0.

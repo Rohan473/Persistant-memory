@@ -1,0 +1,150 @@
+Daily budget: 10/30 remaining
+Batch: 4 expressions from private\templates\_mdl77_reversion_batch.txt
+Daily cap leaves room for 10 more today.
+
+
+=== [1/4] ===
+Pre-flight context (5 related attempt(s)):
+  alpha_0974     score=0.40  Sharpe=+1.87  status=submitted
+    shared datafields: close, high, low, vwap
+    shared operators:  group_rank, rank, winsorize, zscore
+    expression: ts_decay_linear(winsorize(0.3 * group_rank(ts_rank(winsorize(parkinson_volatility_60 - par
+  alpha_1002     score=0.39  Sharpe=+1.28  status=rejected
+    shared datafields: mdl77_ohistoricalgrowthfactor_chg3yepsast, mdl77_shortsentimentfactor_act_util
+    shared operators:  group_rank, winsorize, zscore
+    prior failures:    low_fitness
+    expression: winsorize(0.5 * zscore(group_rank(zscore(mdl77_ohistoricalgrowthfactor_chg3yepsast), indus
+  alpha_1003     score=0.39  Sharpe=+1.40  status=rejected
+    shared datafields: mdl77_ohistoricalgrowthfactor_chg3yepsast, mdl77_shortsentimentfactor_act_util
+    shared operators:  group_rank, winsorize, zscore
+    prior failures:    low_fitness
+    expression: winsorize(0.6 * zscore(group_rank(zscore(mdl77_ohistoricalgrowthfactor_chg3yepsast), indus
+  alpha_1004     score=0.39  Sharpe=+1.29  status=rejected
+    shared datafields: mdl77_ohistoricalgrowthfactor_chg3yepsast, mdl77_shortsentimentfactor_act_util
+    shared operators:  group_rank, winsorize, zscore
+    prior failures:    low_fitness
+    expression: winsorize(0.5 * zscore(group_rank(zscore(mdl77_ohistoricalgrowthfactor_chg3yepsast), subin
+  alpha_1005     score=0.39  Sharpe=+1.23  status=rejected
+    shared datafields: mdl77_ohistoricalgrowthfactor_chg3yepsast, mdl77_shortsentimentfactor_act_util
+    shared operators:  group_rank, winsorize, zscore
+    prior failures:    low_fitness, low_sharpe
+    expression: winsorize(0.4 * zscore(group_rank(zscore(mdl77_ohistoricalgrowthfactor_chg3yepsast), indus
+
+[10/30 remaining] submitting expression (231 chars)
+  sim_id = 4eGTIcIu4UUacqQbxe8lNn
+  status: UNKNOWN
+  status: ERROR
+
+Result: status=ERROR
+  Sharpe=None  Fitness=None  Turnover=None%  Returns=None%
+  wrote: E:\New folder\WQB\knowledge_graph\private\nodes\alphas\alpha_1006.md
+
+=== [2/4] ===
+Pre-flight context (5 related attempt(s)):
+  alpha_0974     score=0.40  Sharpe=+1.87  status=submitted
+    shared datafields: close, high, low, vwap
+    shared operators:  group_rank, rank, winsorize, zscore
+    expression: ts_decay_linear(winsorize(0.3 * group_rank(ts_rank(winsorize(parkinson_volatility_60 - par
+  alpha_1002     score=0.39  Sharpe=+1.28  status=rejected
+    shared datafields: mdl77_ohistoricalgrowthfactor_chg3yepsast, mdl77_shortsentimentfactor_act_util
+    shared operators:  group_rank, winsorize, zscore
+    prior failures:    low_fitness
+    expression: winsorize(0.5 * zscore(group_rank(zscore(mdl77_ohistoricalgrowthfactor_chg3yepsast), indus
+  alpha_1003     score=0.39  Sharpe=+1.40  status=rejected
+    shared datafields: mdl77_ohistoricalgrowthfactor_chg3yepsast, mdl77_shortsentimentfactor_act_util
+    shared operators:  group_rank, winsorize, zscore
+    prior failures:    low_fitness
+    expression: winsorize(0.6 * zscore(group_rank(zscore(mdl77_ohistoricalgrowthfactor_chg3yepsast), indus
+  alpha_1004     score=0.39  Sharpe=+1.29  status=rejected
+    shared datafields: mdl77_ohistoricalgrowthfactor_chg3yepsast, mdl77_shortsentimentfactor_act_util
+    shared operators:  group_rank, winsorize, zscore
+    prior failures:    low_fitness
+    expression: winsorize(0.5 * zscore(group_rank(zscore(mdl77_ohistoricalgrowthfactor_chg3yepsast), subin
+  alpha_1005     score=0.39  Sharpe=+1.23  status=rejected
+    shared datafields: mdl77_ohistoricalgrowthfactor_chg3yepsast, mdl77_shortsentimentfactor_act_util
+    shared operators:  group_rank, winsorize, zscore
+    prior failures:    low_fitness, low_sharpe
+    expression: winsorize(0.4 * zscore(group_rank(zscore(mdl77_ohistoricalgrowthfactor_chg3yepsast), indus
+
+[9/30 remaining] submitting expression (260 chars)
+  sim_id = 2TL0hIgi150V9ZQS6S7goqx
+  status: UNKNOWN
+  status: COMPLETE
+  alpha resource: /alphas/O0opPxGp
+
+Result: status=COMPLETE
+  Sharpe=1.83  Fitness=1.09  Turnover=33.95%  Returns=12.03%
+  wrote: E:\New folder\WQB\knowledge_graph\private\nodes\alphas\alpha_1007.md
+
+=== [3/4] ===
+Pre-flight context (5 related attempt(s)):
+  alpha_1006     score=0.95  Sharpe=n/a  status=rejected
+    shared datafields: close, high, low, mdl77_ohistoricalgrowthfactor_chg3yepsast, mdl77_shortsentimentfactor_act_util, vwap
+    shared operators:  group_rank, rank, ts_mean, ts_returns, winsorize, zscore
+    expression: winsorize(0.5 * zscore(group_rank(zscore(mdl77_ohistoricalgrowthfactor_chg3yepsast), indus
+  alpha_0974     score=0.40  Sharpe=+1.87  status=submitted
+    shared datafields: close, high, low, vwap
+    shared operators:  group_rank, rank, winsorize, zscore
+    expression: ts_decay_linear(winsorize(0.3 * group_rank(ts_rank(winsorize(parkinson_volatility_60 - par
+  alpha_1002     score=0.39  Sharpe=+1.28  status=rejected
+    shared datafields: mdl77_ohistoricalgrowthfactor_chg3yepsast, mdl77_shortsentimentfactor_act_util
+    shared operators:  group_rank, winsorize, zscore
+    prior failures:    low_fitness
+    expression: winsorize(0.5 * zscore(group_rank(zscore(mdl77_ohistoricalgrowthfactor_chg3yepsast), indus
+  alpha_1003     score=0.39  Sharpe=+1.40  status=rejected
+    shared datafields: mdl77_ohistoricalgrowthfactor_chg3yepsast, mdl77_shortsentimentfactor_act_util
+    shared operators:  group_rank, winsorize, zscore
+    prior failures:    low_fitness
+    expression: winsorize(0.6 * zscore(group_rank(zscore(mdl77_ohistoricalgrowthfactor_chg3yepsast), indus
+  alpha_1004     score=0.39  Sharpe=+1.29  status=rejected
+    shared datafields: mdl77_ohistoricalgrowthfactor_chg3yepsast, mdl77_shortsentimentfactor_act_util
+    shared operators:  group_rank, winsorize, zscore
+    prior failures:    low_fitness
+    expression: winsorize(0.5 * zscore(group_rank(zscore(mdl77_ohistoricalgrowthfactor_chg3yepsast), subin
+
+[8/30 remaining] submitting expression (232 chars)
+  sim_id = 3PLEsU7bO4yxcwXIgfFy6Wc
+  status: UNKNOWN
+  status: COMPLETE
+  alpha resource: /alphas/0mz736PK
+
+Result: status=COMPLETE
+  Sharpe=1.98  Fitness=0.96  Turnover=54.01%  Returns=12.7%
+  failure_modes: low_fitness
+  wrote: E:\New folder\WQB\knowledge_graph\private\nodes\alphas\alpha_1008.md
+
+=== [4/4] ===
+Pre-flight context (5 related attempt(s)):
+  alpha_1006     score=0.95  Sharpe=n/a  status=rejected
+    shared datafields: close, high, low, mdl77_ohistoricalgrowthfactor_chg3yepsast, mdl77_shortsentimentfactor_act_util, vwap
+    shared operators:  group_rank, rank, ts_mean, ts_returns, winsorize, zscore
+    expression: winsorize(0.5 * zscore(group_rank(zscore(mdl77_ohistoricalgrowthfactor_chg3yepsast), indus
+  alpha_1007     score=0.95  Sharpe=+1.83  status=submitted
+    shared datafields: close, high, low, mdl77_ohistoricalgrowthfactor_chg3yepsast, mdl77_shortsentimentfactor_act_util, vwap
+    shared operators:  group_rank, rank, ts_mean, ts_returns, winsorize, zscore
+    expression: winsorize(0.5 * zscore(group_rank(zscore(mdl77_ohistoricalgrowthfactor_chg3yepsast), indus
+  alpha_0974     score=0.40  Sharpe=+1.87  status=submitted
+    shared datafields: close, high, low, vwap
+    shared operators:  group_rank, rank, winsorize, zscore
+    expression: ts_decay_linear(winsorize(0.3 * group_rank(ts_rank(winsorize(parkinson_volatility_60 - par
+  alpha_1002     score=0.39  Sharpe=+1.28  status=rejected
+    shared datafields: mdl77_ohistoricalgrowthfactor_chg3yepsast, mdl77_shortsentimentfactor_act_util
+    shared operators:  group_rank, winsorize, zscore
+    prior failures:    low_fitness
+    expression: winsorize(0.5 * zscore(group_rank(zscore(mdl77_ohistoricalgrowthfactor_chg3yepsast), indus
+  alpha_1003     score=0.39  Sharpe=+1.40  status=rejected
+    shared datafields: mdl77_ohistoricalgrowthfactor_chg3yepsast, mdl77_shortsentimentfactor_act_util
+    shared operators:  group_rank, winsorize, zscore
+    prior failures:    low_fitness
+    expression: winsorize(0.6 * zscore(group_rank(zscore(mdl77_ohistoricalgrowthfactor_chg3yepsast), indus
+
+[7/30 remaining] submitting expression (248 chars)
+  sim_id = 24Bo0ndE4DGbBqYRCQJlwe
+  status: UNKNOWN
+  status: WARNING
+  alpha resource: /alphas/QPEaLJMG
+
+Result: status=WARNING
+  Sharpe=1.95  Fitness=0.93  Turnover=53.41%  Returns=12.22%
+  failure_modes: low_fitness
+  wrote: E:\New folder\WQB\knowledge_graph\private\nodes\alphas\alpha_1009.md

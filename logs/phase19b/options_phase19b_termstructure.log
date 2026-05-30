@@ -1,0 +1,21 @@
+# options_phase19b_termstructure started 13:37:00
+# cmd: C:\Users\91866\AppData\Local\Programs\Python\Python312\python.exe E:\New folder\WQB\knowledge_graph\scripts\sweep.py run options_phase19b_termstructure --budget 30
+
+
+Template: options_phase19b_termstructure
+Selected 1 expression(s) to submit
+
+Daily budget: 15/30 remaining
+
+=== [1/1] group_rank(-1 * (pcr_oi_30 - pcr_oi_180), subindustry) ===
+  Pre-flight: top similar = alpha_1156 (score=0.625, Sharpe=0.26)
+  [15/30 remaining] submitting expression (54 chars)
+    sim_id = 2pJj4W1g34OK9ysOiI2LJbD
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/np3d0d5E
+  -> status=COMPLETE Sharpe=0.79 Fitness=0.23 Turnover=20.81%
+    failure_modes: concentrated_weight, low_fitness, low_sharpe, sub_universe_failure
+    wrote: alpha_1158.md
+
+Done. Submitted 1/1. Budget remaining: 13/30.

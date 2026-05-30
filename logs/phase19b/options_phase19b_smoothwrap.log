@@ -1,0 +1,21 @@
+# options_phase19b_smoothwrap started 13:37:00
+# cmd: C:\Users\91866\AppData\Local\Programs\Python\Python312\python.exe E:\New folder\WQB\knowledge_graph\scripts\sweep.py run options_phase19b_smoothwrap --budget 30
+
+
+Template: options_phase19b_smoothwrap
+Selected 1 expression(s) to submit
+
+Daily budget: 15/30 remaining
+
+=== [1/1] ts_mean(group_rank(-1 * pcr_oi_30, subindustry), 22) ===
+  Pre-flight: top similar = alpha_1156 (score=0.71, Sharpe=0.26)
+  [15/30 remaining] submitting expression (52 chars)
+    sim_id = 1Nh8Xx40T4sEaLD4pTq5PLT
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/JjbNlodA
+  -> status=COMPLETE Sharpe=0.21 Fitness=0.05 Turnover=6.02%
+    failure_modes: low_fitness, low_sharpe, sub_universe_failure
+    wrote: alpha_1159.md
+
+Done. Submitted 1/1. Budget remaining: 13/30.

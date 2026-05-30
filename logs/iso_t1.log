@@ -1,0 +1,40 @@
+Daily budget: 19/30 remaining
+Batch: 1 expressions from private\templates\_isolation_t1_strong_top1000.txt
+Daily cap leaves room for 19 more today.
+
+
+=== [1/1] ===
+Pre-flight context (5 related attempt(s)):
+  alpha_1018     score=0.78  Sharpe=+2.16  status=submitted
+    shared datafields: close, mdl77_chgnoa, mdl77_fangma_gpam11, mdl77_omomemtumanalystmodel_qma_earnexp
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    expression: winsorize(0.30 * zscore(-1 * group_rank(zscore(mdl77_fangma_gpam11), industry)) + 0.25 * z
+  alpha_1019     score=0.78  Sharpe=+2.07  status=submitted
+    shared datafields: close, mdl77_chgnoa, mdl77_fangma_gpam11, mdl77_omomemtumanalystmodel_qma_earnexp
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    expression: winsorize(0.40 * zscore(-1 * group_rank(zscore(mdl77_fangma_gpam11), industry)) + 0.20 * z
+  alpha_1020     score=0.78  Sharpe=+1.49  status=submitted
+    shared datafields: close, mdl77_chgnoa, mdl77_fangma_gpam11, mdl77_omomemtumanalystmodel_qma_earnexp
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    expression: winsorize(0.50 * zscore(-1 * group_rank(zscore(mdl77_fangma_gpam11), industry)) + 0.25 * z
+  alpha_1021     score=0.78  Sharpe=+1.11  status=rejected
+    shared datafields: close, mdl77_chgnoa, mdl77_fangma_gpam11, mdl77_omomemtumanalystmodel_qma_earnexp
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    prior failures:    low_fitness, low_sharpe
+    expression: winsorize(0.40 * zscore(-1 * group_rank(zscore(mdl77_fangma_gpam11), industry)) + 0.20 * z
+  alpha_1022     score=0.78  Sharpe=+1.35  status=rejected
+    shared datafields: close, mdl77_chgnoa, mdl77_fangma_gpam11, mdl77_omomemtumanalystmodel_qma_earnexp
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    prior failures:    low_fitness
+    expression: winsorize(0.40 * zscore(-1 * group_rank(zscore(mdl77_fangma_gpam11), industry)) + 0.20 * z
+
+[19/30 remaining] submitting expression (399 chars)
+  sim_id = 22jAoe5m74nVaPg12UuqrDG6
+  status: UNKNOWN
+  status: COMPLETE
+  alpha resource: /alphas/78J1VOa2
+
+Result: status=COMPLETE
+  Sharpe=1.22  Fitness=0.99  Turnover=17.28%  Returns=11.27%
+  failure_modes: low_fitness, low_sharpe
+  wrote: E:\New folder\WQB\knowledge_graph\private\nodes\alphas\alpha_1033.md

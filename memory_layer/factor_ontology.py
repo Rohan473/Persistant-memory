@@ -240,6 +240,91 @@ FACTOR_FAMILIES = {
         macro_related=False,
         sector_related=True
     ),
+    # ── Portfolio-context families (WQB IQC) ──────────────────────────────────
+    "attention": FactorFamily(
+        id="attention",
+        name="attention",
+        display_name="Attention / Volume Anomaly",
+        category="behavioral",
+        description="Stocks receiving abnormal participation relative to recent history. RVOL, news buzz, sentiment volume.",
+        keywords=["attention", "rvol", "volume_anomaly", "buzz", "participation", "relative_volume"],
+        datafield_indicators=["volume", "scl12_buzz", "snt_buzz", "mean_composite_sentiment_score"],
+        operator_indicators=["ts_sum", "ts_mean"],
+        macro_related=False,
+        sector_related=False
+    ),
+    "neglect": FactorFamily(
+        id="neglect",
+        name="neglect",
+        display_name="Neglect / Contrarian",
+        category="behavioral",
+        description="Recent losers not yet repriced. Negative multi-week return signals, contrarian timing.",
+        keywords=["neglect", "contrarian", "loser", "underperform", "mean_reversion"],
+        datafield_indicators=["returns"],
+        operator_indicators=["ts_sum", "rank"],
+        macro_related=False,
+        sector_related=False
+    ),
+    "price_state": FactorFamily(
+        id="price_state",
+        name="price_state",
+        display_name="Price State / Intraday",
+        category="price_action",
+        description="Price level relative to moving averages, intraday open-close patterns, Parkinson volatility.",
+        keywords=["price_state", "intraday", "close_weakness", "parkinson", "mean_reversion", "open_close"],
+        datafield_indicators=["close", "open", "parkinson_volatility_60", "parkinson_volatility_180", "vwap"],
+        operator_indicators=["ts_mean", "rank"],
+        macro_related=False,
+        sector_related=False
+    ),
+    "operational": FactorFamily(
+        id="operational",
+        name="operational",
+        display_name="Operational Efficiency",
+        category="fundamental",
+        description="Sales/inventory ratios, asset turnover, revenue quality. Measures how efficiently capital is deployed.",
+        keywords=["operational", "inventory", "sales", "asset_turnover", "throughput", "efficiency"],
+        datafield_indicators=["inventory", "sales", "revenue", "asset_turnover", "cap_turnover"],
+        operator_indicators=["rank", "group_rank", "ts_delta"],
+        macro_related=False,
+        sector_related=False
+    ),
+    "capital_efficiency": FactorFamily(
+        id="capital_efficiency",
+        name="capital_efficiency",
+        display_name="Capital Efficiency",
+        category="fundamental",
+        description="Return on assets, gross profitability, cash flow quality. Measures profitability per unit of capital.",
+        keywords=["capital_efficiency", "profitability", "roa", "roe", "gross_profit", "ebitda", "cash_flow"],
+        datafield_indicators=["gross_profit", "ebitda", "net_income", "assets", "cash_flow"],
+        operator_indicators=["rank", "group_rank"],
+        macro_related=False,
+        sector_related=False
+    ),
+    "balance_sheet": FactorFamily(
+        id="balance_sheet",
+        name="balance_sheet",
+        display_name="Balance Sheet / Stress",
+        category="fundamental",
+        description="Leverage, liquidity, interest coverage, working capital. Financial health and solvency signals.",
+        keywords=["balance_sheet", "leverage", "debt", "liquidity", "coverage", "working_capital", "solvency"],
+        datafield_indicators=["debt", "total_debt", "current_ratio", "interest_expense", "working_capital"],
+        operator_indicators=["rank", "group_rank"],
+        macro_related=True,
+        sector_related=False
+    ),
+    "implied_vol_options": FactorFamily(
+        id="implied_vol_options",
+        name="implied_vol_options",
+        display_name="Implied Vol / Options",
+        category="derivatives",
+        description="Options-based signals: IV term structure, put-call ratio, vol skew.",
+        keywords=["implied_volatility", "pcr", "put_call", "options", "skew", "term_structure", "vol_surface"],
+        datafield_indicators=["implied_volatility_call_270", "pcr_oi_call", "pcr_oi_put"],
+        operator_indicators=["ts_rank", "rank", "ts_mean"],
+        macro_related=True,
+        sector_related=False
+    ),
 }
 
 MACRO_THEMES = {
@@ -398,6 +483,157 @@ class FactorOntologyEngine:
 
         exposures.sort(key=lambda x: x.confidence, reverse=True)
         return exposures
+
+    def classify_from_file(self, path: Path) -> List[str]:
+        """Read an alpha .md file and return its top factor family ids."""
+        meta = {}
+        try:
+            import frontmatter as fm
+            post = fm.load(str(path))
+            meta = post.metadata
+        except Exception:
+            pass
+
+        if not meta:
+            # Manual YAML list parser for the frontmatter block
+            try:
+                text = path.read_text(encoding="utf-8")
+                import re as _re
+                # Extract frontmatter between --- markers
+                fm_match = _re.match(r'^---\n(.*?)\n---', text, _re.DOTALL)
+                if fm_match:
+                    fm_text = fm_match.group(1)
+                    current_key = None
+                    for line in fm_text.split("\n"):
+                        list_item = _re.match(r'^- (.+)', line)
+                        kv = _re.match(r'^(\w+):\s*(.*)', line)
+                        if list_item and current_key:
+                            if current_key not in meta:
+                                meta[current_key] = []
+                            if isinstance(meta[current_key], list):
+                                meta[current_key].append(list_item.group(1).strip())
+                        elif kv:
+                            current_key = kv.group(1)
+                            val = kv.group(2).strip()
+                            meta[current_key] = val if val else []
+            except Exception:
+                return []
+
+        def _as_list(v):
+            if isinstance(v, list): return [str(x) for x in v]
+            if v: return [str(v)]
+            return []
+
+        expr = str(meta.get("expression") or "")
+        datafields = _as_list(meta.get("datafields"))
+        operators = _as_list(meta.get("operators"))
+        concepts = _as_list(meta.get("concepts"))
+
+        # Portfolio-context explicit pattern matching (precision over recall)
+        families = set()
+        expr_l = expr.lower()
+        df_str = " ".join(str(f).lower() for f in datafields)
+        expr_plus_df = expr_l + " " + df_str
+
+        # Attention: RVOL — volume divided by its own rolling average
+        if re.search(r'volume\s*/\s*\(?ts_su?m?\s*\(?\s*volume', expr_l) or \
+           re.search(r'volume\s*/\s*\(?\s*ts_mean\s*\(\s*volume', expr_l) or \
+           any(f in datafields for f in ["scl12_buzz", "snt_buzz",
+                                          "mean_composite_sentiment_score",
+                                          "scl12_buzz_fast_d1", "snt_buzz_fast_d1"]):
+            families.add("attention")
+
+        # Neglect: explicit negated multi-week return accumulation
+        if re.search(r'-\s*ts_sum\s*\(\s*returns', expr_l) or \
+           re.search(r'rank\s*\(-\s*ts_sum\s*\(\s*returns', expr_l) or \
+           re.search(r'-\s*ts_rank\s*\(\s*returns', expr_l) or \
+           re.search(r'returns\s*>\s*0\?.*250', expr_l):
+            families.add("neglect")
+
+        # Price state: intraday OC midpoint, Parkinson vol, close vs own MA
+        if re.search(r'\(\s*open\s*\+\s*close\s*\)', expr_l) or \
+           re.search(r'1\s*-\s*close\s*/\s*open', expr_l) or \
+           re.search(r'close\s*/\s*open', expr_l) or \
+           re.search(r'close\s*-\s*vwap', expr_l) or \
+           re.search(r'parkinson', expr_plus_df):
+            families.add("price_state")
+
+        # Operational: sales/inventory/revenue datafields
+        if re.search(r'(?:^|\b)(inventor|sales_|revenue|asset_turn|cap_turn)', df_str):
+            families.add("operational")
+
+        # Capital efficiency: profitability datafields
+        if re.search(r'(?:gross_profit|ebitd|net_income|return_on|roa_|roe_)', df_str):
+            families.add("capital_efficiency")
+
+        # Balance sheet: leverage/debt/liquidity datafields
+        if re.search(r'(?:total_debt|leverage|interest_exp|working_cap|current_ratio)', df_str):
+            families.add("balance_sheet")
+
+        # Implied vol / options datafields
+        if re.search(r'(?:implied_volatility|pcr_oi|pcr_vol|put_call)', df_str):
+            families.add("implied_vol_options")
+
+        # Model composite: mdl77 and named composite model fields
+        if re.search(r'mdl77_|equity_value_score|mdl177_', expr_l) and not families:
+            # Use the field name to infer the sub-family where possible
+            if re.search(r'growth|gpam|eps|revision|earn', expr_l + df_str):
+                families.add("growth")
+            elif re.search(r'liquidity|liqrisk', expr_l + df_str):
+                families.add("liquidity")
+            elif re.search(r'value|pegy|bp_|pe_|ev_', expr_l + df_str):
+                families.add("value")
+            elif re.search(r'profit|margin|roa|roe|quality', expr_l + df_str):
+                families.add("capital_efficiency")
+            else:
+                families.add("model_composite")
+
+        # For remaining unclassified alphas, fall back to ontology engine
+        # with high confidence threshold to avoid generic noise
+        if not families:
+            exposures = self.classify_alpha(expr, datafields, operators, concepts)
+            legacy_families = {"quality", "value", "momentum", "reversal",
+                               "liquidity", "volatility", "growth", "distress",
+                               "positioning", "flow_based", "sector_sensitive"}
+            families = {e.factor_family for e in exposures[:2]
+                        if e.confidence >= 0.45 and e.factor_family in legacy_families}
+
+        return sorted(families) if families else ["unclassified"]
+
+    def portfolio_saturation(
+        self,
+        alphas_dir: Path,
+        active_states: set = None
+    ) -> Dict:
+        """
+        Compute factor family saturation across the active portfolio.
+
+        Returns dict: {family_id: {"count": N, "alphas": [id, ...]}}
+        """
+        if active_states is None:
+            active_states = {"IS_PASS", "ACTIVE_OS", "SUBMITTED"}
+
+        saturation: Dict[str, List[str]] = defaultdict(list)
+        total = 0
+
+        for path in sorted(alphas_dir.glob("*.md")):
+            try:
+                text = path.read_text(encoding="utf-8")
+                state_m = re.search(r'^pipeline_state:\s*(\S+)', text, re.MULTILINE)
+                state = state_m.group(1) if state_m else ""
+                if state not in active_states:
+                    continue
+                alpha_id = path.stem
+                families = self.classify_from_file(path)
+                if not families:
+                    families = ["unclassified"]
+                for f in families:
+                    saturation[f].append(alpha_id)
+                total += 1
+            except Exception:
+                continue
+
+        return {"total_active": total, "by_family": dict(saturation)}
 
     def _infer_direction(self, expression: str, factor_family: str) -> str:
         """Infer whether the alpha is long/short/neutral on the factor."""

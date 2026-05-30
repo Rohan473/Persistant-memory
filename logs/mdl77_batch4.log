@@ -1,0 +1,77 @@
+  FAILED — ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+  FAILED — ConnectionError: HTTPSConnectionPool(host='api.worldquantbrain.com', port=443): Max retries exceeded with url: /simulations (Caused by NameResolutionError("HTTPSConnection(host='api.worldquantbrain.com', port=443): Failed to resolve 'api.worldquantbrain.com' ([Errno 11001] getaddrinfo failed)"))
+
+Template: mdl77_signal_probe
+Selected 16 expression(s) to submit
+
+Daily budget: 18/30 remaining
+
+=== [1/16] group_rank(zscore(mdl77_ovalueanalystmodel_qva_shortfall), industry) ===
+  SKIP — exact prior attempt: alpha_0986 (use --force to override)
+
+=== [2/16] group_rank(zscore(mdl77_ovalueanalystmodel_qva_shortfall), subindustry) ===
+  SKIP — exact prior attempt: alpha_0987 (use --force to override)
+
+=== [3/16] group_rank(zscore(mdl77_ovalueanalystmodel_qva_valuation), industry) ===
+  SKIP — exact prior attempt: alpha_0988 (use --force to override)
+
+=== [4/16] group_rank(zscore(mdl77_ovalueanalystmodel_qva_valuation), subindustry) ===
+  SKIP — exact prior attempt: alpha_0989 (use --force to override)
+
+=== [5/16] group_rank(zscore(mdl77_ohistoricalgrowthfactor_pfcoghc), industry) ===
+  SKIP — exact prior attempt: alpha_0990 (use --force to override)
+
+=== [6/16] group_rank(zscore(mdl77_ohistoricalgrowthfactor_pfcoghc), subindustry) ===
+  SKIP — exact prior attempt: alpha_0991 (use --force to override)
+
+=== [7/16] group_rank(zscore(mdl77_ohistoricalgrowthfactor_chg3yepsast), industry) ===
+  SKIP — exact prior attempt: alpha_0992 (use --force to override)
+
+=== [8/16] group_rank(zscore(mdl77_ohistoricalgrowthfactor_chg3yepsast), subindustry) ===
+  SKIP — exact prior attempt: alpha_0993 (use --force to override)
+
+=== [9/16] group_rank(zscore(mdl77_2earningsqualityfactor_dpcapex), industry) ===
+  SKIP — exact prior attempt: alpha_0994 (use --force to override)
+
+=== [10/16] group_rank(zscore(mdl77_2earningsqualityfactor_dpcapex), subindustry) ===
+  SKIP — exact prior attempt: alpha_0995 (use --force to override)
+
+=== [11/16] group_rank(zscore(mdl77_earningsqualityfactor_chgshare), industry) ===
+  SKIP — exact prior attempt: alpha_0996 (use --force to override)
+
+=== [12/16] group_rank(zscore(mdl77_earningsqualityfactor_chgshare), subindustry) ===
+  SKIP — exact prior attempt: alpha_0997 (use --force to override)
+
+=== [13/16] group_rank(zscore(mdl77_liquidityriskfactor_lfd), industry) ===
+  Pre-flight: top similar = alpha_0986 (score=0.45, Sharpe=-0.26)
+  [18/30 remaining] submitting expression (59 chars)
+    sim_id = 1suIaE95f54D9oH5NSwWsyG
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/d5dx2xmX
+  -> status=COMPLETE Sharpe=-0.24 Fitness=-0.08 Turnover=2.53%
+    failure_modes: low_fitness, low_sharpe
+    wrote: alpha_0998.md
+
+=== [14/16] group_rank(zscore(mdl77_liquidityriskfactor_lfd), subindustry) ===
+  Pre-flight: top similar = alpha_0986 (score=0.45, Sharpe=-0.26)
+  [17/30 remaining] submitting expression (62 chars)
+    sim_id = dkrbO5Hp5eFbP911y4Z0SZF
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/RRdpJA80
+  -> status=COMPLETE Sharpe=-0.23 Fitness=-0.08 Turnover=2.24%
+    failure_modes: low_fitness, low_sharpe
+    wrote: alpha_0999.md
+
+=== [15/16] group_rank(zscore(mdl77_shortsentimentfactor_act_util), industry) ===
+  Pre-flight: top similar = alpha_0986 (score=0.45, Sharpe=-0.26)
+  [16/30 remaining] submitting expression (65 chars)
+    sim_id = 2utD5l8Oo4EicBQmRG2by50
+    status: UNKNOWN
+
+=== [16/16] group_rank(zscore(mdl77_shortsentimentfactor_act_util), subindustry) ===
+  Pre-flight: top similar = alpha_0986 (score=0.45, Sharpe=-0.26)
+  [15/30 remaining] submitting expression (68 chars)
+
+Done. Submitted 2/16. Budget remaining: 15/30.

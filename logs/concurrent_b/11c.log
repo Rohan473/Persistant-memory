@@ -1,0 +1,18 @@
+
+Template: mdl53_phase11c_top3000_industry
+Selected 1 expression(s) to submit
+
+Daily budget: 30/30 remaining
+
+=== [1/1] group_rank((zscore(abs(annualized_pd_10_year_jc7 - annualized_pd_10_year_jm5) / (annualized_pd_10_year_jc7 + annualized_pd_10_year_jm5 + 0.000001)) + zscore(abs(annualized_pd_10_year_jc5 - annualized_pd_10_year_jc7) / (annualized_pd_10_year_jc5 + annualized_pd_10_year_jc7 + 0.000001)) + zscore(abs(mdl53_jc5_10year - mdl53_jm5_10year) / (mdl53_jc5_10year + mdl53_jm5_10year + 0.000001))) / 3, industry) ===
+  Pre-flight: top similar = alpha_1106 (score=1.0, Sharpe=1.12)
+  [30/30 remaining] submitting expression (403 chars)
+    sim_id = 4tTgdCcUa4kKbk81ea5ZHUfJ
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/9qJV60me
+  -> status=COMPLETE Sharpe=1.69 Fitness=1.54 Turnover=8.06%
+    failure_modes: concentrated_weight
+    wrote: alpha_1116.md
+
+Done. Submitted 1/1. Budget remaining: 27/30.

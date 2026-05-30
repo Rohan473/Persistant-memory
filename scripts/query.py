@@ -418,6 +418,8 @@ def main():
         cmd_search(G, pattern, limit=limit)
     elif cmd == "memory":
         cmd_memory(args[1:])
+    elif cmd == "saturation":
+        cmd_saturation(G)
     else:
         print(__doc__)
 
@@ -702,6 +704,104 @@ def cmd_memory(args):
         if e.description:
             print(f"             {e.description}")
         print(f"             ({e.file_path.name})")
+
+
+def cmd_saturation(G):
+    """
+    Portfolio factor saturation report.
+
+    Reads all IS_PASS / ACTIVE_OS / SUBMITTED alphas, classifies each into
+    factor families, and shows which families are over- vs under-represented.
+    Use this to guide the next alpha search: avoid saturated families, target gaps.
+    """
+    import importlib.util, sys as _sys
+    from pathlib import Path as _Path
+    from collections import Counter as _C
+
+    base = _Path(__file__).resolve().parent.parent
+    spec = importlib.util.spec_from_file_location(
+        "factor_ontology", base / "memory_layer" / "factor_ontology.py"
+    )
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+
+    engine = mod.FactorOntologyEngine()
+    alphas_dir = base / "private" / "nodes" / "alphas"
+    result = engine.portfolio_saturation(alphas_dir)
+
+    total = result["total_active"]
+    by_family = result["by_family"]
+
+    FAMILY_DISPLAY = {
+        "attention":           "Attention / RVOL",
+        "neglect":             "Neglect / Contrarian",
+        "price_state":         "Price State / Intraday",
+        "volatility":          "Realized Volatility",
+        "implied_vol_options": "Implied Vol / Options",
+        "momentum":            "Momentum",
+        "reversal":            "Reversal",
+        "liquidity":           "Liquidity",
+        "operational":         "Operational Efficiency",
+        "capital_efficiency":  "Capital Efficiency",
+        "balance_sheet":       "Balance Sheet / Stress",
+        "quality":             "Quality",
+        "value":               "Value",
+        "growth":              "Growth",
+        "sentiment_news":      "Sentiment / News",
+        "positioning":         "Positioning / Flow",
+        "model_composite":     "Model Composite (mdl77)",
+        "unclassified":        "Unclassified",
+    }
+
+    def verdict(count, total):
+        if total == 0:
+            return "UNKNOWN"
+        pct = count / total
+        if pct >= 0.25:   return "SATURATED  — avoid"
+        if pct >= 0.12:   return "HIGH       — caution"
+        if pct >= 0.05:   return "MEDIUM     — ok"
+        if count > 0:     return "LOW        — explore"
+        return              "EMPTY      — target"
+
+    print(f"\nPortfolio Factor Saturation  ({total} active alphas)")
+    print("=" * 72)
+    print(f"  {'Family':<28} {'Count':>5}  {'Share':>6}  Verdict")
+    print(f"  {'-'*28} {'-'*5}  {'-'*6}  {'-'*22}")
+
+    # Sort: saturated first, empty last
+    ordered = sorted(by_family.items(), key=lambda x: -len(x[1]))
+
+    shown_families = set()
+    for fam_id, alpha_ids in ordered:
+        shown_families.add(fam_id)
+        display = FAMILY_DISPLAY.get(fam_id, fam_id)
+        cnt = len(alpha_ids)
+        pct = cnt / total * 100 if total else 0
+        v = verdict(cnt, total)
+        print(f"  {display:<28} {cnt:>5}  {pct:>5.0f}%  {v}")
+
+    # Show empty families (not in portfolio at all)
+    empty = [fid for fid in FAMILY_DISPLAY if fid not in shown_families
+             and fid != "unclassified"]
+    if empty:
+        print()
+        for fid in empty:
+            display = FAMILY_DISPLAY.get(fid, fid)
+            print(f"  {display:<28} {0:>5}  {'0':>6}%  EMPTY      — target")
+
+    print()
+    # Recommendation
+    SKIP = {"unclassified", "model_composite", "sector_sensitive"}
+    gap_families = [fid for fid in FAMILY_DISPLAY
+                    if fid not in by_family and fid not in SKIP]
+    saturated = [fid for fid, ids in by_family.items()
+                 if total and len(ids) / total >= 0.12 and fid not in SKIP]
+
+    if saturated:
+        print(f"  AVOID     : {', '.join(FAMILY_DISPLAY.get(f, f) for f in saturated[:5])}")
+    if gap_families:
+        print(f"  TARGET    : {', '.join(FAMILY_DISPLAY.get(f, f) for f in gap_families[:5])}")
+    print()
 
 
 def cmd_search(G, pattern, limit=20):

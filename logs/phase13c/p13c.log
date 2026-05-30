@@ -1,0 +1,29 @@
+  FAILED — ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+  FAILED — ConnectionError: HTTPSConnectionPool(host='api.worldquantbrain.com', port=443): Max retries exceeded with url: /simulations (Caused by NameResolutionError("HTTPSConnection(host='api.worldquantbrain.com', port=443): Failed to resolve 'api.worldquantbrain.com' ([Errno 11001] getaddrinfo failed)"))
+  FAILED — ConnectionError: HTTPSConnectionPool(host='api.worldquantbrain.com', port=443): Max retries exceeded with url: /simulations (Caused by NameResolutionError("HTTPSConnection(host='api.worldquantbrain.com', port=443): Failed to resolve 'api.worldquantbrain.com' ([Errno 11001] getaddrinfo failed)"))
+  FAILED — ConnectionError: HTTPSConnectionPool(host='api.worldquantbrain.com', port=443): Max retries exceeded with url: /simulations (Caused by NameResolutionError("HTTPSConnection(host='api.worldquantbrain.com', port=443): Failed to resolve 'api.worldquantbrain.com' ([Errno 11001] getaddrinfo failed)"))
+
+Template: news_phase13c_ts_delta
+Selected 4 expression(s) to submit
+
+Daily budget: 30/30 remaining
+
+=== [1/4] group_rank(ts_delta(mean_composite_sentiment_score, 5), subindustry) ===
+  Pre-flight: top similar = alpha_1140 (score=0.66, Sharpe=0.92)
+  [30/30 remaining] submitting expression (68 chars)
+    sim_id = 4FoEWHbt54iuaHa6T0vwHly
+    status: UNKNOWN
+
+=== [2/4] group_rank(ts_delta(mean_composite_sentiment_score, 22), subindustry) ===
+  Pre-flight: top similar = alpha_1140 (score=0.66, Sharpe=0.92)
+  [29/30 remaining] submitting expression (69 chars)
+
+=== [3/4] group_rank(ts_delta(ts_mean(mean_composite_sentiment_score, 5), 5), subindustry) ===
+  Pre-flight: top similar = alpha_1141 (score=0.7, Sharpe=0.65)
+  [29/30 remaining] submitting expression (80 chars)
+
+=== [4/4] group_rank(ts_delta(mean_composite_sentiment_score, 1), subindustry) ===
+  Pre-flight: top similar = alpha_1140 (score=0.66, Sharpe=0.92)
+  [29/30 remaining] submitting expression (68 chars)
+
+Done. Submitted 0/4. Budget remaining: 29/30.

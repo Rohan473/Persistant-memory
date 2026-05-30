@@ -1,0 +1,51 @@
+
+Template: news_phase13f_asymmetric
+Selected 4 expression(s) to submit
+
+Daily budget: 20/30 remaining
+
+=== [1/4] ts_mean(group_rank(ts_mean(if_else(mean_composite_sentiment_score > 0, mean_composite_sentiment_score, 0), 5) - 0.5 * ts_mean(if_else(mean_composite_sentiment_score < 0, mean_composite_sentiment_score, 0), 22), subindustry), 22) ===
+  Pre-flight: top similar = alpha_1141 (score=0.7, Sharpe=0.65)
+  [20/30 remaining] submitting expression (228 chars)
+    sim_id = 2LGT0n7V4Kr9pgihQ2WdRz
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/A1kNZ1VQ
+  -> status=COMPLETE Sharpe=0.96 Fitness=0.68 Turnover=7.04%
+    failure_modes: low_fitness, low_sharpe
+    wrote: alpha_1152.md
+
+=== [2/4] ts_mean(group_rank(ts_mean(if_else(mean_composite_sentiment_score > 0, mean_composite_sentiment_score, 0), 5) - ts_mean(if_else(mean_composite_sentiment_score < 0, mean_composite_sentiment_score, 0), 22), subindustry), 22) ===
+  Pre-flight: top similar = alpha_1141 (score=0.7, Sharpe=0.65)
+  [19/30 remaining] submitting expression (222 chars)
+    sim_id = 3fKGlj27T4Y5cKcR1V8v8Bq
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/qMgxrmmV
+  -> status=COMPLETE Sharpe=0.96 Fitness=0.68 Turnover=7.04%
+    failure_modes: low_fitness, low_sharpe
+    wrote: alpha_1153.md
+
+=== [3/4] ts_mean(group_rank(-1 * ts_mean(if_else(mean_composite_sentiment_score < 0, mean_composite_sentiment_score, 0), 65), subindustry), 22) ===
+  Pre-flight: top similar = alpha_1141 (score=0.7, Sharpe=0.65)
+  [18/30 remaining] submitting expression (134 chars)
+    sim_id = 3h0u498hw4KJa4BIwwgtQyF
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/np3dReM8
+  -> status=COMPLETE Sharpe=0.0 Fitness=None Turnover=0.0%
+    failure_modes: concentrated_weight, low_fitness, low_sharpe, low_turnover, sub_universe_failure
+    wrote: alpha_1154.md
+
+=== [4/4] ts_mean(group_rank(ts_mean(if_else(mean_composite_sentiment_score > 0, mean_composite_sentiment_score, 0), 5), subindustry), 22) ===
+  Pre-flight: top similar = alpha_1141 (score=0.7, Sharpe=0.65)
+  [17/30 remaining] submitting expression (128 chars)
+    sim_id = 4u9VKcgfL4Y09V4em4zLNMB
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/Xg1b56al
+  -> status=COMPLETE Sharpe=0.96 Fitness=0.68 Turnover=7.04%
+    failure_modes: low_fitness, low_sharpe
+    wrote: alpha_1155.md
+
+Done. Submitted 4/4. Budget remaining: 16/30.

@@ -1,0 +1,12 @@
+  FAILED — BrainRateLimit: Persistently rate-limited on POST /simulations
+
+Template: complement_phase20_v4_breakeven
+Selected 1 expression(s) to submit
+
+Daily budget: 1000000000/0 remaining
+
+=== [1/1] ts_mean(group_rank(ts_delta(option_breakeven_30, 5), subindustry), 22) ===
+  Pre-flight: top similar = alpha_1147 (score=0.35, Sharpe=1.54)
+  [1000000000/0 remaining] submitting expression (70 chars)
+
+Done. Submitted 0/1. Budget remaining: 1000000000/0.

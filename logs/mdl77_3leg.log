@@ -1,0 +1,111 @@
+Daily budget: 22/30 remaining
+Batch: 3 expressions from private\templates\_mdl77_3leg_batch.txt
+Daily cap leaves room for 22 more today.
+
+
+=== [1/3] ===
+Pre-flight context (5 related attempt(s)):
+  alpha_1006     score=0.46  Sharpe=n/a  status=rejected
+    shared datafields: close
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    expression: winsorize(0.5 * zscore(group_rank(zscore(mdl77_ohistoricalgrowthfactor_chg3yepsast), indus
+  alpha_1007     score=0.46  Sharpe=+1.83  status=submitted
+    shared datafields: close
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    expression: winsorize(0.5 * zscore(group_rank(zscore(mdl77_ohistoricalgrowthfactor_chg3yepsast), indus
+  alpha_1008     score=0.46  Sharpe=+1.98  status=rejected
+    shared datafields: close
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    prior failures:    low_fitness
+    expression: winsorize(0.5 * zscore(group_rank(zscore(mdl77_ohistoricalgrowthfactor_chg3yepsast), indus
+  alpha_1009     score=0.46  Sharpe=+1.95  status=rejected
+    shared datafields: close
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    prior failures:    low_fitness
+    expression: winsorize(0.5 * zscore(group_rank(zscore(mdl77_ohistoricalgrowthfactor_chg3yepsast), indus
+  alpha_0933     score=0.34  Sharpe=+1.63  status=rejected
+    shared datafields: close
+    shared operators:  rank, ts_mean, winsorize, zscore
+    prior failures:    concentrated_weight, low_fitness
+    expression: winsorize(zscore(ts_rank(implied_volatility_call_270, 60)) + zscore(rank(-(close - ts_mean
+
+[22/30 remaining] submitting expression (310 chars)
+  sim_id = 2ftjtMehu4HB9VNgWYMSwRl
+  status: UNKNOWN
+  status: COMPLETE
+  alpha resource: /alphas/RRdpk7n0
+
+Result: status=COMPLETE
+  Sharpe=2.16  Fitness=1.85  Turnover=19.86%  Returns=14.57%
+  wrote: E:\New folder\WQB\knowledge_graph\private\nodes\alphas\alpha_1018.md
+
+=== [2/3] ===
+Pre-flight context (5 related attempt(s)):
+  alpha_1006     score=0.46  Sharpe=n/a  status=rejected
+    shared datafields: close
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    expression: winsorize(0.5 * zscore(group_rank(zscore(mdl77_ohistoricalgrowthfactor_chg3yepsast), indus
+  alpha_1007     score=0.46  Sharpe=+1.83  status=submitted
+    shared datafields: close
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    expression: winsorize(0.5 * zscore(group_rank(zscore(mdl77_ohistoricalgrowthfactor_chg3yepsast), indus
+  alpha_1008     score=0.46  Sharpe=+1.98  status=rejected
+    shared datafields: close
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    prior failures:    low_fitness
+    expression: winsorize(0.5 * zscore(group_rank(zscore(mdl77_ohistoricalgrowthfactor_chg3yepsast), indus
+  alpha_1009     score=0.46  Sharpe=+1.95  status=rejected
+    shared datafields: close
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    prior failures:    low_fitness
+    expression: winsorize(0.5 * zscore(group_rank(zscore(mdl77_ohistoricalgrowthfactor_chg3yepsast), indus
+  alpha_0933     score=0.34  Sharpe=+1.63  status=rejected
+    shared datafields: close
+    shared operators:  rank, ts_mean, winsorize, zscore
+    prior failures:    concentrated_weight, low_fitness
+    expression: winsorize(zscore(ts_rank(implied_volatility_call_270, 60)) + zscore(rank(-(close - ts_mean
+
+[21/30 remaining] submitting expression (310 chars)
+  sim_id = 2tLeRWdNn56faE217JJpY7hf
+  status: UNKNOWN
+  status: COMPLETE
+  alpha resource: /alphas/3qz7n12g
+
+Result: status=COMPLETE
+  Sharpe=2.07  Fitness=1.88  Turnover=18.5%  Returns=15.26%
+  wrote: E:\New folder\WQB\knowledge_graph\private\nodes\alphas\alpha_1019.md
+
+=== [3/3] ===
+Pre-flight context (5 related attempt(s)):
+  alpha_1018     score=0.95  Sharpe=+2.16  status=submitted
+    shared datafields: close, mdl77_chgnoa, mdl77_fangma_gpam11, mdl77_omomemtumanalystmodel_qma_earnexp
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    expression: winsorize(0.30 * zscore(-1 * group_rank(zscore(mdl77_fangma_gpam11), industry)) + 0.25 * z
+  alpha_1006     score=0.46  Sharpe=n/a  status=rejected
+    shared datafields: close
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    expression: winsorize(0.5 * zscore(group_rank(zscore(mdl77_ohistoricalgrowthfactor_chg3yepsast), indus
+  alpha_1007     score=0.46  Sharpe=+1.83  status=submitted
+    shared datafields: close
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    expression: winsorize(0.5 * zscore(group_rank(zscore(mdl77_ohistoricalgrowthfactor_chg3yepsast), indus
+  alpha_1008     score=0.46  Sharpe=+1.98  status=rejected
+    shared datafields: close
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    prior failures:    low_fitness
+    expression: winsorize(0.5 * zscore(group_rank(zscore(mdl77_ohistoricalgrowthfactor_chg3yepsast), indus
+  alpha_1009     score=0.46  Sharpe=+1.95  status=rejected
+    shared datafields: close
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    prior failures:    low_fitness
+    expression: winsorize(0.5 * zscore(group_rank(zscore(mdl77_ohistoricalgrowthfactor_chg3yepsast), indus
+
+[20/30 remaining] submitting expression (236 chars)
+  sim_id = 1u6xUl53C4QJ9pVwa9FP7ju
+  status: UNKNOWN
+  status: COMPLETE
+  alpha resource: /alphas/wpLRJ7dl
+
+Result: status=COMPLETE
+  Sharpe=1.49  Fitness=1.46  Turnover=10.16%  Returns=11.94%
+  wrote: E:\New folder\WQB\knowledge_graph\private\nodes\alphas\alpha_1020.md

@@ -1,0 +1,21 @@
+# mdl53_phase16c_market started 09:29:33
+# cmd: C:\Users\91866\AppData\Local\Programs\Python\Python312\python.exe E:\New folder\WQB\knowledge_graph\scripts\sweep.py run mdl53_phase16c_market --budget 100 --force
+
+
+Template: mdl53_phase16c_market
+Selected 1 expression(s) to submit
+
+Daily budget: 86/100 remaining
+
+=== [1/1] group_rank((zscore(abs(annualized_pd_10_year_jc7 - annualized_pd_10_year_jm5) / (annualized_pd_10_year_jc7 + annualized_pd_10_year_jm5 + 0.000001)) + zscore(abs(annualized_pd_10_year_jc5 - annualized_pd_10_year_jc7) / (annualized_pd_10_year_jc5 + annualized_pd_10_year_jc7 + 0.000001)) + zscore(abs(mdl53_jc5_10year - mdl53_jm5_10year) / (mdl53_jc5_10year + mdl53_jm5_10year + 0.000001))) / 3, sector) ===
+  Pre-flight: top similar = alpha_1124 (score=1.0, Sharpe=1.7)
+  [86/100 remaining] submitting expression (401 chars)
+    sim_id = 2HICpEeFB4hZbgS18GVDEE4u
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/xARYjg1n
+  -> status=COMPLETE Sharpe=1.69 Fitness=1.69 Turnover=6.83%
+    failure_modes: concentrated_weight
+    wrote: alpha_1130.md
+
+Done. Submitted 1/1. Budget remaining: 82/100.

@@ -1,0 +1,21 @@
+# mdl53_phase11d_top3000_subindustry started 00:28:22
+# cmd: C:\Users\91866\AppData\Local\Programs\Python\Python312\python.exe E:\New folder\WQB\knowledge_graph\scripts\sweep.py run mdl53_phase11d_top3000_subindustry --budget 100
+
+
+Template: mdl53_phase11d_top3000_subindustry
+Selected 1 expression(s) to submit
+
+Daily budget: 18/100 remaining
+
+=== [1/1] group_rank((zscore(abs(annualized_pd_10_year_jc7 - annualized_pd_10_year_jm5) / (annualized_pd_10_year_jc7 + annualized_pd_10_year_jm5 + 0.000001)) + zscore(abs(annualized_pd_10_year_jc5 - annualized_pd_10_year_jc7) / (annualized_pd_10_year_jc5 + annualized_pd_10_year_jc7 + 0.000001)) + zscore(abs(mdl53_jc5_10year - mdl53_jm5_10year) / (mdl53_jc5_10year + mdl53_jm5_10year + 0.000001))) / 3, subindustry) ===
+  Pre-flight: top similar = alpha_1106 (score=0.875, Sharpe=1.12)
+  [18/100 remaining] submitting expression (406 chars)
+    sim_id = 4DIQyfa9N4IEcHsu4bgCOy3
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/KPk7nL2g
+  -> status=COMPLETE Sharpe=1.74 Fitness=1.45 Turnover=8.63%
+    failure_modes: concentrated_weight
+    wrote: alpha_1113.md
+
+Done. Submitted 1/1. Budget remaining: 16/100.

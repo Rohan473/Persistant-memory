@@ -1,0 +1,51 @@
+
+Template: mdl53_phase14_concentration_fix
+Selected 4 expression(s) to submit
+
+Daily budget: 23/30 remaining
+
+=== [1/4] rank((zscore(abs(annualized_pd_10_year_jc7 - annualized_pd_10_year_jm5) / (annualized_pd_10_year_jc7 + annualized_pd_10_year_jm5 + 0.000001)) + zscore(abs(annualized_pd_10_year_jc5 - annualized_pd_10_year_jc7) / (annualized_pd_10_year_jc5 + annualized_pd_10_year_jc7 + 0.000001)) + zscore(abs(mdl53_jc5_10year - mdl53_jm5_10year) / (mdl53_jc5_10year + mdl53_jm5_10year + 0.000001))) / 3) ===
+  Pre-flight: top similar = alpha_1113 (score=0.7, Sharpe=1.74)
+  [23/30 remaining] submitting expression (387 chars)
+    sim_id = 4ci0RMgIF4z8b1r15ROryAu7
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/1YJxaeo6
+  -> status=COMPLETE Sharpe=1.02 Fitness=0.79 Turnover=8.64%
+    failure_modes: concentrated_weight, low_fitness, low_sharpe
+    wrote: alpha_1121.md
+
+=== [2/4] group_neutralize((zscore(abs(annualized_pd_10_year_jc7 - annualized_pd_10_year_jm5) / (annualized_pd_10_year_jc7 + annualized_pd_10_year_jm5 + 0.000001)) + zscore(abs(annualized_pd_10_year_jc5 - annualized_pd_10_year_jc7) / (annualized_pd_10_year_jc5 + annualized_pd_10_year_jc7 + 0.000001)) + zscore(abs(mdl53_jc5_10year - mdl53_jm5_10year) / (mdl53_jc5_10year + mdl53_jm5_10year + 0.000001))) / 3, industry) ===
+  Pre-flight: top similar = alpha_1113 (score=0.7, Sharpe=1.74)
+  [22/30 remaining] submitting expression (409 chars)
+    sim_id = 1ClPFRaMs4ybaUdBI80qubp
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/QPE32lqg
+  -> status=COMPLETE Sharpe=0.96 Fitness=0.72 Turnover=8.92%
+    failure_modes: concentrated_weight, low_fitness, low_sharpe
+    wrote: alpha_1122.md
+
+=== [3/4] scale(group_neutralize((zscore(abs(annualized_pd_10_year_jc7 - annualized_pd_10_year_jm5) / (annualized_pd_10_year_jc7 + annualized_pd_10_year_jm5 + 0.000001)) + zscore(abs(annualized_pd_10_year_jc5 - annualized_pd_10_year_jc7) / (annualized_pd_10_year_jc5 + annualized_pd_10_year_jc7 + 0.000001)) + zscore(abs(mdl53_jc5_10year - mdl53_jm5_10year) / (mdl53_jc5_10year + mdl53_jm5_10year + 0.000001))) / 3, industry)) ===
+  Pre-flight: top similar = alpha_1113 (score=0.67, Sharpe=1.74)
+  [21/30 remaining] submitting expression (416 chars)
+    sim_id = 1T3OITaTb54Yb3V1dszXQ7q2
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/mLZgr52E
+  -> status=COMPLETE Sharpe=0.96 Fitness=0.72 Turnover=8.92%
+    failure_modes: concentrated_weight, low_fitness, low_sharpe
+    wrote: alpha_1123.md
+
+=== [4/4] group_rank((zscore(abs(annualized_pd_10_year_jc7 - annualized_pd_10_year_jm5) / (annualized_pd_10_year_jc7 + annualized_pd_10_year_jm5 + 0.000001)) + zscore(abs(annualized_pd_10_year_jc5 - annualized_pd_10_year_jc7) / (annualized_pd_10_year_jc5 + annualized_pd_10_year_jc7 + 0.000001)) + zscore(abs(mdl53_jc5_10year - mdl53_jm5_10year) / (mdl53_jc5_10year + mdl53_jm5_10year + 0.000001))) / 3, sector) ===
+  Pre-flight: top similar = alpha_1113 (score=0.85, Sharpe=1.74)
+  [20/30 remaining] submitting expression (401 chars)
+    sim_id = 2SRsFeWz4ytcyD11oEn4JLz
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/P0vZwxxM
+  -> status=COMPLETE Sharpe=1.7 Fitness=1.6 Turnover=7.6%
+    failure_modes: concentrated_weight
+    wrote: alpha_1124.md
+
+Done. Submitted 4/4. Budget remaining: 19/30.

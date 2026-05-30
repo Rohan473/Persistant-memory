@@ -1,0 +1,44 @@
+  FAILED — HTTPError: 504 Server Error: Gateway Time-out for url: https://api.worldquantbrain.com/simulations
+
+Template: mdl53_phase15_hump_concentration
+Selected 4 expression(s) to submit
+
+Daily budget: 19/30 remaining
+
+=== [1/4] hump(group_rank((zscore(abs(annualized_pd_10_year_jc7 - annualized_pd_10_year_jm5) / (annualized_pd_10_year_jc7 + annualized_pd_10_year_jm5 + 0.000001)) + zscore(abs(annualized_pd_10_year_jc5 - annualized_pd_10_year_jc7) / (annualized_pd_10_year_jc5 + annualized_pd_10_year_jc7 + 0.000001)) + zscore(abs(mdl53_jc5_10year - mdl53_jm5_10year) / (mdl53_jc5_10year + mdl53_jm5_10year + 0.000001))) / 3, sector), hump=0.01) ===
+  Pre-flight: top similar = alpha_1113 (score=0.775, Sharpe=1.74)
+  [19/30 remaining] submitting expression (418 chars)
+    sim_id = 24Akla4jR4CQbjawzxVc1Ab
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/LLk91qJ6
+  -> status=COMPLETE Sharpe=0.6 Fitness=0.37 Turnover=2.04%
+    failure_modes: concentrated_weight, low_fitness, low_sharpe
+    wrote: alpha_1125.md
+
+=== [2/4] hump(group_rank((zscore(abs(annualized_pd_10_year_jc7 - annualized_pd_10_year_jm5) / (annualized_pd_10_year_jc7 + annualized_pd_10_year_jm5 + 0.000001)) + zscore(abs(annualized_pd_10_year_jc5 - annualized_pd_10_year_jc7) / (annualized_pd_10_year_jc5 + annualized_pd_10_year_jc7 + 0.000001)) + zscore(abs(mdl53_jc5_10year - mdl53_jm5_10year) / (mdl53_jc5_10year + mdl53_jm5_10year + 0.000001))) / 3, sector), hump=0.005) ===
+  Pre-flight: top similar = alpha_1113 (score=0.775, Sharpe=1.74)
+  [18/30 remaining] submitting expression (419 chars)
+    sim_id = 6koC08Gk5hgaHCimylZXrg
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/qMgWlWlZ
+  -> status=COMPLETE Sharpe=0.6 Fitness=0.37 Turnover=2.04%
+    failure_modes: concentrated_weight, low_fitness, low_sharpe
+    wrote: alpha_1126.md
+
+=== [3/4] group_rank((zscore(abs(annualized_pd_10_year_jc7 - annualized_pd_10_year_jm5) / (annualized_pd_10_year_jc7 + annualized_pd_10_year_jm5 + 0.000001)) + zscore(abs(annualized_pd_10_year_jc5 - annualized_pd_10_year_jc7) / (annualized_pd_10_year_jc5 + annualized_pd_10_year_jc7 + 0.000001)) + zscore(abs(mdl53_jc5_10year - mdl53_jm5_10year) / (mdl53_jc5_10year + mdl53_jm5_10year + 0.000001))) / 3, sector) ===
+  Pre-flight: top similar = alpha_1124 (score=1.0, Sharpe=1.7)
+  [17/30 remaining] submitting expression (401 chars)
+    sim_id = 2k6s2me8w4khcqVwbzK7Two
+    status: UNKNOWN
+    status: COMPLETE
+    WARN: could not fetch alpha blvRqgvR: HTTPSConnectionPool(host='api.worldquantbrain.com', port=443): Read timed out. (read timeout=30.0)
+  -> status=COMPLETE Sharpe=None Fitness=None Turnover=None%
+    wrote: alpha_1127.md
+
+=== [4/4] group_rank((zscore(winsorize(abs(annualized_pd_10_year_jc7 - annualized_pd_10_year_jm5) / (annualized_pd_10_year_jc7 + annualized_pd_10_year_jm5 + 0.000001), std=3)) + zscore(winsorize(abs(annualized_pd_10_year_jc5 - annualized_pd_10_year_jc7) / (annualized_pd_10_year_jc5 + annualized_pd_10_year_jc7 + 0.000001), std=3)) + zscore(winsorize(abs(mdl53_jc5_10year - mdl53_jm5_10year) / (mdl53_jc5_10year + mdl53_jm5_10year + 0.000001), std=3))) / 3, sector) ===
+  Pre-flight: top similar = alpha_1119 (score=0.704, Sharpe=1.14)
+  [16/30 remaining] submitting expression (455 chars)
+
+Done. Submitted 3/4. Budget remaining: 16/30.

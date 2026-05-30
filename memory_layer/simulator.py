@@ -25,6 +25,62 @@ USAGE_PATH = Path(__file__).parent / "sim_usage.json"
 ALPHAS_DIR = Path(__file__).resolve().parent.parent / "private" / "nodes" / "alphas"
 
 
+# ── pipeline state machine ──────────────────────────────────────────────────
+# Stages (mirrors xiegengcai's INIT/SIMULATED/SYNC/CHECKED/SUBMITTED but adds
+# REJECTED + ACTIVE_OS for our reality):
+#
+#   INIT         template expanded but not yet submitted to WQB
+#   SIMULATED    sim complete, metrics back, but gates not yet IS-passed
+#   GATE_FAIL    sim complete; at least one IS check FAIL (most common end state)
+#   IS_PASS      all IS gates pass; eligible to submit (user must click)
+#   SUBMITTED    user has submitted; status went UNSUBMITTED -> ACTIVE; OS pending
+#   ACTIVE_OS    OS checks resolving (weeks to months — see reference-wqb-os-check-resolution)
+#   REJECTED     terminal failure (sim errored, expression invalid, etc.)
+#
+# This field is for AI/dashboard convenience — the source of truth for "what next"
+# is still (status × grade × failure_modes × OS checks). See `derive_pipeline_state`.
+
+
+PIPELINE_INIT       = "INIT"
+PIPELINE_SIMULATED  = "SIMULATED"
+PIPELINE_GATE_FAIL  = "GATE_FAIL"
+PIPELINE_IS_PASS    = "IS_PASS"
+PIPELINE_SUBMITTED  = "SUBMITTED"
+PIPELINE_ACTIVE_OS  = "ACTIVE_OS"
+PIPELINE_REJECTED   = "REJECTED"
+
+
+def _derive_pipeline_state_after_sim(result, failure_modes) -> str:
+    """Map a freshly-completed simulation to a pipeline_state value."""
+    if not getattr(result, "succeeded", False):
+        return PIPELINE_REJECTED
+    return PIPELINE_GATE_FAIL if failure_modes else PIPELINE_IS_PASS
+
+
+def derive_pipeline_state(metadata: dict) -> str:
+    """Derive pipeline_state from existing alpha frontmatter — for backfill and
+    for resync against WQB API responses. Idempotent on already-set states.
+
+    Local `status` semantics: 'submitted' = passed our IS gate, 'rejected' = failed it.
+    True submission (user clicked Submit at WQB) is recorded via `api_status` (filled
+    by `scripts/sync_pipeline_states.py` or similar resync against /alphas/{id})."""
+    api_status = (metadata.get("api_status") or metadata.get("wqb_status") or "").upper()
+    if api_status == "ACTIVE":
+        return PIPELINE_ACTIVE_OS
+    if api_status in ("UNSUBMITTED", ""):  # not yet verified or known-unsubmitted
+        pass
+    status = (metadata.get("status") or "").lower()
+    failure_modes = metadata.get("failure_modes") or []
+    sharpe = metadata.get("sharpe")
+    if sharpe is None:
+        return PIPELINE_INIT
+    if status == "submitted" and not failure_modes:
+        # Passed local IS gate. Until api_status is verified ACTIVE, treat as IS_PASS,
+        # not SUBMITTED — the user may not have clicked Submit at WQB yet.
+        return PIPELINE_IS_PASS
+    return PIPELINE_GATE_FAIL if failure_modes else PIPELINE_IS_PASS
+
+
 # ── budget ───────────────────────────────────────────────────────────────────
 
 class BudgetExhausted(Exception):
@@ -77,15 +133,21 @@ class DailyBudget:
         return False, ""
 
     def remaining(self) -> int:
+        if self.limit <= 0:
+            return 10**9  # unlimited sentinel
         return max(0, self.limit - self._load()["count"])
 
     def check(self) -> int:
-        """Raise QuietHours / BudgetExhausted if blocked; return current count."""
+        """Raise QuietHours / BudgetExhausted if blocked; return current count.
+        Set limit <= 0 to disable the daily-budget check entirely (WQB-side cap
+        and concurrency limit still apply)."""
         is_quiet, msg = self.quiet_window()
         if is_quiet:
             raise QuietHours(
                 f"{msg}. Pass --ignore-quiet-hours to override."
             )
+        if self.limit <= 0:
+            return self._load()["count"]
         data = self._load()
         if data["count"] >= self.limit:
             raise BudgetExhausted(
@@ -425,6 +487,15 @@ def write_back(
     match_path = None if force_new else find_matching_alpha(
         result.expression, alphas_dir, settings=result.settings
     )
+
+    # SAFETY: if this sim ERRORED (no metrics back), refuse to overwrite an
+    # existing alpha file. Otherwise we wipe verified metrics with NULLs
+    # whenever a settings-only variant errors. Create a fresh ERROR-stub file
+    # instead so the failure is recorded without clobbering history.
+    if match_path and not result.succeeded and not (result.metrics or {}).get("sharpe"):
+        match_path = None
+        force_new = True
+
     metrics = result.metrics
     settings = result.settings or {}
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
@@ -477,6 +548,10 @@ def write_back(
         "simulation_id": result.sim_id,
         "remote_alpha_id": result.alpha_id_remote,
         "last_simulated": today,
+        # Pipeline state — explicit machine-readable lifecycle stage. Derived from
+        # (succeeded, failure_modes); upgraded later by the submitter / OS poll.
+        # See `derive_pipeline_state` for the rules.
+        "pipeline_state": _derive_pipeline_state_after_sim(result, failure_modes),
     })
 
     # Body

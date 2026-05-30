@@ -1,0 +1,43 @@
+
+Template: mdl77_signal_probe
+Selected 4 expression(s) to submit
+
+Daily budget: 29/30 remaining
+
+=== [1/4] group_rank(zscore(mdl77_ovalueanalystmodel_qva_shortfall), industry) ===
+  SKIP — exact prior attempt: alpha_0986 (use --force to override)
+
+=== [2/4] group_rank(zscore(mdl77_ovalueanalystmodel_qva_shortfall), subindustry) ===
+  Pre-flight: top similar = alpha_0986 (score=0.95, Sharpe=-0.26)
+  [29/30 remaining] submitting expression (71 chars)
+    sim_id = 3qkcvv9by4Tw95v18t7bJYSo
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/kqQK68jL
+  -> status=COMPLETE Sharpe=-0.39 Fitness=-0.14 Turnover=3.81%
+    failure_modes: low_fitness, low_sharpe, sub_universe_failure
+    wrote: alpha_0987.md
+
+=== [3/4] group_rank(zscore(mdl77_ovalueanalystmodel_qva_valuation), industry) ===
+  Pre-flight: top similar = alpha_0986 (score=0.45, Sharpe=-0.26)
+  [28/30 remaining] submitting expression (68 chars)
+    sim_id = 4tm6pnbQO5crcAe1Omd6Mp9
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/vRdmXQwz
+  -> status=COMPLETE Sharpe=-0.38 Fitness=-0.21 Turnover=6.91%
+    failure_modes: low_fitness, low_sharpe, sub_universe_failure
+    wrote: alpha_0988.md
+
+=== [4/4] group_rank(zscore(mdl77_ovalueanalystmodel_qva_valuation), subindustry) ===
+  Pre-flight: top similar = alpha_0986 (score=0.45, Sharpe=-0.26)
+  [27/30 remaining] submitting expression (71 chars)
+    sim_id = 3hRqsLa6c5kgbha2qB0RCwo
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/j21gkw7W
+  -> status=COMPLETE Sharpe=-0.32 Fitness=-0.15 Turnover=6.61%
+    failure_modes: low_fitness, low_sharpe, sub_universe_failure
+    wrote: alpha_0989.md
+
+Done. Submitted 3/4. Budget remaining: 26/30.

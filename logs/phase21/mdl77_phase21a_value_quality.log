@@ -1,0 +1,20 @@
+# mdl77_phase21a_value_quality started 15:22:26
+# cmd: C:\Users\91866\AppData\Local\Programs\Python\Python312\python.exe E:\New folder\WQB\knowledge_graph\scripts\sweep.py run mdl77_phase21a_value_quality --budget 0
+
+
+Template: mdl77_phase21a_value_quality
+Selected 1 expression(s) to submit
+
+Daily budget: 1000000000/0 remaining
+
+=== [1/1] winsorize(0.30 * zscore(-1 * group_rank(zscore(equity_value_score), industry)) + 0.25 * zscore(group_rank(zscore(mdl177_2_earningsqualityfactor_ttmaccu), industry)) + 0.25 * zscore(group_rank(zscore(earnings_momentum_composite_score_2), industry)) + 0.20 * zscore(rank(-(close - ts_mean(close, 20)) / ts_mean(close, 20))), std=2.5) ===
+  Pre-flight: top similar = alpha_1018 (score=0.362, Sharpe=2.16)
+  [1000000000/0 remaining] submitting expression (331 chars)
+    sim_id = 3x1f5U8NA4OyclC1gdeacBPq
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/vRdrl7bA
+  -> status=COMPLETE Sharpe=1.5 Fitness=1.03 Turnover=16.27%
+    wrote: alpha_1178.md
+
+Done. Submitted 1/1. Budget remaining: 1000000000/0.

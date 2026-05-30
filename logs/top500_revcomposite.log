@@ -1,0 +1,106 @@
+  FAILED: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+Daily budget: 27/30 remaining
+Batch: 3 expressions from private\templates\_top500_revcomposite.txt
+Daily cap leaves room for 27 more today.
+
+
+=== [1/3] ===
+Pre-flight context (5 related attempt(s)):
+  alpha_1029     score=0.61  Sharpe=+1.21  status=rejected
+    shared datafields: close, mdl77_2earningsmomemtummodel_pge_cf, mdl77_2liquidityriskfactor_si_ratio, mdl77_garpanalystmodel_qgp_vfpriceratio, mdl77_ohistoricalgrowthfactor_pctchgeps
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    prior failures:    low_fitness, low_sharpe
+    expression: winsorize(0.40 * zscore(group_rank(zscore(mdl77_2liquidityriskfactor_si_ratio), industry))
+  alpha_1030     score=0.61  Sharpe=+1.45  status=submitted
+    shared datafields: close, mdl77_2earningsmomemtummodel_pge_cf, mdl77_2liquidityriskfactor_si_ratio, mdl77_garpanalystmodel_qgp_vfpriceratio, mdl77_ohistoricalgrowthfactor_pctchgeps
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    expression: winsorize(0.30 * zscore(group_rank(zscore(mdl77_2liquidityriskfactor_si_ratio), industry))
+  alpha_1031     score=0.61  Sharpe=+1.08  status=rejected
+    shared datafields: close, mdl77_2earningsmomemtummodel_pge_cf, mdl77_2liquidityriskfactor_si_ratio, mdl77_garpanalystmodel_qgp_vfpriceratio, mdl77_ohistoricalgrowthfactor_pctchgeps
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    prior failures:    low_fitness, low_sharpe, sub_universe_failure
+    expression: winsorize(0.30 * zscore(group_rank(zscore(mdl77_2liquidityriskfactor_si_ratio), industry))
+  alpha_1032     score=0.59  Sharpe=+1.75  status=submitted
+    shared datafields: close, mdl77_2earningsmomemtummodel_pge_cf, mdl77_2liquidityriskfactor_si_ratio, mdl77_garpanalystmodel_qgp_vfpriceratio, mdl77_ohistoricalgrowthfactor_pctchgeps
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    expression: winsorize(0.30 * zscore(group_rank(zscore(mdl77_2liquidityriskfactor_si_ratio), industry))
+  alpha_1018     score=0.56  Sharpe=+2.16  status=submitted
+    shared datafields: close, mdl77_chgnoa, mdl77_fangma_gpam11, mdl77_omomemtumanalystmodel_qma_earnexp
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    expression: winsorize(0.30 * zscore(-1 * group_rank(zscore(mdl77_fangma_gpam11), industry)) + 0.25 * z
+
+[27/30 remaining] submitting expression (373 chars)
+  sim_id = 3QrtVH375aKbhJNzdW5YNo
+  status: UNKNOWN
+
+=== [2/3] ===
+Pre-flight context (5 related attempt(s)):
+  alpha_1029     score=0.61  Sharpe=+1.21  status=rejected
+    shared datafields: close, mdl77_2earningsmomemtummodel_pge_cf, mdl77_2liquidityriskfactor_si_ratio, mdl77_garpanalystmodel_qgp_vfpriceratio, mdl77_ohistoricalgrowthfactor_pctchgeps
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    prior failures:    low_fitness, low_sharpe
+    expression: winsorize(0.40 * zscore(group_rank(zscore(mdl77_2liquidityriskfactor_si_ratio), industry))
+  alpha_1030     score=0.61  Sharpe=+1.45  status=submitted
+    shared datafields: close, mdl77_2earningsmomemtummodel_pge_cf, mdl77_2liquidityriskfactor_si_ratio, mdl77_garpanalystmodel_qgp_vfpriceratio, mdl77_ohistoricalgrowthfactor_pctchgeps
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    expression: winsorize(0.30 * zscore(group_rank(zscore(mdl77_2liquidityriskfactor_si_ratio), industry))
+  alpha_1031     score=0.61  Sharpe=+1.08  status=rejected
+    shared datafields: close, mdl77_2earningsmomemtummodel_pge_cf, mdl77_2liquidityriskfactor_si_ratio, mdl77_garpanalystmodel_qgp_vfpriceratio, mdl77_ohistoricalgrowthfactor_pctchgeps
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    prior failures:    low_fitness, low_sharpe, sub_universe_failure
+    expression: winsorize(0.30 * zscore(group_rank(zscore(mdl77_2liquidityriskfactor_si_ratio), industry))
+  alpha_1032     score=0.59  Sharpe=+1.75  status=submitted
+    shared datafields: close, mdl77_2earningsmomemtummodel_pge_cf, mdl77_2liquidityriskfactor_si_ratio, mdl77_garpanalystmodel_qgp_vfpriceratio, mdl77_ohistoricalgrowthfactor_pctchgeps
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    expression: winsorize(0.30 * zscore(group_rank(zscore(mdl77_2liquidityriskfactor_si_ratio), industry))
+  alpha_1018     score=0.56  Sharpe=+2.16  status=submitted
+    shared datafields: close, mdl77_chgnoa, mdl77_fangma_gpam11, mdl77_omomemtumanalystmodel_qma_earnexp
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    expression: winsorize(0.30 * zscore(-1 * group_rank(zscore(mdl77_fangma_gpam11), industry)) + 0.25 * z
+
+[26/30 remaining] submitting expression (504 chars)
+  sim_id = 1kPQ0n2V54JSaVlxe56cKw8
+  status: UNKNOWN
+  status: COMPLETE
+  alpha resource: /alphas/RRd16mzj
+
+Result: status=COMPLETE
+  Sharpe=1.36  Fitness=0.81  Turnover=36.95%  Returns=13.15%
+  failure_modes: low_fitness
+  wrote: E:\New folder\WQB\knowledge_graph\private\nodes\alphas\alpha_1037.md
+
+=== [3/3] ===
+Pre-flight context (5 related attempt(s)):
+  alpha_1029     score=0.61  Sharpe=+1.21  status=rejected
+    shared datafields: close, mdl77_2earningsmomemtummodel_pge_cf, mdl77_2liquidityriskfactor_si_ratio, mdl77_garpanalystmodel_qgp_vfpriceratio, mdl77_ohistoricalgrowthfactor_pctchgeps
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    prior failures:    low_fitness, low_sharpe
+    expression: winsorize(0.40 * zscore(group_rank(zscore(mdl77_2liquidityriskfactor_si_ratio), industry))
+  alpha_1030     score=0.61  Sharpe=+1.45  status=submitted
+    shared datafields: close, mdl77_2earningsmomemtummodel_pge_cf, mdl77_2liquidityriskfactor_si_ratio, mdl77_garpanalystmodel_qgp_vfpriceratio, mdl77_ohistoricalgrowthfactor_pctchgeps
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    expression: winsorize(0.30 * zscore(group_rank(zscore(mdl77_2liquidityriskfactor_si_ratio), industry))
+  alpha_1031     score=0.61  Sharpe=+1.08  status=rejected
+    shared datafields: close, mdl77_2earningsmomemtummodel_pge_cf, mdl77_2liquidityriskfactor_si_ratio, mdl77_garpanalystmodel_qgp_vfpriceratio, mdl77_ohistoricalgrowthfactor_pctchgeps
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    prior failures:    low_fitness, low_sharpe, sub_universe_failure
+    expression: winsorize(0.30 * zscore(group_rank(zscore(mdl77_2liquidityriskfactor_si_ratio), industry))
+  alpha_1032     score=0.59  Sharpe=+1.75  status=submitted
+    shared datafields: close, mdl77_2earningsmomemtummodel_pge_cf, mdl77_2liquidityriskfactor_si_ratio, mdl77_garpanalystmodel_qgp_vfpriceratio, mdl77_ohistoricalgrowthfactor_pctchgeps
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    expression: winsorize(0.30 * zscore(group_rank(zscore(mdl77_2liquidityriskfactor_si_ratio), industry))
+  alpha_1018     score=0.56  Sharpe=+2.16  status=submitted
+    shared datafields: close, mdl77_chgnoa, mdl77_fangma_gpam11, mdl77_omomemtumanalystmodel_qma_earnexp
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    expression: winsorize(0.30 * zscore(-1 * group_rank(zscore(mdl77_fangma_gpam11), industry)) + 0.25 * z
+
+[25/30 remaining] submitting expression (286 chars)
+  sim_id = 3cXSdV4gF5a1cbjLKbBs8H9
+  status: UNKNOWN
+  status: COMPLETE
+  alpha resource: /alphas/YPQgMR2q
+
+Result: status=COMPLETE
+  Sharpe=1.25  Fitness=0.68  Turnover=49.91%  Returns=14.63%
+  failure_modes: low_fitness
+  wrote: E:\New folder\WQB\knowledge_graph\private\nodes\alphas\alpha_1038.md

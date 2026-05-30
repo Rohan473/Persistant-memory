@@ -1,0 +1,24 @@
+
+Template: mdl77_signal_probe
+Selected 4 expression(s) to submit
+
+Daily budget: 30/30 remaining
+
+=== [1/4] group_rank(zscore(mdl77_ovalueanalystmodel_qva_shortfall), industry) ===
+  Pre-flight: top similar = alpha_0010 (score=0.35, Sharpe=0.76)
+  [30/30 remaining] submitting expression (68 chars)
+    sim_id = IGArw2ig4VkbOT1gDighJIV
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/Xg1Kx0pz
+Traceback (most recent call last):
+  File "E:\New folder\WQB\knowledge_graph\scripts\sweep.py", line 255, in <module>
+    main()
+  File "E:\New folder\WQB\knowledge_graph\scripts\sweep.py", line 251, in main
+    args.fn(args)
+  File "E:\New folder\WQB\knowledge_graph\scripts\sweep.py", line 184, in cmd_run
+    print(f"  \u2192 status={result.status} "
+  File "C:\Users\91866\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 2: character maps to <undefined>

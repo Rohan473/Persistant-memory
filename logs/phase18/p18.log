@@ -1,0 +1,10 @@
+
+Template: mdl53_phase18_probe_top1000
+Selected 1 expression(s) to submit
+
+Daily budget: 5/30 remaining
+
+=== [1/1] group_rank((zscore(if_else(annualized_pd_10_year_jc7 > 0.005, abs(annualized_pd_10_year_jc7 - annualized_pd_10_year_jm5) / (annualized_pd_10_year_jc7 + annualized_pd_10_year_jm5 + 0.000001), 0)) + zscore(if_else(annualized_pd_10_year_jc5 > 0.005, abs(annualized_pd_10_year_jc5 - annualized_pd_10_year_jc7) / (annualized_pd_10_year_jc5 + annualized_pd_10_year_jc7 + 0.000001), 0)) + zscore(if_else(mdl53_jc5_10year > 0.005, abs(mdl53_jc5_10year - mdl53_jm5_10year) / (mdl53_jc5_10year + mdl53_jm5_10year + 0.000001), 0))) / 3, sector) ===
+  SKIP — exact prior attempt: alpha_1135 (use --force to override)
+
+Done. Submitted 0/1. Budget remaining: 5/30.

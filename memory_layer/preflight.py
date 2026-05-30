@@ -50,6 +50,17 @@ def _jaccard(a: Set[str], b: Set[str]) -> float:
     return inter / union if union else 0.0
 
 
+def _settings_key(d: dict) -> tuple:
+    """Stable tuple of the settings that distinguish two otherwise-identical sims.
+    Truncation is intentionally OUT — alpha_1127 proved trunc rarely binds and is not stored on every node."""
+    return (
+        (d.get("universe") or "").upper(),
+        (d.get("neutralization") or "").lower(),
+        d.get("delay"),
+        (d.get("region") or "").upper(),
+    )
+
+
 def find_similar_attempts(
     G,
     expression: str,
@@ -58,15 +69,19 @@ def find_similar_attempts(
     *,
     concepts: Optional[List[str]] = None,
     parent: Optional[str] = None,
+    settings: Optional[dict] = None,
     top_n: int = 5,
 ) -> List[SimilarAttempt]:
-    """Return top-N alphas similar to a candidate. Higher score = more similar."""
+    """Return top-N alphas similar to a candidate. Higher score = more similar.
+    If `settings` is provided, EXACT MATCH also requires matching (universe, neutralization, delay, region) —
+    so a settings-only variant of an existing alpha is treated as a fresh candidate, not a dedup-skip."""
     if G is None:
         return []
     df_set = {d.lower() for d in (datafields or []) if d}
     op_set = {o.lower() for o in (operators or []) if o}
     concept_set = {c.lower() for c in (concepts or []) if c}
     target_norm = _norm(expression)
+    target_settings = _settings_key(settings) if settings else None
 
     out: List[SimilarAttempt] = []
     for nid in G.nodes:
@@ -98,12 +113,19 @@ def find_similar_attempts(
         if score == 0:
             continue
 
-        # Exact-expression bonus
+        # Exact-expression bonus — only mark EXACT MATCH if settings also align,
+        # otherwise a settings-only variant gets dedup-skipped without ever running.
         note = ""
         existing_norm = _norm(d.get("expression") or "")
         if existing_norm and existing_norm == target_norm:
-            score = 1.0
-            note = "EXACT MATCH"
+            if target_settings is None or target_settings == _settings_key(d):
+                score = 1.0
+                note = "EXACT MATCH"
+            else:
+                # Expression matches, settings differ — still a near-duplicate worth
+                # flagging, but don't auto-skip. Score high but not 1.0.
+                score = 0.95
+                note = "EXPR MATCH, settings differ"
 
         # Pull failure_modes via FAILED_BY edges
         fm = []

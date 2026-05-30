@@ -1,0 +1,18 @@
+
+Template: options_phase19a_baseline
+Selected 1 expression(s) to submit
+
+Daily budget: 16/30 remaining
+
+=== [1/1] group_rank(-1 * pcr_oi_30, subindustry) ===
+  Pre-flight: top similar = alpha_0200 (score=0.3, Sharpe=0.52)
+  [16/30 remaining] submitting expression (39 chars)
+    sim_id = 19D0TqfxN5cUcCr89wcGaUZ
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/wpLZVWa1
+  -> status=COMPLETE Sharpe=0.26 Fitness=0.05 Turnover=21.19%
+    failure_modes: concentrated_weight, low_fitness, low_sharpe, sub_universe_failure
+    wrote: alpha_1156.md
+
+Done. Submitted 1/1. Budget remaining: 15/30.

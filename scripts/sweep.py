@@ -154,6 +154,7 @@ def cmd_run(args):
                 datafields=ex.datafields,
                 operators=ex.operators,
                 concepts=ex.concepts,
+                settings=ex.settings,
                 top_n=3,
             )
             if sim and sim[0].note == "EXACT MATCH" and not args.force:
@@ -181,7 +182,7 @@ def cmd_run(args):
             continue
 
         m = result.metrics
-        print(f"  → status={result.status} "
+        print(f"  -> status={result.status} "
               f"Sharpe={m.get('sharpe')} Fitness={m.get('fitness')} "
               f"Turnover={m.get('turnover')}%")
         if result.failure_modes:
@@ -236,7 +237,8 @@ def main():
     sp.add_argument("--no-preflight", action="store_true")
     sp.add_argument("--force", action="store_true",
                     help="Submit even when EXACT prior attempt exists")
-    sp.add_argument("--budget", type=int, default=30)
+    sp.add_argument("--budget", type=int, default=0,
+                    help="Daily sim cap; 0 = unlimited (default). WQB-side cap + 3-concurrent still apply.")
     sp.add_argument("--poll", type=float, default=5.0)
     sp.add_argument("--timeout", type=float, default=600.0)
     sp.add_argument("--sleep", type=float, default=1.0,

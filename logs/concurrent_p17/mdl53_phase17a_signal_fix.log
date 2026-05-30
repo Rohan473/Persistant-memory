@@ -1,0 +1,54 @@
+# mdl53_phase17a_signal_fix started 10:48:04
+# cmd: C:\Users\91866\AppData\Local\Programs\Python\Python312\python.exe E:\New folder\WQB\knowledge_graph\scripts\sweep.py run mdl53_phase17a_signal_fix --budget 100
+
+
+Template: mdl53_phase17a_signal_fix
+Selected 4 expression(s) to submit
+
+Daily budget: 81/100 remaining
+
+=== [1/4] group_rank((zscore(abs(annualized_pd_10_year_jc7 - annualized_pd_10_year_jm5)) + zscore(abs(annualized_pd_10_year_jc5 - annualized_pd_10_year_jc7)) + zscore(abs(mdl53_jc5_10year - mdl53_jm5_10year))) / 3, sector) ===
+  Pre-flight: top similar = alpha_1129 (score=0.89, Sharpe=0.93)
+  [81/100 remaining] submitting expression (212 chars)
+    sim_id = 3V6DHv2mf4Np9SJVMdK9Huf
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/O0orR3zq
+  -> status=COMPLETE Sharpe=0.85 Fitness=0.76 Turnover=6.88%
+    failure_modes: concentrated_weight, low_fitness, low_sharpe
+    wrote: alpha_1133.md
+
+=== [2/4] group_rank((zscore(if_else(annualized_pd_10_year_jc7 > 0.005, abs(annualized_pd_10_year_jc7 - annualized_pd_10_year_jm5) / (annualized_pd_10_year_jc7 + annualized_pd_10_year_jm5 + 0.000001), 0)) + zscore(if_else(annualized_pd_10_year_jc5 > 0.005, abs(annualized_pd_10_year_jc5 - annualized_pd_10_year_jc7) / (annualized_pd_10_year_jc5 + annualized_pd_10_year_jc7 + 0.000001), 0)) + zscore(if_else(mdl53_jc5_10year > 0.005, abs(mdl53_jc5_10year - mdl53_jm5_10year) / (mdl53_jc5_10year + mdl53_jm5_10year + 0.000001), 0))) / 3, sector) ===
+  Pre-flight: top similar = alpha_1129 (score=0.815, Sharpe=0.93)
+  [79/100 remaining] submitting expression (533 chars)
+    sim_id = 4xO0bBgg54sRai1kvX94HJi
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/GrkdKJEO
+  -> status=COMPLETE Sharpe=1.77 Fitness=1.7 Turnover=7.96%
+    failure_modes: concentrated_weight
+    wrote: alpha_1135.md
+
+=== [3/4] group_rank((zscore(log((annualized_pd_10_year_jc7 + 0.000001) / (annualized_pd_10_year_jm5 + 0.000001))) + zscore(log((annualized_pd_10_year_jc5 + 0.000001) / (annualized_pd_10_year_jc7 + 0.000001))) + zscore(log((mdl53_jc5_10year + 0.000001) / (mdl53_jm5_10year + 0.000001)))) / 3, sector) ===
+  Pre-flight: top similar = alpha_1129 (score=0.74, Sharpe=0.93)
+  [77/100 remaining] submitting expression (290 chars)
+    sim_id = 1ZfxsOcYf5idcjDd8ooq40
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/6XzropnG
+  -> status=COMPLETE Sharpe=0.39 Fitness=0.17 Turnover=6.64%
+    failure_modes: concentrated_weight, low_fitness, low_sharpe, sub_universe_failure
+    wrote: alpha_1136.md
+
+=== [4/4] group_rank((zscore(abs(annualized_pd_10_year_jc7 - annualized_pd_10_year_jm5) * sqrt(annualized_pd_10_year_jc7 + annualized_pd_10_year_jm5 + 0.000001)) + zscore(abs(annualized_pd_10_year_jc5 - annualized_pd_10_year_jc7) * sqrt(annualized_pd_10_year_jc5 + annualized_pd_10_year_jc7 + 0.000001)) + zscore(abs(mdl53_jc5_10year - mdl53_jm5_10year) * sqrt(mdl53_jc5_10year + mdl53_jm5_10year + 0.000001))) / 3, sector) ===
+  Pre-flight: top similar = alpha_1129 (score=0.815, Sharpe=0.93)
+  [76/100 remaining] submitting expression (413 chars)
+    sim_id = 2EkA3K7At4TSbwnseHM0vbo
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/Jjbxzj0E
+  -> status=COMPLETE Sharpe=0.77 Fitness=0.67 Turnover=6.15%
+    failure_modes: concentrated_weight, low_fitness, low_sharpe
+    wrote: alpha_1138.md
+
+Done. Submitted 4/4. Budget remaining: 75/100.

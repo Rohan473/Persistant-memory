@@ -1,0 +1,43 @@
+# mdl53_phase16a_industry started 09:29:33
+# cmd: C:\Users\91866\AppData\Local\Programs\Python\Python312\python.exe E:\New folder\WQB\knowledge_graph\scripts\sweep.py run mdl53_phase16a_industry --budget 100 --force
+
+
+Template: mdl53_phase16a_industry
+Selected 3 expression(s) to submit
+
+Daily budget: 86/100 remaining
+
+=== [1/3] group_rank((zscore(abs(annualized_pd_10_year_jc7 - annualized_pd_10_year_jm5) / (annualized_pd_10_year_jc7 + annualized_pd_10_year_jm5 + 0.000001)) + zscore(abs(annualized_pd_10_year_jc5 - annualized_pd_10_year_jc7) / (annualized_pd_10_year_jc5 + annualized_pd_10_year_jc7 + 0.000001)) + zscore(abs(mdl53_jc5_10year - mdl53_jm5_10year) / (mdl53_jc5_10year + mdl53_jm5_10year + 0.000001))) / 3, industry) ===
+  Pre-flight: top similar = alpha_1106 (score=1.0, Sharpe=1.12)
+  [86/100 remaining] submitting expression (403 chars)
+    sim_id = 3pvn1I9594lnbYcXVQUMB0N
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/RRdV7REz
+  -> status=COMPLETE Sharpe=1.69 Fitness=1.54 Turnover=8.06%
+    failure_modes: concentrated_weight
+    wrote: alpha_1128.md
+
+=== [2/3] rank((zscore(abs(annualized_pd_10_year_jc7 - annualized_pd_10_year_jm5) / (annualized_pd_10_year_jc7 + annualized_pd_10_year_jm5 + 0.000001)) + zscore(abs(annualized_pd_10_year_jc5 - annualized_pd_10_year_jc7) / (annualized_pd_10_year_jc5 + annualized_pd_10_year_jc7 + 0.000001)) + zscore(abs(mdl53_jc5_10year - mdl53_jm5_10year) / (mdl53_jc5_10year + mdl53_jm5_10year + 0.000001))) / 3) ===
+  Pre-flight: top similar = alpha_1121 (score=1.0, Sharpe=1.02)
+  [83/100 remaining] submitting expression (387 chars)
+    sim_id = 3uCsag8kq5bn9e113vDaRW0L
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/58MQl6E1
+  -> status=COMPLETE Sharpe=1.02 Fitness=0.79 Turnover=8.64%
+    failure_modes: concentrated_weight, low_fitness, low_sharpe
+    wrote: alpha_1131.md
+
+=== [3/3] group_rank((zscore(winsorize(abs(annualized_pd_10_year_jc7 - annualized_pd_10_year_jm5) / (annualized_pd_10_year_jc7 + annualized_pd_10_year_jm5 + 0.000001), std=3)) + zscore(winsorize(abs(annualized_pd_10_year_jc5 - annualized_pd_10_year_jc7) / (annualized_pd_10_year_jc5 + annualized_pd_10_year_jc7 + 0.000001), std=3)) + zscore(winsorize(abs(mdl53_jc5_10year - mdl53_jm5_10year) / (mdl53_jc5_10year + mdl53_jm5_10year + 0.000001), std=3))) / 3, sector) ===
+  Pre-flight: top similar = alpha_1125 (score=0.747, Sharpe=0.6)
+  [82/100 remaining] submitting expression (455 chars)
+    sim_id = IDkskgzC4xocKmv3AfPHkG
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/Wj9P77rx
+  -> status=COMPLETE Sharpe=1.71 Fitness=1.61 Turnover=7.71%
+    failure_modes: concentrated_weight
+    wrote: alpha_1132.md
+
+Done. Submitted 3/3. Budget remaining: 81/100.

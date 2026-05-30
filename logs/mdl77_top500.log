@@ -1,0 +1,38 @@
+Daily budget: 29/30 remaining
+Batch: 1 expressions from private\templates\_mdl77_universe_test.txt
+Daily cap leaves room for 29 more today.
+
+
+=== [1/1] ===
+Pre-flight context (5 related attempt(s)):
+  alpha_1019     score=1.00  Sharpe=+2.07  status=submitted [EXACT MATCH]
+    shared datafields: close, mdl77_chgnoa, mdl77_fangma_gpam11, mdl77_omomemtumanalystmodel_qma_earnexp
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    expression: winsorize(0.40 * zscore(-1 * group_rank(zscore(mdl77_fangma_gpam11), industry)) + 0.20 * z
+  alpha_1018     score=0.90  Sharpe=+2.16  status=submitted
+    shared datafields: close, mdl77_chgnoa, mdl77_fangma_gpam11, mdl77_omomemtumanalystmodel_qma_earnexp
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    expression: winsorize(0.30 * zscore(-1 * group_rank(zscore(mdl77_fangma_gpam11), industry)) + 0.25 * z
+  alpha_1020     score=0.90  Sharpe=+1.49  status=submitted
+    shared datafields: close, mdl77_chgnoa, mdl77_fangma_gpam11, mdl77_omomemtumanalystmodel_qma_earnexp
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    expression: winsorize(0.50 * zscore(-1 * group_rank(zscore(mdl77_fangma_gpam11), industry)) + 0.25 * z
+  alpha_1006     score=0.41  Sharpe=n/a  status=rejected
+    shared datafields: close
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    expression: winsorize(0.5 * zscore(group_rank(zscore(mdl77_ohistoricalgrowthfactor_chg3yepsast), indus
+  alpha_1007     score=0.41  Sharpe=+1.83  status=submitted
+    shared datafields: close
+    shared operators:  group_rank, rank, ts_mean, winsorize, zscore
+    expression: winsorize(0.5 * zscore(group_rank(zscore(mdl77_ohistoricalgrowthfactor_chg3yepsast), indus
+
+[29/30 remaining] submitting expression (310 chars)
+  sim_id = 1fzOBM6ol4rZc3LgqxDJLAj
+  status: UNKNOWN
+  status: COMPLETE
+  alpha resource: /alphas/j2105Lao
+
+Result: status=COMPLETE
+  Sharpe=1.11  Fitness=0.75  Turnover=20.01%  Returns=9.13%
+  failure_modes: low_fitness, low_sharpe
+  wrote: E:\New folder\WQB\knowledge_graph\private\nodes\alphas\alpha_1021.md

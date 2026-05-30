@@ -1,0 +1,17 @@
+# options_phase19e_v2_zscore started 14:29:40
+# cmd: C:\Users\91866\AppData\Local\Programs\Python\Python312\python.exe E:\New folder\WQB\knowledge_graph\scripts\sweep.py run options_phase19e_v2_zscore --budget 30
+
+  FAILED � ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+Template: options_phase19e_v2_zscore
+Selected 1 expression(s) to submit
+
+Daily budget: 6/30 remaining
+
+=== [1/1] group_rank(-1 * (zscore(ts_delta(pcr_oi_30, 22)) + zscore(pcr_oi_30 - pcr_oi_180)), subindustry) ===
+  Pre-flight: top similar = alpha_1163 (score=0.775, Sharpe=1.35)
+  [6/30 remaining] submitting expression (96 chars)
+    sim_id = 1eRdg937A4BubQV1hmOGwQeq
+    status: UNKNOWN
+
+Done. Submitted 0/1. Budget remaining: 4/30.

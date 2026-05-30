@@ -1,0 +1,13 @@
+# mdl53_phase11a_top1000_industry started 00:28:21
+# cmd: C:\Users\91866\AppData\Local\Programs\Python\Python312\python.exe E:\New folder\WQB\knowledge_graph\scripts\sweep.py run mdl53_phase11a_top1000_industry --budget 100
+
+
+Template: mdl53_phase11a_top1000_industry
+Selected 1 expression(s) to submit
+
+Daily budget: 18/100 remaining
+
+=== [1/1] group_rank((zscore(abs(annualized_pd_10_year_jc7 - annualized_pd_10_year_jm5) / (annualized_pd_10_year_jc7 + annualized_pd_10_year_jm5 + 0.000001)) + zscore(abs(annualized_pd_10_year_jc5 - annualized_pd_10_year_jc7) / (annualized_pd_10_year_jc5 + annualized_pd_10_year_jc7 + 0.000001)) + zscore(abs(mdl53_jc5_10year - mdl53_jm5_10year) / (mdl53_jc5_10year + mdl53_jm5_10year + 0.000001))) / 3, industry) ===
+  SKIP � exact prior attempt: alpha_1106 (use --force to override)
+
+Done. Submitted 0/1. Budget remaining: 18/100.

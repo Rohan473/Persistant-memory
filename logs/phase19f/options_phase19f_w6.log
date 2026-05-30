@@ -1,0 +1,21 @@
+# options_phase19f_w6 started 14:42:34
+# cmd: C:\Users\91866\AppData\Local\Programs\Python\Python312\python.exe E:\New folder\WQB\knowledge_graph\scripts\sweep.py run options_phase19f_w6 --budget 30
+
+
+Template: options_phase19f_w6
+Selected 1 expression(s) to submit
+
+Daily budget: 4/30 remaining
+
+=== [1/1] group_rank(-1 * (6 * ts_delta(pcr_oi_30, 22) + (pcr_oi_30 - pcr_oi_180)), subindustry) ===
+  Pre-flight: top similar = alpha_1163 (score=0.875, Sharpe=1.35)
+  [4/30 remaining] submitting expression (86 chars)
+    sim_id = 1YyFw34gZ4DCbhoKRHq4Ktj
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/gJxbm9Le
+  -> status=COMPLETE Sharpe=1.48 Fitness=0.53 Turnover=28.19%
+    failure_modes: concentrated_weight, low_fitness, sub_universe_failure
+    wrote: alpha_1170.md
+
+Done. Submitted 1/1. Budget remaining: 1/30.

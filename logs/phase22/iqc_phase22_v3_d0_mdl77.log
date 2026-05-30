@@ -1,0 +1,33 @@
+# iqc_phase22_v3_d0_mdl77 started 15:36:57
+# cmd: C:\Users\91866\AppData\Local\Programs\Python\Python312\python.exe E:\New folder\WQB\knowledge_graph\scripts\sweep.py run iqc_phase22_v3_d0_mdl77 --budget 0
+
+  ! session token expires in 451s � re-auth soon to avoid mid-sweep 401
+  ! session token expires in 448s � re-auth soon to avoid mid-sweep 401
+  ! session token expires in 443s � re-auth soon to avoid mid-sweep 401
+  ! session token expires in 437s � re-auth soon to avoid mid-sweep 401
+  ! session token expires in 432s � re-auth soon to avoid mid-sweep 401
+  ! session token expires in 426s � re-auth soon to avoid mid-sweep 401
+  ! session token expires in 421s � re-auth soon to avoid mid-sweep 401
+  ! session token expires in 415s � re-auth soon to avoid mid-sweep 401
+  ! session token expires in 410s � re-auth soon to avoid mid-sweep 401
+  ! session token expires in 404s � re-auth soon to avoid mid-sweep 401
+  ! session token expires in 399s � re-auth soon to avoid mid-sweep 401
+  ! session token expires in 393s � re-auth soon to avoid mid-sweep 401
+  ! session token expires in 388s � re-auth soon to avoid mid-sweep 401
+  ! session token expires in 383s � re-auth soon to avoid mid-sweep 401
+
+Template: iqc_phase22_v3_d0_mdl77
+Selected 1 expression(s) to submit
+
+Daily budget: 1000000000/0 remaining
+
+=== [1/1] winsorize(0.30 * zscore(-1 * group_rank(zscore(equity_value_score), industry)) + 0.25 * zscore(group_rank(zscore(mdl177_2_earningsqualityfactor_ttmaccu), industry)) + 0.25 * zscore(group_rank(zscore(earnings_momentum_composite_score_2), industry)) + 0.20 * zscore(rank(-(close - ts_mean(close, 20)) / ts_mean(close, 20))), std=2.5) ===
+  Pre-flight: top similar = alpha_1178 (score=0.95, Sharpe=1.5)
+  [1000000000/0 remaining] submitting expression (331 chars)
+    sim_id = 40JrkQNx4vP9uqSKCqt8cI
+    status: UNKNOWN
+    status: ERROR
+  -> status=ERROR Sharpe=None Fitness=None Turnover=None%
+    wrote: alpha_1178.md
+
+Done. Submitted 1/1. Budget remaining: 1000000000/0.

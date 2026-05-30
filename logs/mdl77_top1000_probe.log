@@ -1,0 +1,73 @@
+
+Template: mdl77_top1000_probe
+Selected 6 expression(s) to submit
+
+Daily budget: 28/30 remaining
+
+=== [1/6] group_rank(zscore(mdl77_ohistoricalgrowthfactor_pctchgeps), industry) ===
+  Pre-flight: top similar = alpha_0986 (score=0.42, Sharpe=-0.26)
+  [28/30 remaining] submitting expression (69 chars)
+    sim_id = 4idYCxgc05be9wtP99yVDNi
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/1YJde85m
+  -> status=COMPLETE Sharpe=0.41 Fitness=0.2 Turnover=3.15%
+    failure_modes: low_fitness, low_sharpe
+    wrote: alpha_1023.md
+
+=== [2/6] group_rank(zscore(mdl77_earningsmomemtummodel_fc_fcfroey1p), industry) ===
+  Pre-flight: top similar = alpha_0986 (score=0.42, Sharpe=-0.26)
+  [27/30 remaining] submitting expression (70 chars)
+    sim_id = 2k1yvb2TY4L1cDGcTjFaL37
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/omVlpex6
+  -> status=COMPLETE Sharpe=-0.21 Fitness=-0.06 Turnover=4.85%
+    failure_modes: low_fitness, low_sharpe
+    wrote: alpha_1024.md
+
+=== [3/6] group_rank(zscore(mdl77_garpanalystmodel_qgp_vfpriceratio), industry) ===
+  Pre-flight: top similar = alpha_0986 (score=0.42, Sharpe=-0.26)
+  [26/30 remaining] submitting expression (69 chars)
+    sim_id = 41J3lnbx84y0bW4155hrOg2G
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/9qJrvro9
+  -> status=COMPLETE Sharpe=-0.59 Fitness=-0.4 Turnover=6.29%
+    failure_modes: low_fitness, low_sharpe
+    wrote: alpha_1025.md
+
+=== [4/6] group_rank(zscore(mdl77_ooearningsmomemtummodel_chgsup), industry) ===
+  Pre-flight: top similar = alpha_0986 (score=0.42, Sharpe=-0.26)
+  [25/30 remaining] submitting expression (66 chars)
+    sim_id = uTGcRIc4qx9LzqH5DF3xF
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/Wj9Gq0bG
+  -> status=COMPLETE Sharpe=-0.07 Fitness=-0.01 Turnover=7.72%
+    failure_modes: low_fitness, low_sharpe, sub_universe_failure
+    wrote: alpha_1026.md
+
+=== [5/6] group_rank(zscore(mdl77_2liquidityriskfactor_si_ratio), industry) ===
+  Pre-flight: top similar = alpha_0986 (score=0.42, Sharpe=-0.26)
+  [24/30 remaining] submitting expression (65 chars)
+    sim_id = 1fMAdK1ga5bgaW9QBJqEouY
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/blvqZX5m
+  -> status=COMPLETE Sharpe=0.63 Fitness=0.32 Turnover=7.2%
+    failure_modes: low_fitness, low_sharpe
+    wrote: alpha_1027.md
+
+=== [6/6] group_rank(zscore(mdl77_2earningsmomemtummodel_pge_cf), industry) ===
+  Pre-flight: top similar = alpha_0986 (score=0.42, Sharpe=-0.26)
+  [23/30 remaining] submitting expression (65 chars)
+    sim_id = tQnnk7744qx8Ze11ko7Sb9G
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/6Xz9V3XE
+  -> status=COMPLETE Sharpe=-0.46 Fitness=-0.18 Turnover=6.17%
+    failure_modes: low_fitness, low_sharpe, sub_universe_failure
+    wrote: alpha_1028.md
+
+Done. Submitted 6/6. Budget remaining: 22/30.

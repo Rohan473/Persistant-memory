@@ -1,0 +1,64 @@
+
+Template: mdl77_signal_probe
+Selected 16 expression(s) to submit
+
+Daily budget: 15/30 remaining
+NOTE: budget allows only 15 of 16 — remainder will be skipped.
+
+=== [1/16] group_rank(zscore(mdl77_ovalueanalystmodel_qva_shortfall), industry) ===
+  SKIP — exact prior attempt: alpha_0986 (use --force to override)
+
+=== [2/16] group_rank(zscore(mdl77_ovalueanalystmodel_qva_shortfall), subindustry) ===
+  SKIP — exact prior attempt: alpha_0987 (use --force to override)
+
+=== [3/16] group_rank(zscore(mdl77_ovalueanalystmodel_qva_valuation), industry) ===
+  SKIP — exact prior attempt: alpha_0988 (use --force to override)
+
+=== [4/16] group_rank(zscore(mdl77_ovalueanalystmodel_qva_valuation), subindustry) ===
+  SKIP — exact prior attempt: alpha_0989 (use --force to override)
+
+=== [5/16] group_rank(zscore(mdl77_ohistoricalgrowthfactor_pfcoghc), industry) ===
+  SKIP — exact prior attempt: alpha_0990 (use --force to override)
+
+=== [6/16] group_rank(zscore(mdl77_ohistoricalgrowthfactor_pfcoghc), subindustry) ===
+  SKIP — exact prior attempt: alpha_0991 (use --force to override)
+
+=== [7/16] group_rank(zscore(mdl77_ohistoricalgrowthfactor_chg3yepsast), industry) ===
+  SKIP — exact prior attempt: alpha_0992 (use --force to override)
+
+=== [8/16] group_rank(zscore(mdl77_ohistoricalgrowthfactor_chg3yepsast), subindustry) ===
+  SKIP — exact prior attempt: alpha_0993 (use --force to override)
+
+=== [9/16] group_rank(zscore(mdl77_2earningsqualityfactor_dpcapex), industry) ===
+  SKIP — exact prior attempt: alpha_0994 (use --force to override)
+
+=== [10/16] group_rank(zscore(mdl77_2earningsqualityfactor_dpcapex), subindustry) ===
+  SKIP — exact prior attempt: alpha_0995 (use --force to override)
+
+=== [11/16] group_rank(zscore(mdl77_earningsqualityfactor_chgshare), industry) ===
+  SKIP — exact prior attempt: alpha_0996 (use --force to override)
+
+=== [12/16] group_rank(zscore(mdl77_earningsqualityfactor_chgshare), subindustry) ===
+  SKIP — exact prior attempt: alpha_0997 (use --force to override)
+
+=== [13/16] group_rank(zscore(mdl77_liquidityriskfactor_lfd), industry) ===
+  SKIP — exact prior attempt: alpha_0998 (use --force to override)
+
+=== [14/16] group_rank(zscore(mdl77_liquidityriskfactor_lfd), subindustry) ===
+  SKIP — exact prior attempt: alpha_0999 (use --force to override)
+
+=== [15/16] group_rank(zscore(mdl77_shortsentimentfactor_act_util), industry) ===
+  SKIP — exact prior attempt: alpha_1000 (use --force to override)
+
+=== [16/16] group_rank(zscore(mdl77_shortsentimentfactor_act_util), subindustry) ===
+  Pre-flight: top similar = alpha_1000 (score=0.95, Sharpe=1.03)
+  [15/30 remaining] submitting expression (68 chars)
+    sim_id = 1Gbhzo1wB4IrauChbaWYW4S
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/mLZ8wZbW
+  -> status=COMPLETE Sharpe=0.99 Fitness=0.36 Turnover=56.89%
+    failure_modes: low_fitness, low_sharpe, sub_universe_failure
+    wrote: alpha_1001.md
+
+Done. Submitted 1/16. Budget remaining: 14/30.

@@ -1,0 +1,21 @@
+# complement_phase20_v1_short started 15:08:04
+# cmd: C:\Users\91866\AppData\Local\Programs\Python\Python312\python.exe E:\New folder\WQB\knowledge_graph\scripts\sweep.py run complement_phase20_v1_short --budget 0
+
+
+Template: complement_phase20_v1_short
+Selected 1 expression(s) to submit
+
+Daily budget: 1000000000/0 remaining
+
+=== [1/1] ts_mean(group_rank(-1 * ts_delta(mdl177_5shortsentimentfactor_act_util, 5), subindustry), 22) ===
+  Pre-flight: top similar = alpha_1147 (score=0.35, Sharpe=1.54)
+  [1000000000/0 remaining] submitting expression (93 chars)
+    sim_id = 3E2ErVdlQ4woafi18Nf6EUT8
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/A1kNwO6R
+  -> status=COMPLETE Sharpe=0.61 Fitness=0.25 Turnover=25.64%
+    failure_modes: low_fitness, low_sharpe, sub_universe_failure
+    wrote: alpha_1174.md
+
+Done. Submitted 1/1. Budget remaining: 1000000000/0.

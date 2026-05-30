@@ -1,0 +1,59 @@
+
+Template: news_phase13e_fanout
+Selected 5 expression(s) to submit
+
+Daily budget: 25/30 remaining
+
+=== [1/5] ts_mean(group_rank(ts_delta(mean_equity_sentiment_score, 5), subindustry), 22) ===
+  Pre-flight: top similar = alpha_1143 (score=0.268, Sharpe=1.25)
+  [25/30 remaining] submitting expression (78 chars)
+    sim_id = 2iLjMG1q25d8aqV110J8yJVI
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/6XzjXgoL
+  -> status=COMPLETE Sharpe=1.54 Fitness=1.11 Turnover=17.87%
+    wrote: alpha_1147.md
+
+=== [2/5] ts_mean(group_rank(ts_delta(mean_event_sentiment_score, 5), subindustry), 22) ===
+  Pre-flight: top similar = alpha_1143 (score=0.268, Sharpe=1.25)
+  [24/30 remaining] submitting expression (77 chars)
+    sim_id = 4nOSVVayp4BobEnOihvlRri
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/omVLmZ75
+  -> status=COMPLETE Sharpe=0.83 Fitness=0.52 Turnover=12.99%
+    failure_modes: low_fitness, low_sharpe
+    wrote: alpha_1148.md
+
+=== [3/5] ts_mean(group_rank(ts_delta(mean_earnings_evaluation_sentiment, 5), subindustry), 22) ===
+  Pre-flight: top similar = alpha_1143 (score=0.268, Sharpe=1.25)
+  [23/30 remaining] submitting expression (85 chars)
+    sim_id = 2lCbq9eQF5dQa8c13Jo2x96A
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/xAR3O8Al
+  -> status=COMPLETE Sharpe=1.5 Fitness=1.08 Turnover=17.8%
+    wrote: alpha_1149.md
+
+=== [4/5] ts_mean(group_rank(ts_delta(mean_corporate_action_sentiment, 5), subindustry), 22) ===
+  Pre-flight: top similar = alpha_1143 (score=0.268, Sharpe=1.25)
+  [22/30 remaining] submitting expression (82 chars)
+    sim_id = 3IQcCI8gE4ZRcuOdcqnpEdy
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/e7LbkQmg
+  -> status=COMPLETE Sharpe=1.54 Fitness=1.12 Turnover=17.9%
+    wrote: alpha_1150.md
+
+=== [5/5] ts_mean(group_rank(ts_delta(mean_composite_sentiment_score, 10), subindustry), 22) ===
+  Pre-flight: top similar = alpha_1143 (score=0.768, Sharpe=1.25)
+  [21/30 remaining] submitting expression (82 chars)
+    sim_id = 17QsgegUg5aH8FFJhaR2JiG
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/E5kpOPrm
+  -> status=COMPLETE Sharpe=1.49 Fitness=1.07 Turnover=17.14%
+    failure_modes: sub_universe_failure
+    wrote: alpha_1151.md
+
+Done. Submitted 5/5. Budget remaining: 20/30.

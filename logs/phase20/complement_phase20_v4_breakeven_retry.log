@@ -1,0 +1,18 @@
+
+Template: complement_phase20_v4_breakeven
+Selected 1 expression(s) to submit
+
+Daily budget: 1000000000/0 remaining
+
+=== [1/1] ts_mean(group_rank(ts_delta(option_breakeven_30, 5), subindustry), 22) ===
+  Pre-flight: top similar = alpha_1172 (score=0.39, Sharpe=0.27)
+  [1000000000/0 remaining] submitting expression (70 chars)
+    sim_id = 1uykdz1Fp4DkchfkKdm0sfg
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/O0oNZQpv
+  -> status=COMPLETE Sharpe=0.26 Fitness=0.08 Turnover=13.87%
+    failure_modes: low_fitness, low_sharpe, sub_universe_failure
+    wrote: alpha_1175.md
+
+Done. Submitted 1/1. Budget remaining: 1000000000/0.

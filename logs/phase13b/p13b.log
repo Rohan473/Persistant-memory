@@ -1,0 +1,37 @@
+  STOP — auth: 401 on GET /simulations/1SFAokaxt57gbqqvpIvmvlc — session likely expired. Re-run scripts/wqbrain_login.py.
+
+Template: news_phase13b_smooth
+Selected 4 expression(s) to submit
+
+Daily budget: 3/30 remaining
+NOTE: budget allows only 3 of 4 — remainder will be skipped.
+
+=== [1/4] group_rank(zscore(ts_mean(mean_composite_sentiment_score, 22)), subindustry) ===
+  Pre-flight: top similar = alpha_1140 (score=0.76, Sharpe=0.92)
+  [3/30 remaining] submitting expression (76 chars)
+    sim_id = 1kGMUd5Sm5hMcvV7TOyAHuv
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/E5kvM5R9
+  -> status=COMPLETE Sharpe=0.65 Fitness=0.3 Turnover=16.39%
+    failure_modes: low_fitness, low_sharpe
+    wrote: alpha_1141.md
+
+=== [2/4] group_rank(zscore(ts_mean(mean_composite_sentiment_score, 5)), subindustry) ===
+  Pre-flight: top similar = alpha_1140 (score=0.76, Sharpe=0.92)
+  [2/30 remaining] submitting expression (75 chars)
+    sim_id = 40fPXd4hT4AHcBh7MTdqpPG
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/78JZrdk1
+  -> status=COMPLETE Sharpe=0.42 Fitness=0.09 Turnover=42.44%
+    failure_modes: low_fitness, low_sharpe, sub_universe_failure
+    wrote: alpha_1142.md
+
+=== [3/4] group_rank(zscore(ts_mean(mean_composite_sentiment_score, 22)), industry) ===
+  Pre-flight: top similar = alpha_1140 (score=0.76, Sharpe=0.92)
+  [1/30 remaining] submitting expression (73 chars)
+    sim_id = 1SFAokaxt57gbqqvpIvmvlc
+    status: UNKNOWN
+
+Done. Submitted 2/4. Budget remaining: 0/30.

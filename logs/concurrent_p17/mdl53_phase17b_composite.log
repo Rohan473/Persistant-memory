@@ -1,0 +1,32 @@
+# mdl53_phase17b_composite started 10:48:04
+# cmd: C:\Users\91866\AppData\Local\Programs\Python\Python312\python.exe E:\New folder\WQB\knowledge_graph\scripts\sweep.py run mdl53_phase17b_composite --budget 100
+
+
+Template: mdl53_phase17b_composite
+Selected 2 expression(s) to submit
+
+Daily budget: 81/100 remaining
+
+=== [1/2] winsorize(0.50 * zscore(-1 * group_rank(zscore(mdl77_fangma_gpam11), subindustry)) + 0.25 * zscore(group_rank((zscore(abs(annualized_pd_10_year_jc7 - annualized_pd_10_year_jm5) / (annualized_pd_10_year_jc7 + annualized_pd_10_year_jm5 + 0.000001)) + zscore(abs(annualized_pd_10_year_jc5 - annualized_pd_10_year_jc7) / (annualized_pd_10_year_jc5 + annualized_pd_10_year_jc7 + 0.000001)) + zscore(abs(mdl53_jc5_10year - mdl53_jm5_10year) / (mdl53_jc5_10year + mdl53_jm5_10year + 0.000001))) / 3, subindustry)) + 0.25 * zscore(group_rank(zscore(mdl77_omomemtumanalystmodel_qma_earnexp), subindustry)), std=2.5) ===
+  Pre-flight: top similar = alpha_1132 (score=0.705, Sharpe=1.71)
+  [81/100 remaining] submitting expression (606 chars)
+    sim_id = 2g2uX62DU5bN9e091r49zFM
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/j213P58o
+  -> status=COMPLETE Sharpe=1.63 Fitness=1.67 Turnover=12.36%
+    failure_modes: concentrated_weight
+    wrote: alpha_1134.md
+
+=== [2/2] winsorize(0.50 * zscore(-1 * group_rank(zscore(mdl77_fangma_gpam11), subindustry)) + 0.25 * zscore(group_rank(zscore(mdl77_chgnoa), subindustry)) + 0.25 * zscore(group_rank((zscore(abs(annualized_pd_10_year_jc7 - annualized_pd_10_year_jm5) / (annualized_pd_10_year_jc7 + annualized_pd_10_year_jm5 + 0.000001)) + zscore(abs(annualized_pd_10_year_jc5 - annualized_pd_10_year_jc7) / (annualized_pd_10_year_jc5 + annualized_pd_10_year_jc7 + 0.000001)) + zscore(abs(mdl53_jc5_10year - mdl53_jm5_10year) / (mdl53_jc5_10year + mdl53_jm5_10year + 0.000001))) / 3, subindustry)), std=2.5) ===
+  Pre-flight: top similar = alpha_1117 (score=0.775, Sharpe=1.7)
+  [78/100 remaining] submitting expression (579 chars)
+    sim_id = 4cfLcP9FK4uA9NoVmDNTaJq
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/kqQVWVXz
+  -> status=COMPLETE Sharpe=1.47 Fitness=1.49 Turnover=8.77%
+    failure_modes: concentrated_weight
+    wrote: alpha_1137.md
+
+Done. Submitted 2/2. Budget remaining: 75/100.

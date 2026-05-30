@@ -1,0 +1,21 @@
+# mdl77_phase21c_dispersion_indmom started 15:22:26
+# cmd: C:\Users\91866\AppData\Local\Programs\Python\Python312\python.exe E:\New folder\WQB\knowledge_graph\scripts\sweep.py run mdl77_phase21c_dispersion_indmom --budget 0
+
+
+Template: mdl77_phase21c_dispersion_indmom
+Selected 1 expression(s) to submit
+
+Daily budget: 1000000000/0 remaining
+
+=== [1/1] winsorize(0.30 * zscore(-1 * group_rank(zscore(coefficient_variation_fy2_eps), industry)) + 0.25 * zscore(group_rank(zscore(mdl177_2_momemtumanalystmodel_qma_indrelrtn3m), industry)) + 0.25 * zscore(-1 * group_rank(zscore(enterprise_value_weighted_value_score), industry)) + 0.20 * zscore(rank(-(close - ts_mean(close, 20)) / ts_mean(close, 20))), std=2.5) ===
+  Pre-flight: top similar = alpha_1018 (score=0.362, Sharpe=2.16)
+  [1000000000/0 remaining] submitting expression (356 chars)
+    sim_id = 1A5ttm9Pq4CLbruJqSS1N4A
+    status: UNKNOWN
+    status: COMPLETE
+    alpha resource: /alphas/rKAOla6a
+  -> status=COMPLETE Sharpe=0.15 Fitness=0.05 Turnover=16.26%
+    failure_modes: low_fitness, low_sharpe, sub_universe_failure
+    wrote: alpha_1177.md
+
+Done. Submitted 1/1. Budget remaining: 1000000000/0.
