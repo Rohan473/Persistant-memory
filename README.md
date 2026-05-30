@@ -1,6 +1,11 @@
 # WQ Brain Alpha Knowledge Graph
 
-A structured knowledge graph of all WorldQuant Brain alpha development sessions, built automatically from Claude.ai chat exports.
+A structured knowledge graph of all WorldQuant Brain alpha development sessions, built automatically from Claude.ai chat exports — now backed by a live **memory layer** that simulates, scores, and writes back new alphas directly into the graph.
+
+The project has two halves:
+
+1. **Knowledge graph** (`graph/`, `nodes/`, original `scripts/`) — the static, extracted record of past alpha work.
+2. **Memory layer** (`memory_layer/`) — a live system that talks to the WQ Brain API, runs simulations, checks for overfit/correlation, and persists results back into the graph so each new session builds on the last.
 
 ---
 
@@ -72,7 +77,50 @@ python scripts/query.py lineage alpha_0900
 
 # Top N alphas by Sharpe with full details
 python scripts/query.py best 10
+
+# Which factor families are over/under-represented in the portfolio
+python scripts/query.py saturation
 ```
+
+---
+
+## Memory layer (`memory_layer/`)
+
+The live system that turns the static graph into a working research loop. Highlights:
+
+- **`brain_api.py`** — WQ Brain REST client (login, simulate, fetch alphas, self-correlation). Supports auto-reauth from saved credentials (`python scripts/wqbrain_login.py --save-credentials`).
+- **`simulator.py`** — runs simulations and `write_back`s results (expression, metrics, datafields, operators, concepts) into the graph as new alpha nodes.
+- **`brain_catalogue.json` / `brain_catalogue.py`** — full WQ Brain datafield catalogue (coverage, type, dataset) used for pre-flight checks.
+- **`factor_ontology.py`** — maps datafields to factor families so the portfolio can be checked for saturation.
+- **`preflight.py`** — field-novelty / operator-overlap checks before spending sim budget.
+- **`correlation_engine.py`**, **`budget.py`**, **`provenance.py`** — self-correlation gating, daily sim-budget guard, and provenance tracking.
+
+---
+
+## Tooling scripts
+
+The original pipeline scripts (`parse_exports.py`, `build_graph.py`, `query.py`, `visualize.py`) are joined by a set of live-research helpers:
+
+```bash
+# Multi-model critic — fresh-context review (Claude + GPT + Gemini) of recent work.
+# No chat/memory context; only project state. LLM passes skip cleanly if no API key set.
+python scripts/critic.py
+
+# Overfit risk check for an alpha (static + IS metrics + year-by-year + coverage).
+python scripts/overfit_checker.py alpha_1206 --live
+
+# Fan out multiple sweep.py templates in parallel, capped at WQB's concurrent-sim limit.
+python scripts/run_concurrent.py --tabs              # one Windows Terminal tab per template
+
+# Recover a completed-but-unwritten WQB alpha into the graph by remote id.
+python scripts/writeback_alpha.py <remote_id> "<expression>" --hypothesis "..." \
+      --datafields fld1,fld2 --operators op1,op2 --concepts c1,c2
+
+# Rank a model53 sweep and propose the next 5 variants on the winning branch.
+python scripts/analyze_mdl53.py
+```
+
+`external_research/` holds the literature notes (options PCR, news sentiment, credit models, volatility sizing) that inform template design before sweeps are fired. `logs/` holds the captured output of past phase sweeps.
 
 ---
 
@@ -94,13 +142,27 @@ graph/
   edges.csv           All edges as CSV (source, target, relation)
   graph.png           Rendered visualization
   graph.gexf          Gephi-compatible export
+  graph.html          Interactive HTML graph view
+memory_layer/         Live memory layer (WQB API, simulator, catalogue, ontology) — see above
+external_research/    Literature notes that inform template design (PCR, news, credit, vol)
+logs/                 Captured output of past phase sweeps
 scripts/
   parse_exports.py    Phase 2: parse exports, filter WQ Brain sessions
   backfill_entities.py  Post-extraction: fill missing entity node files
   build_graph.py      Phase 4: build NetworkX graph from markdown files
-  query.py            Phase 5: CLI retrieval helper
+  query.py            Phase 5: CLI retrieval helper (+ saturation/best)
   visualize.py        Phase 6: render graph.png + graph.gexf
+  sweep.py            Fire a template of sims against WQB
+  run_concurrent.py   Fan out multiple sweeps in parallel
+  critic.py           Fresh-context multi-model critic
+  overfit_checker.py  Overfit risk check for an alpha
+  writeback_alpha.py  Recover a completed alpha into the graph
+  analyze_mdl53.py    Rank a sweep and propose next variants
+  wqbrain_login.py    WQB session login + credential save
 ```
+
+> Note: `nodes/`, `exports/`, `private/`, and the binary graph exports are git-ignored
+> (they hold private session data). The repo ships the code and the extracted summaries.
 
 ---
 

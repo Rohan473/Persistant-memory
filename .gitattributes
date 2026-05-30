@@ -1,0 +1,19 @@
+# Normalize line endings: store LF in the repo, check out native on each OS.
+# Silences the "LF will be replaced by CRLF" warnings on Windows.
+* text=auto
+
+# Explicit text files (override auto-detection where helpful)
+*.py    text
+*.md    text
+*.json  text
+*.csv   text
+*.html  text
+*.yml   text
+*.txt   text
+
+# Binary files — never touch line endings
+*.pdf   binary
+*.png   binary
+*.gpickle binary
+*.gexf  binary
+*.so    binary
