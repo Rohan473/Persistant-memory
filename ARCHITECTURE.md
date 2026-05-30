@@ -8,6 +8,60 @@ This document describes the architecture of the evolved WQ Brain Knowledge Graph
 
 ## Architecture Overview
 
+### System diagram
+
+```mermaid
+flowchart TB
+    subgraph EXT["External sources"]
+        WQB["WorldQuant Brain API"]
+        EXP["Claude.ai chat exports"]
+        LIT["Literature / SSRN papers"]
+    end
+
+    subgraph KG["Knowledge graph"]
+        NODES[("nodes/ + graph/<br/>alphas, factors, regimes, failures")]
+    end
+
+    subgraph MEM["Memory layer (memory_layer/)"]
+        BRAINAPI["brain_api / simulator<br/>run + write_back"]
+        PREFLIGHT["preflight + budget<br/>pre-sim gates"]
+        FACTOR["factor_ontology<br/>16-factor taxonomy"]
+        REGIME["regime_analysis<br/>regime-aware perf"]
+        CORR["correlation_engine<br/>orthogonality + portfolio"]
+        FAIL["failure_learning<br/>recurring patterns"]
+        VEC["vector_memory<br/>embeddings + recall"]
+        COPILOT["research_copilot / agent<br/>reasoning + hypotheses"]
+        LINEAGE["alpha_lineage<br/>ancestry + experiments"]
+    end
+
+    subgraph IFACE["Interfaces"]
+        API["api.py — FastAPI"]
+        MCP["mcp.py — MCP tools"]
+        CLI["query.py — CLI"]
+    end
+
+    WQB <--> BRAINAPI
+    EXP --> NODES
+    LIT --> COPILOT
+
+    PREFLIGHT --> BRAINAPI
+    BRAINAPI -->|write_back| NODES
+    NODES --> FACTOR --> NODES
+    NODES --> REGIME
+    NODES --> CORR
+    NODES --> FAIL
+    NODES --> VEC
+    NODES --> LINEAGE
+    VEC --> COPILOT
+    CORR --> COPILOT
+
+    NODES --> API
+    NODES --> MCP
+    NODES --> CLI
+    COPILOT --> API
+    COPILOT --> MCP
+```
+
 ### Core Components
 
 ```

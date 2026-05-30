@@ -9,6 +9,84 @@ The project has two halves:
 
 ---
 
+## Architecture
+
+How the pieces fit together — external sources feed an extraction pipeline into the knowledge graph, while the memory layer runs a live research loop against the WQ Brain API and writes results back into the same graph.
+
+```mermaid
+flowchart TB
+    subgraph EXT["External sources"]
+        WQB["WorldQuant Brain API"]
+        EXP["Claude.ai chat exports"]
+        LIT["Literature / SSRN papers"]
+    end
+
+    subgraph INGEST["Ingestion & extraction"]
+        PARSE["parse_exports.py"]
+        EXTRACT["entity extraction"]
+        NOTES["external_research/ notes"]
+    end
+
+    subgraph KG["Knowledge graph"]
+        NODES[("nodes/ — alphas, concepts,<br/>datafields, operators, failures")]
+        GRAPH[("graph/ — NetworkX DiGraph,<br/>edges.csv, graph.html")]
+    end
+
+    subgraph MEM["Memory layer"]
+        BRAINAPI["brain_api.py<br/>WQB REST client"]
+        PREFLIGHT["preflight.py<br/>novelty / coverage"]
+        SIM["simulator.py<br/>run + write_back"]
+        CORR["correlation_engine.py<br/>self-corr gating"]
+        FACTOR["factor_ontology.py<br/>16-factor taxonomy"]
+        BUDGET["budget.py<br/>sim-budget guard"]
+        VEC["vector_memory.py<br/>semantic recall"]
+    end
+
+    subgraph IFACE["Interfaces"]
+        CLI["query.py CLI"]
+        API["api.py — FastAPI"]
+        MCP["mcp.py — MCP server"]
+        CRITIC["critic.py — multi-model"]
+    end
+
+    EXP --> PARSE --> EXTRACT --> NODES
+    NODES --> GRAPH
+    LIT --> NOTES --> SIM
+
+    WQB <--> BRAINAPI
+    BRAINAPI --> SIM
+    PREFLIGHT --> SIM
+    BUDGET --> SIM
+    FACTOR --> CORR
+    SIM --> CORR
+    SIM -->|write_back| NODES
+
+    GRAPH --> VEC
+    GRAPH --> CLI
+    GRAPH --> API
+    GRAPH --> MCP
+    NODES --> CRITIC
+```
+
+### The research loop
+
+Each new alpha is designed from graph gaps + literature, gated before and after simulation, and persisted so the next iteration starts smarter.
+
+```mermaid
+flowchart LR
+    A["Design template<br/>from graph gaps + literature"] --> B["preflight<br/>novelty + coverage"]
+    B --> C["sweep.py / simulator<br/>run on WQB"]
+    C --> D["overfit_checker<br/>+ correlation gate"]
+    D -->|pass| E["write_back to graph"]
+    D -->|fail| A
+    E --> F["query.py saturation<br/>→ next gap"]
+    F --> A
+```
+
+See [ARCHITECTURE.md](ARCHITECTURE.md) for the full component breakdown and API surface.
+
+---
+
 ## What's inside
 
 | Item | Count |
