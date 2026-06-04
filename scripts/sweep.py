@@ -40,6 +40,7 @@ brain_api  = _load("brain_api",  "memory_layer/brain_api.py")
 simulator  = _load("simulator",  "memory_layer/simulator.py")
 preflight  = _load("preflight",  "memory_layer/preflight.py")
 sessions   = _load("sessions",   "memory_layer/sessions.py")
+pnl_corr   = _load("pnl_corr",   "scripts/pnl_corr.py")
 
 
 def cmd_list(args):
@@ -196,6 +197,19 @@ def cmd_run(args):
             operators=t.operators_hint or ex.operators,
         )
         print(f"    wrote: {out_path.name}")
+        if result.alpha_id_remote:
+            try:
+                nv = pnl_corr.novelty_summary(client, result.alpha_id_remote)
+                if nv:
+                    print(f"    novelty: max_corr={nv['max']:.2f} "
+                          f"novelty={nv['novelty']:.2f} #>0.5={nv['over5']} "
+                          f"#>0.7={nv['over7']} -> {nv['verdict']} "
+                          f"(vs {nv['n_book']} cached)")
+                else:
+                    print(f"    novelty: PnL pending — "
+                          f"python scripts/pnl_corr.py novelty {result.alpha_id_remote}")
+            except Exception as e:
+                print(f"    novelty: skipped ({type(e).__name__})")
         try:
             sessions.log_event(
                 "simulation",
